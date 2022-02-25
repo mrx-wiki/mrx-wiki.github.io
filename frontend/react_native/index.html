@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang=><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> React_native - gyk&#39;s blog</title>
+    <meta name="description" content="1.Mac启动react-native项目 ======================启动安卓✅============== 1.安装Nodev12 以上、JDK1.8 和 Android Studio（Android 10 (Q)sdk/ANDROID_HOME） 2.创建项目npx react-native init AwesomeProject、 3.创建虚拟机(机型和系统都要选好) 4.编译运行yarn react-native run-android ======================启动苹果✅================ 1.安装Node12 以上、Watchman、Xcode模拟器13版本 和 CocoaPods代理。 2.创建项目npx react-native init AwesomeProject 3.编译运行yarn react-native run-ios需要先新开shell运行yarn start ======================正常流程================ 1.创建项目npx react-native init JustCodeDict 2.开启重启监控yarn start 3.把profile的use_flipper! 修改为 use_flipper!({ &#39;Flipper-Folly&#39; =&gt; &#39;2.3.0&#39; })后删lock文件后重新pod install 4.开始编译yarn iOS ======================基础=============== React Native 是一个使用react和应用平台的原生功能来构建 Android 和 iOS 应用的开源框架 React Native 中的尺寸都是无单位的 Platform.OS import { StyleSheet, Image, View } from &#39;react-native&#39;; 1.添加css样式。 &lt;View style={styles.container}&gt; &lt;/View&gt; const styles = StyleSheet.">
+    <link rel="canonical" href="https://gyk19950104.github.io/frontend/react_native/">
+    <meta property="og:title" content="React_native">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://gyk19950104.github.io/frontend/react_native/">
+    <meta property="og:description" content="1.Mac启动react-native项目 ======================启动安卓✅============== 1.安装Nodev12 以上、JDK1.8 和 Android Studio（Android 10 (Q)sdk/ANDROID_HOME） 2.创建项目npx react-native init AwesomeProject、 3.创建虚拟机(机型和系统都要选好) 4.编译运行yarn react-native run-android ======================启动苹果✅================ 1.安装Node12 以上、Watchman、Xcode模拟器13版本 和 CocoaPods代理。 2.创建项目npx react-native init AwesomeProject 3.编译运行yarn react-native run-ios需要先新开shell运行yarn start ======================正常流程================ 1.创建项目npx react-native init JustCodeDict 2.开启重启监控yarn start 3.把profile的use_flipper! 修改为 use_flipper!({ &#39;Flipper-Folly&#39; =&gt; &#39;2.3.0&#39; })后删lock文件后重新pod install 4.开始编译yarn iOS ======================基础=============== React Native 是一个使用react和应用平台的原生功能来构建 Android 和 iOS 应用的开源框架 React Native 中的尺寸都是无单位的 Platform.OS import { StyleSheet, Image, View } from &#39;react-native&#39;; 1.添加css样式。 &lt;View style={styles.container}&gt; &lt;/View&gt; const styles = StyleSheet.">
+    <meta property="og:site_name" content="gyk&#39;s blog">
+    <link rel="stylesheet" href="https://gyk19950104.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
+    <meta name="generator" content="Hugo 0.73.0" />
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+
+    
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body><header class="site-header">
+    <nav class="site-nav" role="navigation" aria-label="breadcrumb">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb"><li class="breadcrumb-item  " 
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/">
+    <span itemprop="name">gyk&#39;s blog</span>
+  </a>
+  <meta itemprop="position" content="0" />
+</li>/<li class="breadcrumb-item  " 
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/frontend/">
+    <span itemprop="name">frontend</span>
+  </a>
+  <meta itemprop="position" content="0" />
+</li>/<li class="breadcrumb-item active hidden" aria-current="page"
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/frontend/react_native/">
+    <span itemprop="name">react_native</span>
+  </a>
+  <meta itemprop="position" content="1" />
+</li></ol>
+    </nav>
+    <h1 class="site-title hidden">
+    <a href="https://gyk19950104.github.io/">gyk&#39;s blog</a>
+    </h1>
+</header>
+<div>先有逻辑正确的思路，剩余的是重复的实践与积累</div>
+<main id="content">
+<article role="article" class="content post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">        
+        <h2 class="post-title" itemprop="name headline">React_native</h2>
+        <span class="post-meta">
+            <time class="date-published" datetime="2022-01-20T03:10:22&#43;07:00" itemprop="datePublished">
+                Thu, 20 Jan 2022
+            </time>
+            
+        </span>
+    </header>
+    <div class="post-content" itemprop="articleBody">
+        <h2 id="1mac启动react-native项目">1.Mac启动react-native项目</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">======================</span>启动安卓✅<span style="color:#f92672">==============</span>
+1.安装Nodev12 以上、JDK1.8 和 Android Studio（Android <span style="color:#ae81ff">10</span> <span style="color:#f92672">(</span>Q<span style="color:#f92672">)</span>sdk/ANDROID_HOME）
+2.创建项目npx react-native init AwesomeProject、
+3.创建虚拟机<span style="color:#f92672">(</span>机型和系统都要选好<span style="color:#f92672">)</span>
+4.编译运行yarn react-native run-android
+
+
+<span style="color:#f92672">======================</span>启动苹果✅<span style="color:#f92672">================</span>
+1.安装Node12 以上、Watchman、Xcode模拟器13版本 和 CocoaPods代理。
+2.创建项目npx react-native init AwesomeProject
+3.编译运行yarn react-native run-ios需要先新开shell运行yarn start
+
+
+
+<span style="color:#f92672">======================</span>正常流程<span style="color:#f92672">================</span>
+1.创建项目npx react-native init JustCodeDict
+2.开启重启监控yarn start
+3.把profile的use_flipper!  修改为 use_flipper!<span style="color:#f92672">({</span> <span style="color:#e6db74">&#39;Flipper-Folly&#39;</span> <span style="color:#f92672">=</span>&gt; <span style="color:#e6db74">&#39;2.3.0&#39;</span> <span style="color:#f92672">})</span>后删lock文件后重新pod install
+4.开始编译yarn iOS
+
+
+<span style="color:#f92672">======================</span>基础<span style="color:#f92672">===============</span>
+React Native 是一个使用react和应用平台的原生功能来构建 Android 和 iOS 应用的开源框架
+React Native 中的尺寸都是无单位的
+Platform.OS
+
+
+
+
+import <span style="color:#f92672">{</span> StyleSheet, Image, View <span style="color:#f92672">}</span> from <span style="color:#e6db74">&#39;react-native&#39;</span>;
+1.添加css样式。
+&lt;View style<span style="color:#f92672">={</span>styles.container<span style="color:#f92672">}</span>&gt; &lt;/View&gt;
+const styles <span style="color:#f92672">=</span> StyleSheet.create<span style="color:#f92672">({</span>
+  container: <span style="color:#f92672">{</span>
+    marginTop: 50,
+  <span style="color:#f92672">}</span>,
+<span style="color:#f92672">})</span>
+
+2.添加图片。
+&lt;Image source<span style="color:#f92672">={</span>require<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;./my-icon.png&#34;</span><span style="color:#f92672">)}</span> /&gt;
+
+<span style="color:#f92672">======================</span>参考链接<span style="color:#f92672">================</span>
+
+1.新手究极搭建react-native环境解决pod install 卡住
+https://www.jianshu.com/p/35c928bac18d
+
+2.React Native新项目启动报错<span style="color:#e6db74">&#39;React/RCTBridgeDelegate.h&#39;</span> file not found
+https://www.cnblogs.com/maijiangdou/p/11378981.html
+
+3.mac搭建并运行react-native项目
+https://blog.csdn.net/jetable/article/details/96994287
+
+4.event2/event-config.h‘ file not found 解决方案
+https://blog.csdn.net/mengdasheng/article/details/113833313
+</code></pre></div>
+    </div>
+    <video id="my_video" style="height: 300px;width:100%" controls="controls"></video>
+</article>
+
+<div class="pagination">
+    
+    <div class="prev"> <a href="https://gyk19950104.github.io/frontend/react/">Previous Post</a> </div>
+    
+    
+    <div class="next"> <a href="https://gyk19950104.github.io/frontend/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/">Next Post</a> </div>
+    
+</div>
+
+
+<script type="text/javascript">
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+</script>
+<script>
+    try{
+        
+        let src = document.getElementsByTagName('code')[0].innerText;
+        
+        if(src.indexOf("mp4")!=-1){
+            document.getElementById('my_video').setAttribute("src",src)
+        }else{
+            
+            let video = document.getElementById('my_video');
+            if (video != null){
+                video.parentNode.removeChild(video);
+            }
+            
+            
+        }
+    }catch(e){
+        
+        let video = document.getElementById('my_video');
+        if (video != null){
+            video.parentNode.removeChild(video);
+        }
+    }
+    
+    
+    
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </main><footer class="site-footer">
+	<span class="right">
+		<em>gyk&#39;s blog</em>
+	</span>
+</footer>
+</body>
+</html>

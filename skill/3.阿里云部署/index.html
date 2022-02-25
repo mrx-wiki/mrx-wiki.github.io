@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang=><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 阿里云部署 - gyk&#39;s blog</title>
+    <meta name="description" content="1.购买云服务器与域名 在阿里云的控制台左侧找到云服务器和域名分别购买，购买后会得到：
+ 服务器公网ip和密码 未认证的域名  2.环境准备 安装node，nginx和pm2
+ node：https://www.cnblogs.com/zhi-leaf/p/10979629.html nginx：https://www.cnblogs.com/-youth/p/9764765.html pm2: npm install pm2 -g  3.配置nginx 在/usr/local/nginx/conf/下vim nginx.conf以下内容后重载nginx配置/usr/local/bin/nginx -s reload
+可能会遇到nginx: [error] open() &quot;/usr/local/nginx/logs/nginx.pid&quot; failed (2: No such f的问题
+可以指定一下nginx的配置文件位置即可/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+worker_processes 1; events { worker_connections 1024; } http { include mime.types; default_type application/octet-stream; sendfile on; keepalive_timeout 65; //配置域名 server { server_name mrx.wiki; } //配置网站根目录 location / { root public; index index.html index.htm; } //配置出错跳转 error_page 500 502 503 504 /50x.">
+    <link rel="canonical" href="https://gyk19950104.github.io/skill/3.%E9%98%BF%E9%87%8C%E4%BA%91%E9%83%A8%E7%BD%B2/">
+    <meta property="og:title" content="阿里云部署">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://gyk19950104.github.io/skill/3.%E9%98%BF%E9%87%8C%E4%BA%91%E9%83%A8%E7%BD%B2/">
+    <meta property="og:description" content="1.购买云服务器与域名 在阿里云的控制台左侧找到云服务器和域名分别购买，购买后会得到：
+ 服务器公网ip和密码 未认证的域名  2.环境准备 安装node，nginx和pm2
+ node：https://www.cnblogs.com/zhi-leaf/p/10979629.html nginx：https://www.cnblogs.com/-youth/p/9764765.html pm2: npm install pm2 -g  3.配置nginx 在/usr/local/nginx/conf/下vim nginx.conf以下内容后重载nginx配置/usr/local/bin/nginx -s reload
+可能会遇到nginx: [error] open() &quot;/usr/local/nginx/logs/nginx.pid&quot; failed (2: No such f的问题
+可以指定一下nginx的配置文件位置即可/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+worker_processes 1; events { worker_connections 1024; } http { include mime.types; default_type application/octet-stream; sendfile on; keepalive_timeout 65; //配置域名 server { server_name mrx.wiki; } //配置网站根目录 location / { root public; index index.html index.htm; } //配置出错跳转 error_page 500 502 503 504 /50x.">
+    <meta property="og:site_name" content="gyk&#39;s blog">
+    <link rel="stylesheet" href="https://gyk19950104.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
+    <meta name="generator" content="Hugo 0.73.0" />
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+
+    
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body><header class="site-header">
+    <nav class="site-nav" role="navigation" aria-label="breadcrumb">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb"><li class="breadcrumb-item  " 
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/">
+    <span itemprop="name">gyk&#39;s blog</span>
+  </a>
+  <meta itemprop="position" content="0" />
+</li>/<li class="breadcrumb-item  " 
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/skill/">
+    <span itemprop="name">skill</span>
+  </a>
+  <meta itemprop="position" content="0" />
+</li>/<li class="breadcrumb-item active hidden" aria-current="page"
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/skill/3.%E9%98%BF%E9%87%8C%E4%BA%91%E9%83%A8%E7%BD%B2/">
+    <span itemprop="name">3.%E9%98%BF%E9%87%8C%E4%BA%91%E9%83%A8%E7%BD%B2</span>
+  </a>
+  <meta itemprop="position" content="1" />
+</li></ol>
+    </nav>
+    <h1 class="site-title hidden">
+    <a href="https://gyk19950104.github.io/">gyk&#39;s blog</a>
+    </h1>
+</header>
+<div>先有逻辑正确的思路，剩余的是重复的实践与积累</div>
+<main id="content">
+<article role="article" class="content post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">        
+        <h2 class="post-title" itemprop="name headline">阿里云部署</h2>
+        <span class="post-meta">
+            <time class="date-published" datetime="2021-02-20T16:20:02&#43;07:00" itemprop="datePublished">
+                Sat, 20 Feb 2021
+            </time>
+            
+        </span>
+    </header>
+    <div class="post-content" itemprop="articleBody">
+        <h2 id="1购买云服务器与域名">1.购买云服务器与域名</h2>
+<p><code>在阿里云的控制台左侧找到云服务器和域名分别购买，购买后会得到：</code></p>
+<ul>
+<li>服务器公网ip和密码</li>
+<li>未认证的域名</li>
+</ul>
+<h2 id="2环境准备">2.环境准备</h2>
+<p><code>安装node，nginx和pm2</code></p>
+<ul>
+<li>node：https://www.cnblogs.com/zhi-leaf/p/10979629.html</li>
+<li>nginx：https://www.cnblogs.com/-youth/p/9764765.html</li>
+<li>pm2: npm install pm2 -g</li>
+</ul>
+<h2 id="3配置nginx">3.配置nginx</h2>
+<p><code>在/usr/local/nginx/conf/下vim nginx.conf以下内容后重载nginx配置/usr/local/bin/nginx -s reload</code></p>
+<p><code>可能会遇到nginx: [error] open() &quot;/usr/local/nginx/logs/nginx.pid&quot; failed (2: No such f的问题</code></p>
+<p><code>可以指定一下nginx的配置文件位置即可/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">worker_processes  1;
+
+events <span style="color:#f92672">{</span>
+    worker_connections  1024;
+<span style="color:#f92672">}</span>
+
+http <span style="color:#f92672">{</span>
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    //配置域名
+    server <span style="color:#f92672">{</span>
+        server_name mrx.wiki;
+
+    <span style="color:#f92672">}</span>
+    //配置网站根目录
+    location / <span style="color:#f92672">{</span>
+            root   public;
+            index  index.html index.htm;
+    <span style="color:#f92672">}</span>
+    //配置出错跳转
+    error_page   <span style="color:#ae81ff">500</span> <span style="color:#ae81ff">502</span> <span style="color:#ae81ff">503</span> <span style="color:#ae81ff">504</span>  /50x.html;
+        location <span style="color:#f92672">=</span> /50x.html <span style="color:#f92672">{</span>
+            root   html;
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+</code></pre></div><h2 id="4本地配置">4.本地配置</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">
+1.brew install Hugo记得要开代理
+
+2.hugo new site mrx  <span style="color:#f92672">&amp;&amp;</span> cd mrx
+
+3.在https://themes.gohugo.io挑选主题并在根目录克隆
+
+4.hugo server -t 主题名字 --buildDrafts进行预览
+
+5.hugo new 弥生.md 
+
+6.hugo --theme<span style="color:#f92672">=</span>the-roots-home --baseUrl<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://123.57.19.151/&#34;</span> --buildDrafts
+
+7.tar -zcvf mrx.tar.gz public 
+
+8.scp mrx.tar.gz root@123.57.19.151:/root
+
+9.tar -zxvf mrx.tar.gz public <span style="color:#f92672">&amp;&amp;</span> cd /usr/local/nginx <span style="color:#f92672">&amp;&amp;</span> sudo rm -f -r public <span style="color:#f92672">&amp;&amp;</span> mv public /usr/local/nginx/
+
+10. vim nginx/conf/nginx.conf中的网站根目录
+
+11.cd /usr/local/nginx <span style="color:#f92672">&amp;&amp;</span> nginx -s reload
+
+12.pm2 start nginx
+
+
+</code></pre></div><p><code>需要将hugo打包后的文件的域名改了</code></p>
+<p><code>在本地放build.sh文件</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># 构建并部署网站</span>
+
+<span style="color:#75715e"># 清除以前的打包文件</span>
+rm -f -r public
+
+<span style="color:#75715e">#  hugo生成静态文件</span>
+hugo --theme<span style="color:#f92672">=</span>the-roots-home --baseUrl<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://mrx.wiki/&#34;</span> --buildDrafts
+<span style="color:#75715e"># hugo --theme=the-roots-home --baseUrl=&#34;http://lonelyzoom.gitee.io/mrx&#34; --buildDrafts</span>
+
+<span style="color:#75715e">#打包静态文件</span>
+tar -zcvf mrx.tar.gz public
+
+<span style="color:#75715e">#上传打包文件</span>
+scp mrx.tar.gz root@123.57.19.151:/root
+
+
+
+</code></pre></div><p><code>在服务器放dep.sh文件</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+
+<span style="color:#75715e"># 解压静态文件</span>
+tar -zxvf mrx.tar.gz public
+
+<span style="color:#75715e"># 进入nginx服务器目录</span>
+cd /usr/local/nginx
+
+<span style="color:#75715e"># 删除之前的静态文件</span>
+sudo rm -f -r public
+
+<span style="color:#75715e"># 回到根目录</span>
+cd ~
+
+<span style="color:#75715e"># 将静态文件移到nginx服务器下</span>
+mv public /usr/local/nginx/
+
+
+<span style="color:#75715e"># 重载nginx配置</span>
+/usr/local/bin/nginx -s reload
+
+<span style="color:#75715e"># 删除上传的压缩包</span>
+sudo rm -f -r mrx.tar.gz
+
+
+</code></pre></div><h2 id="5日常使用">5.日常使用</h2>
+<pre><code>1.本地编辑内容
+2.本地bash build.sh
+3.远程sudo bash ./dep.sh
+4.验证123.57.19.151
+</code></pre>
+    </div>
+    <video id="my_video" style="height: 300px;width:100%" controls="controls"></video>
+</article>
+
+<div class="pagination">
+    
+    <div class="prev"> <a href="https://gyk19950104.github.io/skill/2.%E6%B1%BD%E8%BD%A6%E6%9E%84%E9%80%A0/">Previous Post</a> </div>
+    
+    
+    <div class="next"> <a href="https://gyk19950104.github.io/skill/4.git%E6%8A%80%E5%B7%A7/">Next Post</a> </div>
+    
+</div>
+
+
+<script type="text/javascript">
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+</script>
+<script>
+    try{
+        
+        let src = document.getElementsByTagName('code')[0].innerText;
+        
+        if(src.indexOf("mp4")!=-1){
+            document.getElementById('my_video').setAttribute("src",src)
+        }else{
+            
+            let video = document.getElementById('my_video');
+            if (video != null){
+                video.parentNode.removeChild(video);
+            }
+            
+            
+        }
+    }catch(e){
+        
+        let video = document.getElementById('my_video');
+        if (video != null){
+            video.parentNode.removeChild(video);
+        }
+    }
+    
+    
+    
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </main><footer class="site-footer">
+	<span class="right">
+		<em>gyk&#39;s blog</em>
+	</span>
+</footer>
+</body>
+</html>

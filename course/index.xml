@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Courses on gyk&#39;s blog</title>
+    <link>https://gyk19950104.github.io/course/</link>
+    <description>Recent content in Courses on gyk&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 13 Jan 2022 14:46:18 +0800</lastBuildDate>
+    
+	<atom:link href="https://gyk19950104.github.io/course/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>git教程</title>
+      <link>https://gyk19950104.github.io/course/2.git/</link>
+      <pubDate>Thu, 13 Jan 2022 14:46:18 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/course/2.git/</guid>
+      <description>1.版本控制 1.1 简介 版本控制系统(DVCS)：一种记录并可以回溯文件的系统
+它经历了三个阶段：
+ 本地版本控制系统 集中式版本控制系统 分布式版本控制系统  最常用最简单的版本控制是通过复制完整文件制作副本，它有很多缺点：
+ 整个复制保存手动完成，耗费大量时间 需要自定义文件命名规则，体现不同版本文件差异 不便于协同工作  1.2 差异 1.本 地：保存整体文件，通过补丁（指文件修订前后的变化）对比来计算各版本文件内容在使用这种控制系统时，它会自动比较前后版本的区别，将差异的部分做成补丁保存，当需要回溯某个版本时就从File文件中找出它关联的文件之间的补丁经过计算生成需要回溯的文件，但比较前后变化是非常耗时的操作，并且这些都是在本地操作系统完成的内容，如果是团队合作，那应该怎样实现协同版本的控制系统，于是集中化的版本控制系统就出现了
+2.集中化：为了让不同系统上的开发者协同工作，集中化的版本控制系统会设立单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。但它的缺点是使用时必须要联网，中央服务器可能单点故障，比如服务器宕机，磁盘损坏等，会有丢失历史更新记录的风险。
+​ 其实集中式版本控制系统最大的不足就是中央服务器只有1个，服务器出问题就会导致一系列问题，你可能会说，中央服务器有问题，那成员之间交换代码不就行了么，为什么非得去中央服务器拉取，这是因为本地成员拉取的只是当前版本的代码，而关于版本的变更信息并没有拉取，最完整的内容只保存在中央服务器，从本质上来说是有丢失数据的可能存在，于是人们又研发了分布式的版本控制系统
+3.分布式：在分布式的版本控制系统中，客户端并不只提取最新版本的文件快照， 而是把代码仓库完整地镜像下来，包括完整的历史录。这么一来，任何一处协同工作用的服务器发生故障，事后都可以用任何一个镜像出来的本地仓库恢复。 因为每一次的克隆操作，实际上都是一次对代码仓库的完整备份。git作为分布式版本控制系统，每个拥有git客户端的地方都是中央服务器，它们都可以交换所有变更信息，它最大限度的保护了我们的数据安全。
+这节我们学习了：
+ 什么是版本控制系统 版本控制系统的三大演变 分布式为什么优于本地存储和集中式  大家要确保能够回答这些问题，这对于我们理解版本控制系统非常重要
+2.git的下载 2.1 下载 第一节课已经了解版本控制系统的演变，可以说git作为分布式的版本控制系统，相比于本地
+数据库模式和集中控制系统具有无法取代的安全性，所以我们来学习一下git的详细使用，最
+权威的资料应该就是官网的资料:
+官网：https://git-scm.com
+文档：https://gitee.com/progit/index.html
+git是一个能快速高效处理大小项目的，免费的，开源的，分布式版本控制系统，git易于学习， 它体积小却性能高，因特色的本地分支，便利的暂存区和多样化的工作流等特色战胜了Subversion, CVS, Perforce, and ClearCase等一系列SCM工具，它直接记录快照，而非差异比较，并不是 复制了所有的文件数据块，而是复制了文件的数据块描述结构序列。 这是git官网对它的描述，不过这属于git特性，是下节课要说的内容，这节课先来安装设置一
+下git：
+ 源代码安装 预编译安装包  1️⃣源代码安装，能获得最新的版本, 这里只讲解linux下的源码安装
+👉linux(ubuntu)：依赖工具+源代码+编译安装
+换源：https://www.jb51.net/article/185775.htm 下载编译工具：apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev 报错：Some packages could not be installed.</description>
+    </item>
+    
+    <item>
+      <title>1.jquery源码分析</title>
+      <link>https://gyk19950104.github.io/course/1.jquery%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/</link>
+      <pubDate>Sun, 07 Nov 2021 14:23:42 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/course/1.jquery%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/</guid>
+      <description>1.匿名函数自执行 jquery2.0.3中，源码首先是一个自执行的匿名函数, 匿名函数就是没有函数名的函数，目的是为了保护变量不被污染,如下：
+(function(window,undefined){ //具体源码  })(window); 要理解它需要先来了解js的函数命名：
+js函数有2种命名方式：声明式和函数表达式
+ 声明式：function demo(){ //会被解释器优先编译 } 函数表达式： let demo = function(){ //解释器逐行解释 }  声明式：不论在哪里调用demo都能正常输出a，因为在开始执行前声明的函数都被提升了
+demo(); function demo(){ console.log(&amp;#39;a&amp;#39;) } 函数表达式：必须要在表达式后才能调用demo，因为解释器是逐行执行
+demo(); let demo = function(){ console.log(&amp;#39;a&amp;#39;) } 比对一下就可知：
+(function(){ }) () | | demo () 那为什么不写成：function(){ }()呢？答案是语法里并不支持这么做，最简的方式就是加小括号
+(function(){ })() 2.封装好的功能暴露到全局 采用匿名函数自执行可以很好的保护变量不受污染，但也需要把写好的功能暴露出去提供使用,我们平常使用时：
+$()或者jQuery() 在jquery2.0.3中，它是将其挂载到了window全局对象来实现的
+(function(window,undefined){ if ( typeof window === &amp;#34;object&amp;#34; &amp;amp;&amp;amp; typeof window.document === &amp;#34;object&amp;#34; ) { window.jQuery = window.$ = jQuery; } })(window); 3.</description>
+    </item>
+    
+  </channel>
+</rss>

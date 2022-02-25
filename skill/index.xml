@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Skills on gyk&#39;s blog</title>
+    <link>https://gyk19950104.github.io/skill/</link>
+    <description>Recent content in Skills on gyk&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 18 Feb 2022 04:19:44 +0800</lastBuildDate>
+    
+	<atom:link href="https://gyk19950104.github.io/skill/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>9.autojs脚本</title>
+      <link>https://gyk19950104.github.io/skill/9.autojs/</link>
+      <pubDate>Fri, 18 Feb 2022 04:19:44 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/skill/9.autojs/</guid>
+      <description>1.mac搭建环境 ====================下载软件=======================
+ 1.下载模拟器 https://mumu.163.com/mac/index.html 2.下载编辑器 https://code.visualstudio.com/ 3.下载插件 Auto.js-Pro-Ext 4.下载autojs https://pro.autojs.org/ 5.申请坚果云账号  ====================连接步骤=======================
+ 1.在模拟器的autojs中连接电脑-客户端模式中输入电脑ip地址 2.编写代码 3.在编辑器中command + shift + p调出命令窗口输入autojs保存到指定设备 4.在模拟器的autojs中下拉刷新找到脚本运行  2.热更新原理 ======================热更新============================
+ 1.nodemon monitor.js后会自动监控源码main.js,发生改变后自动上传到坚果云 2.将热更新代码写入main.js，连接模拟器打包文件生成apk 3.每次修改代码后保存，视图自动更新  // 从坚果云下载脚本并执行 const CONFIG = { &amp;#34;path&amp;#34;: &amp;#34;热更新/&amp;#34;, &amp;#34;scriptName&amp;#34;:&amp;#34;main.js&amp;#34;, &amp;#34;user&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;key&amp;#34;: &amp;#34;&amp;#34; } //定时下载脚本比对更新执行 let prevContent=&amp;#34;&amp;#34;; let currContent=&amp;#34;&amp;#34;; setInterval(() =&amp;gt; { try { http.__okhttp__.setTimeout(20000); let currContent = http.get(&amp;#39;http://dav.jianguoyun.com/dav/&amp;#39;+CONFIG.path+CONFIG.scriptName, { headers: { &amp;#34;Authorization&amp;#34;: &amp;#34;Basic &amp;#34; + java.lang.String(android.util.Base64.encode(java.lang.String(CONFIG.user +&amp;#39;:&amp;#39; + CONFIG.</description>
+    </item>
+    
+    <item>
+      <title>体彩</title>
+      <link>https://gyk19950104.github.io/skill/8.%E4%BD%93%E5%BD%A9/</link>
+      <pubDate>Thu, 20 Jan 2022 03:26:23 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/skill/8.%E4%BD%93%E5%BD%A9/</guid>
+      <description>1.大乐透基础 1.2007.05.28国家体育总局发行，每周1，3，6的20:25开奖 2.兑奖时间是60天，节假日顺延 3. 1万以下不交税凭票在销售点兑换，1w以上交税凭票和身份证在省级体彩机构兑奖 4.单注封顶可中500万 5.投注仅对浮动奖有效，为0.8单注奖金 6.彩票玷污损坏后不能兑奖 2.大乐透选注  1.基本投注  前区(01-35选5) 后区(01-12选2)   2.复式投注  前区(01-35选6/6个以上) 后区(01-12选3/3个以上)   3.胆拖投注  前区  胆码拖码个数共6/6个以上 胆码:01-35选1到4个 拖码:01-35选除胆码的数   后区  胆码: 01-12选1个 拖码: 01-12选非胆码的2/2个以上的数      3.大乐透奖金 一等奖：5+2 &amp;lt;1亿: 当期奖金-0.22固定奖金-奖池累积 1-8亿: 当期奖金-0.58固定奖金-奖池累积 当期总额-0.2固定总额 &amp;gt;8亿: 当期奖金-0.28固定奖金-奖池累积 当期总额-0.5固定总额 二等奖：5+1 👉当期奖金-0.22固定奖金 三等奖：5+0 👉1万元 四等奖：4+2 👉3000元 五等奖：4+1 👉300元 六等奖：3+2👉200元 七等奖：4+0👉100元 八等奖：3+1，2+2👉15元 九等奖：3+0，2+1，1+2，0+2👉5元 4.大乐透数据 https://m.lottery.gov.cn/mkjdlt/</description>
+    </item>
+    
+    <item>
+      <title>欧姆龙plc</title>
+      <link>https://gyk19950104.github.io/skill/7.%E6%AC%A7%E5%A7%86%E9%BE%99plc/</link>
+      <pubDate>Thu, 20 Jan 2022 03:17:45 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/skill/7.%E6%AC%A7%E5%A7%86%E9%BE%99plc/</guid>
+      <description>1.欧姆龙plc </description>
+    </item>
+    
+    <item>
+      <title>乐高机械组</title>
+      <link>https://gyk19950104.github.io/skill/6.%E4%B9%90%E9%AB%98/</link>
+      <pubDate>Thu, 20 Jan 2022 03:17:28 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/skill/6.%E4%B9%90%E9%AB%98/</guid>
+      <description>1.乐高机械组 </description>
+    </item>
+    
+    <item>
+      <title>mac技巧</title>
+      <link>https://gyk19950104.github.io/skill/5.mac%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Thu, 20 Jan 2022 02:53:11 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/skill/5.mac%E6%8A%80%E5%B7%A7/</guid>
+      <description>1.终端 0.iTerm2是默认终端的替代品 oh-my-zsh是为了简化zsh的配置的shell
+1.查看所有shell
+cat /etc/shells 2.默认shell
+新版zsh默认zsh：echo $SHELL 更换默认shell：chsh -s /bin/zsh 3.配置文件
+所有命令失效：export PATH=/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11R6/bin - a. /etc/profile - b. /etc/paths - c. ~/.bash_profile - d. ~/.bash_login - e. ~/.profile - f. ~/.bashrc(启动终端自动加载) 2.配置环境变量 Mac的usr/bin目录是不允许增删文件的，可以通过向usr/local/bin增删文件来实现在终端里直接运行
+1️⃣移动软件 sudo mv -f 文件名 /usr/local 2️⃣添加变量 sudo vim /etc/profile # maven环境变 MAVEN_HOME=&amp;#34;/usr/local/apache-maven-3.8.4&amp;#34; export MAVEN_HOME export PATH=${PATH}:${MAVEN_HOME}/bin source /etc/profile 3.快捷键 1.截图快捷键：Command + Shift + 4 4.常用命令 改主机名: hostnamectl set-hostname npm换源: npm config set registry https://registry.npm.taobao.org 增权：Chmod 755 5.</description>
+    </item>
+    
+    <item>
+      <title>4.git技巧</title>
+      <link>https://gyk19950104.github.io/skill/4.git%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Sat, 20 Nov 2021 03:33:29 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/skill/4.git%E6%8A%80%E5%B7%A7/</guid>
+      <description>0.理解 无法推送时，先新建后删除
+//新建代理 git config --global http.proxy http://127.0.0.1:1080 git config --global https.proxy http://127.0.0.1:1080 //删除代理 git config --global --unset http.proxy git config --global --unset https.proxy 1.版本控制系统：可以回溯文件修改内容与历史记录的软件 2.分布式控制系统会复制所有记录，不止当前版本的文件，包括所有修改历史 3.对于任何一个文件，在 Git 内都只有三种状态： 👉已提交（committed）：该文件已经被安全地保存在本地数据库中了 👉已修改（modified）：修改了某个文件 👉已暂存（staged）：已修改的文件放在下次提交时要保存的清单中 4.Git 分支，本质是一个指向 commit 对象(1. 指向暂存内容快照的指针2. 本次提交的作者等相关附属信息 3. 零个或多个指向该提交对象的父对象指针)的可变指针，一个包含commit对象 校验和（40 个字符长度 SHA-1 字串）的文件 它默认名为master，在每次提交的时候都会自动向前移动，永远指向最后一次提交对象的 master 分支 git branch 会创建一个新的分支指针，它也指向最后一次提交对象，但并不会自动切换过去 git checkout会将HEAD指针(指向正在工作中的本地分支的指针)修改为创建好的新分支指针， git merge 会用两个分支的末端和它们共同祖先进行三方合并计算结果重新做一个新的快照， 自动创建一个指向它的提交对象作为最终节点 git rebase 变基是把在一个分支里提交的改变移到另一个分支里重放一遍。 它的原理是回到两个分支最近的共同祖先，根据当前分支(fix)后续的历次提交对象 生成一系列文件补丁，然后以基底分支(master)最后一个 提交对象为新的出发点，逐个应用之前准备好的补丁文件，最后会生成一个新的 合并提交对象，使它成为 master 分支的最后commit对象，它可以得到一个在 远程分支上干净应用的补丁，但一旦分支中的提交对象发布到公共仓库，就千万 不要对该分支进行衍合操作，因为rebase会丢弃需要合并的信息，当别人提前 获取了未丢弃的合并信息继续开发时获得rebase后的代码会重复提交 1.密钥 首次下载git后需要设置</description>
+    </item>
+    
+    <item>
+      <title>阿里云部署</title>
+      <link>https://gyk19950104.github.io/skill/3.%E9%98%BF%E9%87%8C%E4%BA%91%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Sat, 20 Feb 2021 16:20:02 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/skill/3.%E9%98%BF%E9%87%8C%E4%BA%91%E9%83%A8%E7%BD%B2/</guid>
+      <description>1.购买云服务器与域名 在阿里云的控制台左侧找到云服务器和域名分别购买，购买后会得到：
+ 服务器公网ip和密码 未认证的域名  2.环境准备 安装node，nginx和pm2
+ node：https://www.cnblogs.com/zhi-leaf/p/10979629.html nginx：https://www.cnblogs.com/-youth/p/9764765.html pm2: npm install pm2 -g  3.配置nginx 在/usr/local/nginx/conf/下vim nginx.conf以下内容后重载nginx配置/usr/local/bin/nginx -s reload
+可能会遇到nginx: [error] open() &amp;quot;/usr/local/nginx/logs/nginx.pid&amp;quot; failed (2: No such f的问题
+可以指定一下nginx的配置文件位置即可/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+worker_processes 1; events { worker_connections 1024; } http { include mime.types; default_type application/octet-stream; sendfile on; keepalive_timeout 65; //配置域名 server { server_name mrx.wiki; } //配置网站根目录 location / { root public; index index.html index.htm; } //配置出错跳转 error_page 500 502 503 504 /50x.</description>
+    </item>
+    
+    <item>
+      <title>汽车构造</title>
+      <link>https://gyk19950104.github.io/skill/2.%E6%B1%BD%E8%BD%A6%E6%9E%84%E9%80%A0/</link>
+      <pubDate>Tue, 08 Dec 2020 21:56:58 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/skill/2.%E6%B1%BD%E8%BD%A6%E6%9E%84%E9%80%A0/</guid>
+      <description>汽车构造  轿车包括车身，发动机，底盘和电气件四大部分
+ ✅发动机：当点火启动时，不同缸体内的火花塞轮流点火，油气进入缸体与火花接触爆炸，推动曲轴连杆机构将活塞往复运动转化为曲轴旋转运动，传递给主动轴扭矩与速度
+ ✅底盘: 当需要不同扭矩或速度时，踩下离合器将发动机主轴与变速箱主轴分离，拨动档位，调节不同传动比的齿轮啮合后松开离合器，根据不同传递比，变速箱输出轴带有不同的扭矩或转速，空档时虽然发动机主轴与变速箱主轴链接，但变速箱输出轴与传动齿轮间隙配合所以车体也不会获得动力从而移动，当需要刹车减速时，踩下刹车器经助力放大传递到车轮处增大制动器与轮毂摩擦力减小车速
+——————————————————————
+ 为什么换挡要踩离合器？
+ 换挡时发动机转速与所需转速不同，强行换挡会损坏变速箱
+ 为什么有时候离合类似刹车？
+ 处于半联动的离合发动机主轴与变速箱输出主轴摩擦力处于临界状态，超过半联动时，2者保持相同转速，车子自动滑动，踩下油门只是加强了油气混合，增大了发动机输出功率
+ 为什么车子会熄火？
+ 发动机动力不足以抵消车子受到的静摩擦力从而憋停。
+ 参考资料：
+ 比亚迪汽车讲堂： https://b23.tv/L6InoA</description>
+    </item>
+    
+    <item>
+      <title>搭建博客</title>
+      <link>https://gyk19950104.github.io/skill/1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Fri, 20 Nov 2020 16:24:14 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/skill/1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>步骤  1.申请GitHub账号并配置ssh 2.brew安装hugo后选择主题 3.熟悉常见hugo指令 4.GitHub pages部署博客  指令 brew install hugo hugo new site blog git clone https://github.com/rmsubekti/the-roots-home.git themes/the-roots-home hugo server -t the-roots-home --buildDrafts hugo --theme=the-roots-home --baseUrl=&amp;#34;https://gyk19950104.github.io&amp;#34; --buildDrafts cd public git init git add . git commit -m &amp;#39;&amp;#39; git remote add origin https://github.com/gyk19950104/gyk19950104.github.io.git git push -u origin master 写博客 1.hugo new life/1.搭建博客.md 2.编写内容 3.运行脚本bash build.sh 4.从2021.3月开始需要使用token登陆，token记录在本地记事录 //build.sh #!/bin/bash hugo --theme=the-roots-home --baseUrl=&amp;#34;https://gyk19950104.github.io&amp;#34; --buildDrafts cd public git add . git commit -m &amp;#39;+1&amp;#39; git remote add origin https://github.</description>
+    </item>
+    
+  </channel>
+</rss>

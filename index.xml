@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gyk&#39;s blog</title>
+    <link>https://gyk19950104.github.io/</link>
+    <description>Recent content on gyk&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 22 Feb 2022 23:54:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://gyk19950104.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>4.常用maven</title>
+      <link>https://gyk19950104.github.io/book/4.%E5%B8%B8%E7%94%A8maven/</link>
+      <pubDate>Tue, 22 Feb 2022 23:54:24 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/book/4.%E5%B8%B8%E7%94%A8maven/</guid>
+      <description>1.mybatis-spring &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt; &amp;lt;parent&amp;gt; &amp;lt;artifactId&amp;gt;spring-study&amp;lt;/artifactId&amp;gt; &amp;lt;groupId&amp;gt;org.example&amp;lt;/groupId&amp;gt; &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;/parent&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;artifactId&amp;gt;spring-mybatis&amp;lt;/artifactId&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;4.12&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.1.47&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.5.9&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-webmvc&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.3.15&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-jdbc&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.3.16&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.aspectj&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;aspectjweaver&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.9.8&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis-spring&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.0.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.projectlombok&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;lombok&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.18.22&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;log4j&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;log4j&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.2.17&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;/project&amp;gt; 2.mybatis-config.xml &amp;lt;?xml version=&amp;#34;1.</description>
+    </item>
+    
+    <item>
+      <title>9.autojs脚本</title>
+      <link>https://gyk19950104.github.io/skill/9.autojs/</link>
+      <pubDate>Fri, 18 Feb 2022 04:19:44 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/skill/9.autojs/</guid>
+      <description>1.mac搭建环境 ====================下载软件=======================
+ 1.下载模拟器 https://mumu.163.com/mac/index.html 2.下载编辑器 https://code.visualstudio.com/ 3.下载插件 Auto.js-Pro-Ext 4.下载autojs https://pro.autojs.org/ 5.申请坚果云账号  ====================连接步骤=======================
+ 1.在模拟器的autojs中连接电脑-客户端模式中输入电脑ip地址 2.编写代码 3.在编辑器中command + shift + p调出命令窗口输入autojs保存到指定设备 4.在模拟器的autojs中下拉刷新找到脚本运行  2.热更新原理 ======================热更新============================
+ 1.nodemon monitor.js后会自动监控源码main.js,发生改变后自动上传到坚果云 2.将热更新代码写入main.js，连接模拟器打包文件生成apk 3.每次修改代码后保存，视图自动更新  // 从坚果云下载脚本并执行 const CONFIG = { &amp;#34;path&amp;#34;: &amp;#34;热更新/&amp;#34;, &amp;#34;scriptName&amp;#34;:&amp;#34;main.js&amp;#34;, &amp;#34;user&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;key&amp;#34;: &amp;#34;&amp;#34; } //定时下载脚本比对更新执行 let prevContent=&amp;#34;&amp;#34;; let currContent=&amp;#34;&amp;#34;; setInterval(() =&amp;gt; { try { http.__okhttp__.setTimeout(20000); let currContent = http.get(&amp;#39;http://dav.jianguoyun.com/dav/&amp;#39;+CONFIG.path+CONFIG.scriptName, { headers: { &amp;#34;Authorization&amp;#34;: &amp;#34;Basic &amp;#34; + java.lang.String(android.util.Base64.encode(java.lang.String(CONFIG.user +&amp;#39;:&amp;#39; + CONFIG.</description>
+    </item>
+    
+    <item>
+      <title>2.算法</title>
+      <link>https://gyk19950104.github.io/cs/2.%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Thu, 17 Feb 2022 17:19:47 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/cs/2.%E7%AE%97%E6%B3%95/</guid>
+      <description>1.算法简介 2.选择排序 </description>
+    </item>
+    
+    <item>
+      <title>10.spring</title>
+      <link>https://gyk19950104.github.io/backend/10.spring/</link>
+      <pubDate>Thu, 17 Feb 2022 01:53:32 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/backend/10.spring/</guid>
+      <description>===spring简介===｜===spring简介===｜===spring简介===
+https://docs.spring.io/spring-framework/docs/5.2.0.RELEASE/spring-framework-reference/
+  spring是容器，支持IOC(控制反转)和AOP(面向切面编程)
+  控制反转：对象的创建和依赖关系被解耦交给第三方控制(程序由spring容器创建管理装配)而非程序本身控制(程序由程序员创建管理装配)
+  依赖注入(DI):它是实现IOC的方式，所有bean对象的创建都依赖容器，其属性注入赋值也都由容器实现，具体有构造器注入(constructor-arg)，set注入(基本/引用)和第三方注入(p/c) 等形式
+  spring使用｜spring使用｜spring使用｜spring使用
+1.引入spring包
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;groupId&amp;gt;org.example&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-study&amp;lt;/artifactId&amp;gt; &amp;lt;packaging&amp;gt;pom&amp;lt;/packaging&amp;gt; &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;modules&amp;gt; &amp;lt;module&amp;gt;spring-01&amp;lt;/module&amp;gt; &amp;lt;/modules&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-webmvc&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.3.15&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;/project&amp;gt; 2.编写pojo实体类
+package wiki.mrx.pojo; public class Hello { private String str; public String getStr() { return str; } public void setStr(String str) { this.str = str; } @Override public String toString() { return &amp;#34;Hello{&amp;#34; + &amp;#34;str=&amp;#39;&amp;#34; + str + &amp;#39;\&amp;#39;&amp;#39; + &amp;#39;}&amp;#39;; } } 3.</description>
+    </item>
+    
+    <item>
+      <title>mybatis</title>
+      <link>https://gyk19950104.github.io/backend/9.mybatis/</link>
+      <pubDate>Wed, 16 Feb 2022 19:58:49 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/backend/9.mybatis/</guid>
+      <description>mybatis简介|mybatis简介|mybatis简介|mybatis简介|mybatis简介|
+mybatis是持久层框架，免除了 JDBC 代码以及设置参数和获取结果集的工作，通过XML 或注解来映射为数据库中的记录，MyBatis有个 Resources的工具类帮助获取配置文件内容，获取顺序为：
+ 1.mybatis-config.xml中的configuration &amp;mdash;&amp;ndash;&amp;gt; 配置文件 2.SqlSessionFactoryBuilder &amp;mdash;&amp;ndash;&amp;gt; 读取配置的类 3.SqlSessionFactory&amp;mdash;&amp;ndash;&amp;gt; 创建SqlSession的工厂类 4.SqlSession&amp;mdash;&amp;ndash;&amp;gt; 包含了执行sql的所有方法  ===增删改查===| ===增删改查===| ===增删改查===| ===增删改查===|
+CREATE DATABASE `mybatis`; USE `mybatis`; CREATE TABLE `user`( `id` INT(20) NOT NULL PRIMARY KEY, `name` VARCHAR(30) DEFAULT NULL, `pwd` VARCHAR(30) DEFAULT NULL )ENGINE = INNODB DEFAULT CHARSET=utf8; INSERT INTO `user`(`id`,`name`,`pwd`) VALUES (1,&amp;#34;sss&amp;#34;,&amp;#34;111111&amp;#34;), (2,&amp;#34;qq&amp;#34;,&amp;#34;134111&amp;#34;), (3,&amp;#34;rrrr&amp;#34;,&amp;#34;11111441&amp;#34;), (4,&amp;#34;ddd&amp;#34;,&amp;#34;11321111&amp;#34;); SELECT * from `user`; 新建无模版的maven项目，删除src将其作为主工程，导入jar包
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt; &amp;lt;modelVersion&amp;gt;4.</description>
+    </item>
+    
+    <item>
+      <title>公众号开发</title>
+      <link>https://gyk19950104.github.io/frontend/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Mon, 14 Feb 2022 04:55:53 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/frontend/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/</guid>
+      <description>1.简介 1.每个用户针对每个公众号会产生一个安全的OpenID 2.一个用户虽然对多个公众号和应用有多个不同的OpenID，但他对所有这些同一开放平台账号下的公众号和应用，只有一个UnionID 3.在申请到认证公众号之前，申请一个接口测试号，立即开始接口测试开发 4.每个接口都有每日接口调用频次限制 5.公众平台以access_token为接口调用凭据，它在2小时内有效，1天内获取次数有限 6.公众平台接口调用仅支持80端口 7.公众号主要通过公众号消息会话 公众号内网页来为用户提供服务 8.公众号消息会话：公众号是以微信用户的一个联系人形式存在的，消息会话是公众号与用户交互的基础 9.消息服务的类型：群发消息，被动回复消息(加解密)，客服消息，模板消息 10.公众号内网页：获取用户的基本信息，微信JS-SDK EncodingAESKey: ZroCcwPJ2wVUemo94iPc8DJHiEXi3lHcJ3aXKDwUI2r 2.步骤 1.申请自己服务器，搭建web服务，申请公众号，在微信公众号平台的设置与开发-基本配置添加url(开发者ip)，token(验证开发者)和EncodingAESKey(消息加密密钥) 2.在微信公众号平台填好开发者信息后点击提交，微信服务器会向开发者服务器发送signature，timestamp，nonce，开发者用token, timestamp, nonce组合加密生成hashcode，对比微信发来的signature和自己生成的hashcode是否一致，如果一致返回echostr到微信服务器 3.用户发送消息到公众号，微信服务器将消息包装成xml格式发往开发者服务器，开发者服务器解析后发回内容到微信服务器，微信服务器解析后发给用户 微信文档：https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Getting_Started_Guide.html
+centos防火墙：https://blog.csdn.net/s_p_j/article/details/80979450 https://blog.csdn.net/Linda_Lindaaaa/article/details/88836146</description>
+    </item>
+    
+    <item>
+      <title>3.路线</title>
+      <link>https://gyk19950104.github.io/book/3.%E8%B7%AF%E7%BA%BF/</link>
+      <pubDate>Tue, 08 Feb 2022 12:50:27 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/book/3.%E8%B7%AF%E7%BA%BF/</guid>
+      <description>学习路线整理 具体知识学习 熟练程度累积 项目实战检测
+1.html html是Tim Berners-Lee1990年创造的标记语言
+HTML 1.0——1993年6月——IETF草案 HTML 2.0——1995年1 1月——RFC 1866 HTML 3.2——1997年1月——W3C标准 HTML 4.0——1997年12月——W3C标准 HTML 5.0——2008年5月——W3C标准 1️⃣标准：https://html.spec.whatwg.org/multipage/
+2️⃣菜鸟：https://www.runoob.com/html/html-tutorial.html
+3️⃣w3cschool：https://www.w3school.com.cn/html/index.asp
+2.css css是w3c在1996年创造的层叠样式表
+CSS 1.0——1996年12月——W3C标准 CSS 2.0——1998年5月——W3C标准 CSS 3.0——2001年5月——W3C标准 1️⃣标准：https://www.w3.org/Style/CSS/
+2️⃣菜鸟：https://m.runoob.com/css/css-tutorial.html
+3️⃣w3cschool：https://www.w3school.com.cn/css/css_jianjie.asp
+3.JavaScript JavaScript是Brendan Eich在1995年创造的解释型编程语言（运行时加载代码并解译），它包含ecmascript，dom和bom三部分
+JS1.0——1996年——ES1 JS1.3——1998年——ES2 JS1.5——1999年——ES3 JS1.8——2009年——ES5 ES2015—2015年——ES6 ES2016—2016年——ES7 ES2017—2017年——ES8 ES2018—2018年——ES9 ES2019—2019年——ES10 ES2020—2020年——ES11 ES2021—2021年——ES12 1️⃣标准：https://www.ecma-international.org/publications-and-standards/standards/ecma-262/
+2️⃣菜鸟：https://m.runoob.com/js/js-tutorial.html
+3️⃣w3cschool：https://www.w3school.com.cn/js/index.asp
+4️⃣阮一峰：http://javascript.ruanyifeng.com
+4.jqueryjs jquery是一个 用于简化dom操作的js函数库
+1️⃣官网：https://jquery.com/
+5.vuejs vuejs是数据驱动视图的mvvm框架
+1️⃣官网：https://cn.vuejs.org/index.html
+6.reactjs reactjs是数据驱动视图的mvvm框架
+1️⃣官网：https://react.docschina.org/
+7.angularjs angularjs是数据驱动视图的mvvm框架
+1️⃣官网：https://www.angularjs.net.cn/</description>
+    </item>
+    
+    <item>
+      <title>8.javaweb</title>
+      <link>https://gyk19950104.github.io/backend/8.javaweb/</link>
+      <pubDate>Fri, 21 Jan 2022 01:17:00 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/backend/8.javaweb/</guid>
+      <description>1.下载完全版idea 1.1 下载软件 idea软件：
+链接: https://pan.baidu.com/s/1OH0ybMuGvhkXie5EJ10uEg 密码: vjli
+破解包：
+链接: https://pan.baidu.com/s/1cR7eZSyx7dKz3R_Ei29_mg 密码: mj88
+1.2 使用方法 1.安装运行 idea，在弹出的注册界面，选择 Evaluate for free，点击 Evaluate 试用软件
+2.破解文件夹中的 jetbrains-agent.jar 文件拖动到软件内，然后点击 Restart 重启软件
+3.重启后，弹出激活方式，选择 Activation code，复制破解文件 Activation code，激活重启
+4.重启软件，在 Get Help 中点击 About
+2.新建maven项目 2.1 有模版 2.2 无模版 3.tomcat服务器 3.1环境变量 3.2 idea中配置 4.servlet项目 4.1 步骤   1.新建无模版maven项目
+  2.删除src目录，在pom.xml引入javax.servlet和javax.servlet.jsp依赖
+  &amp;lt;dependencies&amp;gt; &amp;lt;!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;javax.servlet&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;javax.servlet-api&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;4.0.1&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;provided&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!-- https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;javax.</description>
+    </item>
+    
+    <item>
+      <title>体彩</title>
+      <link>https://gyk19950104.github.io/skill/8.%E4%BD%93%E5%BD%A9/</link>
+      <pubDate>Thu, 20 Jan 2022 03:26:23 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/skill/8.%E4%BD%93%E5%BD%A9/</guid>
+      <description>1.大乐透基础 1.2007.05.28国家体育总局发行，每周1，3，6的20:25开奖 2.兑奖时间是60天，节假日顺延 3. 1万以下不交税凭票在销售点兑换，1w以上交税凭票和身份证在省级体彩机构兑奖 4.单注封顶可中500万 5.投注仅对浮动奖有效，为0.8单注奖金 6.彩票玷污损坏后不能兑奖 2.大乐透选注  1.基本投注  前区(01-35选5) 后区(01-12选2)   2.复式投注  前区(01-35选6/6个以上) 后区(01-12选3/3个以上)   3.胆拖投注  前区  胆码拖码个数共6/6个以上 胆码:01-35选1到4个 拖码:01-35选除胆码的数   后区  胆码: 01-12选1个 拖码: 01-12选非胆码的2/2个以上的数      3.大乐透奖金 一等奖：5+2 &amp;lt;1亿: 当期奖金-0.22固定奖金-奖池累积 1-8亿: 当期奖金-0.58固定奖金-奖池累积 当期总额-0.2固定总额 &amp;gt;8亿: 当期奖金-0.28固定奖金-奖池累积 当期总额-0.5固定总额 二等奖：5+1 👉当期奖金-0.22固定奖金 三等奖：5+0 👉1万元 四等奖：4+2 👉3000元 五等奖：4+1 👉300元 六等奖：3+2👉200元 七等奖：4+0👉100元 八等奖：3+1，2+2👉15元 九等奖：3+0，2+1，1+2，0+2👉5元 4.大乐透数据 https://m.lottery.gov.cn/mkjdlt/</description>
+    </item>
+    
+    <item>
+      <title>欧姆龙plc</title>
+      <link>https://gyk19950104.github.io/skill/7.%E6%AC%A7%E5%A7%86%E9%BE%99plc/</link>
+      <pubDate>Thu, 20 Jan 2022 03:17:45 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/skill/7.%E6%AC%A7%E5%A7%86%E9%BE%99plc/</guid>
+      <description>1.欧姆龙plc </description>
+    </item>
+    
+    <item>
+      <title>乐高机械组</title>
+      <link>https://gyk19950104.github.io/skill/6.%E4%B9%90%E9%AB%98/</link>
+      <pubDate>Thu, 20 Jan 2022 03:17:28 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/skill/6.%E4%B9%90%E9%AB%98/</guid>
+      <description>1.乐高机械组 </description>
+    </item>
+    
+    <item>
+      <title>React_native</title>
+      <link>https://gyk19950104.github.io/frontend/react_native/</link>
+      <pubDate>Thu, 20 Jan 2022 03:10:22 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/frontend/react_native/</guid>
+      <description>1.Mac启动react-native项目 ======================启动安卓✅============== 1.安装Nodev12 以上、JDK1.8 和 Android Studio（Android 10 (Q)sdk/ANDROID_HOME） 2.创建项目npx react-native init AwesomeProject、 3.创建虚拟机(机型和系统都要选好) 4.编译运行yarn react-native run-android ======================启动苹果✅================ 1.安装Node12 以上、Watchman、Xcode模拟器13版本 和 CocoaPods代理。 2.创建项目npx react-native init AwesomeProject 3.编译运行yarn react-native run-ios需要先新开shell运行yarn start ======================正常流程================ 1.创建项目npx react-native init JustCodeDict 2.开启重启监控yarn start 3.把profile的use_flipper! 修改为 use_flipper!({ &amp;#39;Flipper-Folly&amp;#39; =&amp;gt; &amp;#39;2.3.0&amp;#39; })后删lock文件后重新pod install 4.开始编译yarn iOS ======================基础=============== React Native 是一个使用react和应用平台的原生功能来构建 Android 和 iOS 应用的开源框架 React Native 中的尺寸都是无单位的 Platform.OS import { StyleSheet, Image, View } from &amp;#39;react-native&amp;#39;; 1.添加css样式。 &amp;lt;View style={styles.container}&amp;gt; &amp;lt;/View&amp;gt; const styles = StyleSheet.</description>
+    </item>
+    
+    <item>
+      <title>mac技巧</title>
+      <link>https://gyk19950104.github.io/skill/5.mac%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Thu, 20 Jan 2022 02:53:11 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/skill/5.mac%E6%8A%80%E5%B7%A7/</guid>
+      <description>1.终端 0.iTerm2是默认终端的替代品 oh-my-zsh是为了简化zsh的配置的shell
+1.查看所有shell
+cat /etc/shells 2.默认shell
+新版zsh默认zsh：echo $SHELL 更换默认shell：chsh -s /bin/zsh 3.配置文件
+所有命令失效：export PATH=/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11R6/bin - a. /etc/profile - b. /etc/paths - c. ~/.bash_profile - d. ~/.bash_login - e. ~/.profile - f. ~/.bashrc(启动终端自动加载) 2.配置环境变量 Mac的usr/bin目录是不允许增删文件的，可以通过向usr/local/bin增删文件来实现在终端里直接运行
+1️⃣移动软件 sudo mv -f 文件名 /usr/local 2️⃣添加变量 sudo vim /etc/profile # maven环境变 MAVEN_HOME=&amp;#34;/usr/local/apache-maven-3.8.4&amp;#34; export MAVEN_HOME export PATH=${PATH}:${MAVEN_HOME}/bin source /etc/profile 3.快捷键 1.截图快捷键：Command + Shift + 4 4.常用命令 改主机名: hostnamectl set-hostname npm换源: npm config set registry https://registry.npm.taobao.org 增权：Chmod 755 5.</description>
+    </item>
+    
+    <item>
+      <title>git教程</title>
+      <link>https://gyk19950104.github.io/course/2.git/</link>
+      <pubDate>Thu, 13 Jan 2022 14:46:18 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/course/2.git/</guid>
+      <description>1.版本控制 1.1 简介 版本控制系统(DVCS)：一种记录并可以回溯文件的系统
+它经历了三个阶段：
+ 本地版本控制系统 集中式版本控制系统 分布式版本控制系统  最常用最简单的版本控制是通过复制完整文件制作副本，它有很多缺点：
+ 整个复制保存手动完成，耗费大量时间 需要自定义文件命名规则，体现不同版本文件差异 不便于协同工作  1.2 差异 1.本 地：保存整体文件，通过补丁（指文件修订前后的变化）对比来计算各版本文件内容在使用这种控制系统时，它会自动比较前后版本的区别，将差异的部分做成补丁保存，当需要回溯某个版本时就从File文件中找出它关联的文件之间的补丁经过计算生成需要回溯的文件，但比较前后变化是非常耗时的操作，并且这些都是在本地操作系统完成的内容，如果是团队合作，那应该怎样实现协同版本的控制系统，于是集中化的版本控制系统就出现了
+2.集中化：为了让不同系统上的开发者协同工作，集中化的版本控制系统会设立单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。但它的缺点是使用时必须要联网，中央服务器可能单点故障，比如服务器宕机，磁盘损坏等，会有丢失历史更新记录的风险。
+​ 其实集中式版本控制系统最大的不足就是中央服务器只有1个，服务器出问题就会导致一系列问题，你可能会说，中央服务器有问题，那成员之间交换代码不就行了么，为什么非得去中央服务器拉取，这是因为本地成员拉取的只是当前版本的代码，而关于版本的变更信息并没有拉取，最完整的内容只保存在中央服务器，从本质上来说是有丢失数据的可能存在，于是人们又研发了分布式的版本控制系统
+3.分布式：在分布式的版本控制系统中，客户端并不只提取最新版本的文件快照， 而是把代码仓库完整地镜像下来，包括完整的历史录。这么一来，任何一处协同工作用的服务器发生故障，事后都可以用任何一个镜像出来的本地仓库恢复。 因为每一次的克隆操作，实际上都是一次对代码仓库的完整备份。git作为分布式版本控制系统，每个拥有git客户端的地方都是中央服务器，它们都可以交换所有变更信息，它最大限度的保护了我们的数据安全。
+这节我们学习了：
+ 什么是版本控制系统 版本控制系统的三大演变 分布式为什么优于本地存储和集中式  大家要确保能够回答这些问题，这对于我们理解版本控制系统非常重要
+2.git的下载 2.1 下载 第一节课已经了解版本控制系统的演变，可以说git作为分布式的版本控制系统，相比于本地
+数据库模式和集中控制系统具有无法取代的安全性，所以我们来学习一下git的详细使用，最
+权威的资料应该就是官网的资料:
+官网：https://git-scm.com
+文档：https://gitee.com/progit/index.html
+git是一个能快速高效处理大小项目的，免费的，开源的，分布式版本控制系统，git易于学习， 它体积小却性能高，因特色的本地分支，便利的暂存区和多样化的工作流等特色战胜了Subversion, CVS, Perforce, and ClearCase等一系列SCM工具，它直接记录快照，而非差异比较，并不是 复制了所有的文件数据块，而是复制了文件的数据块描述结构序列。 这是git官网对它的描述，不过这属于git特性，是下节课要说的内容，这节课先来安装设置一
+下git：
+ 源代码安装 预编译安装包  1️⃣源代码安装，能获得最新的版本, 这里只讲解linux下的源码安装
+👉linux(ubuntu)：依赖工具+源代码+编译安装
+换源：https://www.jb51.net/article/185775.htm 下载编译工具：apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev 报错：Some packages could not be installed.</description>
+    </item>
+    
+    <item>
+      <title>Mrx</title>
+      <link>https://gyk19950104.github.io/video/mrx/</link>
+      <pubDate>Sun, 09 Jan 2022 04:59:55 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/video/mrx/</guid>
+      <description>http://r5exz302v.hn-bkt.clouddn.com/%E9%BB%98%202022-01-01%2006.35.53.mp4</description>
+    </item>
+    
+    <item>
+      <title>4.git技巧</title>
+      <link>https://gyk19950104.github.io/skill/4.git%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Sat, 20 Nov 2021 03:33:29 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/skill/4.git%E6%8A%80%E5%B7%A7/</guid>
+      <description>0.理解 无法推送时，先新建后删除
+//新建代理 git config --global http.proxy http://127.0.0.1:1080 git config --global https.proxy http://127.0.0.1:1080 //删除代理 git config --global --unset http.proxy git config --global --unset https.proxy 1.版本控制系统：可以回溯文件修改内容与历史记录的软件 2.分布式控制系统会复制所有记录，不止当前版本的文件，包括所有修改历史 3.对于任何一个文件，在 Git 内都只有三种状态： 👉已提交（committed）：该文件已经被安全地保存在本地数据库中了 👉已修改（modified）：修改了某个文件 👉已暂存（staged）：已修改的文件放在下次提交时要保存的清单中 4.Git 分支，本质是一个指向 commit 对象(1. 指向暂存内容快照的指针2. 本次提交的作者等相关附属信息 3. 零个或多个指向该提交对象的父对象指针)的可变指针，一个包含commit对象 校验和（40 个字符长度 SHA-1 字串）的文件 它默认名为master，在每次提交的时候都会自动向前移动，永远指向最后一次提交对象的 master 分支 git branch 会创建一个新的分支指针，它也指向最后一次提交对象，但并不会自动切换过去 git checkout会将HEAD指针(指向正在工作中的本地分支的指针)修改为创建好的新分支指针， git merge 会用两个分支的末端和它们共同祖先进行三方合并计算结果重新做一个新的快照， 自动创建一个指向它的提交对象作为最终节点 git rebase 变基是把在一个分支里提交的改变移到另一个分支里重放一遍。 它的原理是回到两个分支最近的共同祖先，根据当前分支(fix)后续的历次提交对象 生成一系列文件补丁，然后以基底分支(master)最后一个 提交对象为新的出发点，逐个应用之前准备好的补丁文件，最后会生成一个新的 合并提交对象，使它成为 master 分支的最后commit对象，它可以得到一个在 远程分支上干净应用的补丁，但一旦分支中的提交对象发布到公共仓库，就千万 不要对该分支进行衍合操作，因为rebase会丢弃需要合并的信息，当别人提前 获取了未丢弃的合并信息继续开发时获得rebase后的代码会重复提交 1.密钥 首次下载git后需要设置</description>
+    </item>
+    
+    <item>
+      <title>1.jquery源码分析</title>
+      <link>https://gyk19950104.github.io/course/1.jquery%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/</link>
+      <pubDate>Sun, 07 Nov 2021 14:23:42 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/course/1.jquery%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/</guid>
+      <description>1.匿名函数自执行 jquery2.0.3中，源码首先是一个自执行的匿名函数, 匿名函数就是没有函数名的函数，目的是为了保护变量不被污染,如下：
+(function(window,undefined){ //具体源码  })(window); 要理解它需要先来了解js的函数命名：
+js函数有2种命名方式：声明式和函数表达式
+ 声明式：function demo(){ //会被解释器优先编译 } 函数表达式： let demo = function(){ //解释器逐行解释 }  声明式：不论在哪里调用demo都能正常输出a，因为在开始执行前声明的函数都被提升了
+demo(); function demo(){ console.log(&amp;#39;a&amp;#39;) } 函数表达式：必须要在表达式后才能调用demo，因为解释器是逐行执行
+demo(); let demo = function(){ console.log(&amp;#39;a&amp;#39;) } 比对一下就可知：
+(function(){ }) () | | demo () 那为什么不写成：function(){ }()呢？答案是语法里并不支持这么做，最简的方式就是加小括号
+(function(){ })() 2.封装好的功能暴露到全局 采用匿名函数自执行可以很好的保护变量不受污染，但也需要把写好的功能暴露出去提供使用,我们平常使用时：
+$()或者jQuery() 在jquery2.0.3中，它是将其挂载到了window全局对象来实现的
+(function(window,undefined){ if ( typeof window === &amp;#34;object&amp;#34; &amp;amp;&amp;amp; typeof window.document === &amp;#34;object&amp;#34; ) { window.jQuery = window.$ = jQuery; } })(window); 3.</description>
+    </item>
+    
+    <item>
+      <title>7.数据库</title>
+      <link>https://gyk19950104.github.io/backend/7.%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <pubDate>Thu, 10 Jun 2021 20:03:59 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/backend/7.%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <description>==数据库分类==|====数据库分类==|====数据库分类==|====数据库分类==|
+ 关系数据库：oracle，mysql 非关系数据库：mongodb，redis  基本概念|基本概念|基本概念|基本概念|基本概念|基本概念|基本概念|
+ 1.DQL数据查询语句，DDL数据定义语言，DCL数据控制语言，TCL事务控制语言。 2.主键：可查询到唯一对应的数据，是非空且唯一的,如果是整数类型则需要自增。 3.非外键约束：对单表字段的限定条件 4.外键约束：多表间有联系的字段添加限制条件,student表某字段可以是class表外键 5.级联操作：操作主表时影响从表的外键信息 6.事务：多条sql命令完成一件事，具有原子性，一致性，隔离性，持久性 7.脏读：一个事务读取了另一个没提交的事务 8.幻读：同一事务中，读取了其他插入的数据，导致前后结果不一致  ===常用sql命令=== | ===常用sql命令=== | ===常用sql命令=== |===常用sql命令=== |
+数据库：登陆，查看，增删改查，事务； //1.登陆数据库 mysql -h localhost -u root -p //2.查看信息 show databases;//显示所有数据库 use 数据库名字;//进入该数据库 show tables;//显示该数据库下的锁哟表 desc t_student;//列出该表的所有字段 select * from t_student;//列出该表的所有数据 show create table t_student;//显示创建该字段的sql语句 exit;或者\q;//退出数据库 //3.操作数据 ## 创建表格 create table t_student( sno int(6) primary key auto_increment, sname varchar(5) not null, sex char(1) default &amp;#39;男&amp;#39; check(sex=&amp;#39;男&amp;#39;|| sex=&amp;#39;女&amp;#39;), sage int(3) check(sage&amp;gt;=18 and sage&amp;lt;=50), enterdate date, classname varchar(10), email varchar(15) unique ); ## 插入数据 insert into t_student values(); alter table t_student add score double(5,2) first/after; alter table t_student drop score; ## 修改数据 update t_student set sex = &amp;#39;女&amp;#39; where sno = 1; ## 删除数据 delete from t_student where sno=1; drop table t_student; ## 外键 ## 班级表 create table t_class( cno int(6) primary key auto_increment, cname varchar(10) not null, room char(4) ); insert into t_class values(null,&amp;#39;java001&amp;#39;,&amp;#39;r803&amp;#39;); insert into t_class values(null,&amp;#39;java002&amp;#39;,&amp;#39;r416&amp;#39;); insert into t_class values(null,&amp;#39;java002&amp;#39;,&amp;#39;r103&amp;#39;); ## 学生表 create table t_student( sno int(6) primary key auto_increment, sname varchar(5) not null, cno int(4), constraint fk_stu_cno foreign key(cno) references t_class(cno) ); insert into t_student values(null,&amp;#39;章三&amp;#39;,1),(null,&amp;#39;里斯&amp;#39;,1),(null,&amp;#39;王武&amp;#39;,2); ## 事务 commit ===JDBC=== | ===JDBC=== | ===JDBC=== | ===JDBC=== | ===JDBC=== |</description>
+    </item>
+    
+    <item>
+      <title>6.java杂项</title>
+      <link>https://gyk19950104.github.io/backend/6.java%E6%9D%82%E9%A1%B9/</link>
+      <pubDate>Tue, 01 Jun 2021 17:40:00 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/backend/6.java%E6%9D%82%E9%A1%B9/</guid>
+      <description>1.泛型 泛型：检测或设置引用数据类型
+ 在集合中加泛型可以规定存入集合的数据类型，便于后续遍历 在类中加泛型可以后期传入具体的数据类型，而不必提前规定  package wiki.mrx.www; class Testa&amp;lt;E&amp;gt; { public void test(E m){ } } public class Test { public static void main(String[] args) { Testa&amp;lt;String&amp;gt; t = new Testa&amp;lt;&amp;gt;(); t.test(&amp;#34;test&amp;#34;); } } 2.异常 异常都继承于Throwable类，具体分类如下：
+ Error Exception  检查异常 运行时异常 可以使用如下结构处理异常：    try{ }catch (Exception e){ e.printStackTrace(); }finally { } 3.注解 注解Annotation：代码编译时会被读取并自动操作标记好的内容
+JDK内置了3个注解：@Override重写，@Deprecated过时标记 @SuppressWarnings抑制警告
+jdk5.0提供了4个源注解：Retention生命周期 Target作用目标 Documented文档 Inherited继承
+4.枚举 枚举类enum：可创建的对象个数是有限的，确定的
+package wiki.mrx; public class Season { private final String seasonName; private final String seasonDesc; private Season(String seasonName, String seasonDesc) { this.</description>
+    </item>
+    
+    <item>
+      <title>5。java集合容器</title>
+      <link>https://gyk19950104.github.io/backend/5.java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/</link>
+      <pubDate>Tue, 01 Jun 2021 17:39:34 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/backend/5.java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/</guid>
+      <description>1.基础知识 算法：解决问题的方法，可用时间复杂度，空间复杂度来评判效率
+数据结构：组织管理数据
+逻辑上表现为：线性表，图，树，堆，栈
+物理上表现为：紧密顺序结构，跳转链式结构
+集合用于存储引用类型数据，具体分为：
+ Collection接口  List子接口  ArrayList实现类 Vector实现类 LinkedList实现类   Set子接口  HashSet实现类  LinkedHashSet实现类   TreeSet实现类     Map接口  HashMap TreeMap    2.Collection接口 package wiki.mrx.www; import java.util.ArrayList; import java.util.Collection; import java.util.Iterator; public class TestCollection { public static void main(String[] args) { //创建对象  Collection col = new ArrayList(); //增  col.add(18); col.add(18); col.add(18); col.add(18); //增强型for循环遍历  for (Object o: col) { System.</description>
+    </item>
+    
+    <item>
+      <title>4.java网络编程</title>
+      <link>https://gyk19950104.github.io/backend/4.java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Tue, 01 Jun 2021 17:37:49 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/backend/4.java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</guid>
+      <description>1.基础知识 网络互联需要ip和端口，传输时需要遵守一定的规则，这个规则就是网络传输协议，即四层传输协议：
+ 应用层http 传输层udp,tcp 网络层ip 链路层  2.tcp协议 三次握手：客户端与服务器建立连接
+四次挥手：客户端与服务器断开连接
+//客户端 package wiki.mrx.www; import java.io.*; import java.net.Socket; import java.util.Scanner; public class TestClient { public static void main(String[] args){ System.out.println(&amp;#34;客户端启动了&amp;#34;); //1.创建套接字，指定ip和端口  Socket s = null; OutputStream os = null; ObjectOutputStream oos = null; InputStream is = null; DataInputStream dis = null; try { s = new Socket(&amp;#34;192.168.18.5&amp;#34;,8888); //录入账号密码  Scanner sc = new Scanner(System.in); System.out.println(&amp;#34;请录入账号：&amp;#34;); String name = sc.next(); System.</description>
+    </item>
+    
+    <item>
+      <title>3.javaio流</title>
+      <link>https://gyk19950104.github.io/backend/3.javaio%E6%B5%81/</link>
+      <pubDate>Tue, 01 Jun 2021 17:37:33 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/backend/3.javaio%E6%B5%81/</guid>
+      <description>1.文件外 java将文件抽象为file类可以操作盘符上的文件
+package wiki.mrx.www; import java.io.File; public class FileTest { public static void main(String[] args) { File f = new File(&amp;#34;/Users/gyk/desktop/test.txt&amp;#34;); System.out.println(f.canExecute() ); System.out.println(f.canRead()); System.out.println(f.getName()); System.out.println(f.canWrite()); System.out.println(f.exists()); System.out.println(f.getAbsoluteFile()); System.out.println(f.getAbsolutePath()); System.out.println(f.getParentFile()); System.out.println(f.getPath()); System.out.println(f.isDirectory()); System.out.println(f.isHidden()); System.out.println(f.lastModified()); System.out.println(f.length()); System.out.println(f.list()); } } 2.文件内 文件的本质是二进制的数据，可以把他们想像成水源和管道，他们都有进有出，根据传输的用途分为：
+  处理文本文件的字符流
+  处理非文本文件的字节流
+  减少硬盘操作次数的处理流
+  转换流
+  数据流操作基本数据类型和string
+  对象流操作引用类型数据
+  ===========================================
+处理文本文件的字符流
+用FileReader和FileWriter完成文本文件复制,缓冲数组 ===========================================
+//用FileReader和FileWriter完成文本文件复制 package wiki.mrx.www; import java.io.*; public class FileTest { public static void main(String[] args) throws IOException { //1.</description>
+    </item>
+    
+    <item>
+      <title>Java多线程</title>
+      <link>https://gyk19950104.github.io/backend/2.java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
+      <pubDate>Tue, 01 Jun 2021 17:22:28 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/backend/2.java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
+      <description>1.多线程 多线程就是指多核CPU同时干多件事 在java中开启多线程有三种方法： 继承Thread类， 实现Runnable接口 实现Callable接口 但Thread因为是类的继承，所以有单继承的弊端， Runnable是接口实现，可以进行多继承， 使用时implements实现接口重写run方法，但无返回值， Callable是接口实现，可以进行多继承，也有返回值， 根据不同情况，合理选择使用Runnable和Callable接口 开启多线程后，由于多个线程执行顺序是由CPU自行调度， 这种不确定性会引起执行结果的不稳定性，除执行顺序外， 还可能出现多个线程同时操作同一份资源的情况，这会导 致资源不安全，所以需要线程同步，它的本质是一种等待 的机制，在JDK5之前，我们可以通过synchronized方 法或者synchronized同步块来对资源进行隐式加锁，保 证安全，在JDK5之后，我们可以通过lock锁机制来显式加 锁，保证安全，一般少量代码用synchronized，大量代码 用lock锁 👉synchronized方法： 可以通过private关键字来保证数据对象只能被方法访问， 所以只需要对这个方法提出一套机制，这套机制就是 synchronized 关键字，即synchronized方法 👉synchronized同步块： 有时并不需要对数据添加private关键字 ，而是在代码 中直接使用synchronized( Obj ){ }同步块，obj是 类似于上面的私有数据对象 👉lock锁机制： 多线程编程时同步队列会出现很多常见涉及到锁的情形， 在java中将这些多线程常见情形抽象封装成开箱即用的 工具包，叫做JUC，常见的JUC.locks，JUC.automic 等，它包含了很多接口和实现类，可以拿来即用 ===========================================
+2.1创建：thread，runnable，callable
+===========================================
+//创建 //继承Thread类,重写run方法，新建对象后start开启线程 package wiki.mrx.www; public class TestThread extends Thread{ //主线程  public static void main(String[] args) { //创建并开启线程  TestThread t1 = new TestThread(); t1.start(); //主线程代码  for (int i=0;i&amp;lt;20;i++){ System.</description>
+    </item>
+    
+    <item>
+      <title>java面向对象</title>
+      <link>https://gyk19950104.github.io/backend/1.java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Tue, 01 Jun 2021 17:22:15 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/backend/1.java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
+      <description>先有逻辑正确的思路，剩余的是重复的实践与积累
+1.面向对象 ===========================================
+1.1 类是有属性，方法和构造器的模版，对象是实例
+===========================================
+1.2 面向对象的三大特性：
+===========================================
+ 封装：修饰符，get,set方法 继承：extends，super，源头object 多态：同一行为，不同子类有不同表现，继承，子类重写父类方法，父类引用指向子类实例  //父类 package wiki.mrx.www; public class Person { //属性  private String name; static int age; //构造器：用于初始化数据  public Person(String name, int age) { this.name = name; this.age = age; } //get方法  public String getName() { return name; } public static int getAge() { return age; } //set方法  public void setName(String name) { this.name = name; } public static void setAge(int age) { Person.</description>
+    </item>
+    
+    <item>
+      <title>黑血病毒</title>
+      <link>https://gyk19950104.github.io/work/%E9%BB%91%E8%A1%80%E7%97%85%E6%AF%92/</link>
+      <pubDate>Tue, 04 May 2021 00:45:59 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/work/%E9%BB%91%E8%A1%80%E7%97%85%E6%AF%92/</guid>
+      <description>1.游戏流程 1.进场存包，给玩家游戏背包（书/U盘/鞋套），告知玩家需要假扮成民政局人员前往慰问灾情，实际是调查黑血病毒并寻找火眼
+2.雇佣军npc搜身后将玩家关入面包车，玩家插入U盘听取密码（987）打开包中书里的密码锁，拿到手电筒，根据车四周文字方向（手提箱在树上）打开方向锁，按下按钮听取车钥匙使用方法后用车钥匙发动车，车下降后从通道进入酒店外面
+3.进入酒店外面，根据（手提箱在树上）找到箱子，拿到信箱钥匙，黑色旗子和收音机，用钥匙打开电梯旁边的信箱拿到黑色旗子摆放方法，此时开始刮风并伴有闪电，将旗子挂好后根据摆放方法得到密码（9527）打开树上鸟笼，拿到上半份几何图形，开始下雨，上半份图摆好后接水倒入水箱，对应图旁边的图形得到电梯密码（930124），进入电梯
+4.进入电梯，场控室按✅玩家进入电梯，玩家按完楼层后开始地震，结束后保安将玩家救出，将玩家带到病房发现需要喂药，保安手里有侯芳门卡，回到医生房间拿到药箱里的药回到病房给每个病人喂一颗，背景音提示火眼留下的线索在接待室，拿到后回到病房拿灯照水管得到密码（723）打开第二本书拿到U盘
+5.回到医生房间插入U盘，听到火眼用微型侦探器侦测到医生的动作，敲击蒸具后，场控室按✅美钞(需要关灯才能触发)，衣柜门内架子旋转，知道QQ和密码，登陆后知道冰箱里的蛋糕水果颜色（绿红紫黑）顺序，根据顺序打电话（4107）后冰箱右边打开
+6.从冰箱右边进入金库，场控室按✅金库灯光，玩家根据维修表拿到通道中的铁棍插入，金库中央机关旋转打开，进入电箱房间
+7.根据墙上（电箱是假，用力拉绿线）后，生化室门打开，进入后拿到ic卡刷控制台，按下播放键，播放火眼第一段视频，将合同放入碎纸机，开始第二段视频
+8.视频完后开始倒计时，玩家进入铁门，生化人表演，小木箱打开后拿到钥匙，打开旁边的门走出，等玩家跑过生化室通道栅栏后场控室按✅最后通道门，生化人掰弯钢管追出，游戏结束
+3.线索密码  1.第一本书密码：987 2.方向锁：上右左下 3.鸟笼密码：9527 4.电梯密码：930124 5.第二本书密码：723 6.QQ号码：661314/0504 7.电话号码：4107 8.电箱是假，用力拉绿线  2.控场术语 👉A区
+1.U盘插在哪里？ 各位探员，我们可以在车里驾驶座旁边寻找一下U盘插口 2.插完U盘音频没听清？ 各位探员，刚才火眼给我们留下的箱子密码是987 3.拿到手电后不知道干嘛的？ 各位探员，我们可以尝试用紫光手电寻找四周的报纸，看看有没有线索 3.看了报纸不知道什么意思 各位探员，我们有没有发现红色的字体呢，把红色的字体连成一句话的顺序，就是我们的密码。 4.不会解方向锁 各位探员，我们的方向锁每输错一次密码，要用力按两次锁头重置，就可以再次尝试了(右下上左) 5.插了钥匙后车子不降 各位可以先按动火眼留给我们的按钮，再重新尝试启动车子。 1.进入庭院后不知道干嘛 各位探员，我们还记得刚才报纸上面的那句话吗~（手提箱在树上） 2.打开手提箱之后不知道干嘛 各位探员，我们手提箱内有一个火眼留给我们的录音机，我们可以先听一下 3.听完不知道干嘛 各位探员，我们有一把酒店内部人员留给我们的钥匙，我们可以尝试寻找一下钥匙的插口 4.不知道怎么挂旗子 各位探员，我们可以根据图中所示的方式，破解密码。（7258 按照从右到左一个笑脸图案能看的出来） 5.打开鸟笼后不会解密 各位探员，我们有没有在鸟笼里发现一张酒店人员留给我们的图纸呢? 我们可以把图纸放到庭园里的一个木板上观察一下。 6.图纸放上去后不会解密 各位探员，我们木板上的线索有提到“把水注满”，把水倒入注水口，并且观察水流切割我们图纸中的图案 ，而木板左边有几个图案，对应图纸中的图案可以观察到数字密码。 （密码:930124“其中一个图案是两位密码”） 👉B区
+1.玩家进入难民房后不知道干嘛 各位探员，刚才我们走廊里的海报有提到，黑血病会使人的血液粘稠形成血栓， 我们可以寻找一下治疗血栓的药，让每位病人吃一粒。 2.喂完药不知道干嘛 各位探员，刚才火眼说他给我们的留的线索放在接待室的柜子上面，我们可以去检查一下。 3.不会解第二本书密码 各位探员，我们可以按照火眼留给我们的线索，把灯泡伸到管子里的左侧部分看看有什么线索。 （密码:732） 4.看完U盘视频不知道该干嘛 各位探员，我们可以按照视频里侯芳医生的方法，把衣柜门关紧，再把灯关掉，按照视频里的频率 用勺子敲击蒸笼。 5.敲击结束之后不知道该干嘛 各位探员，我们可以打开我们的衣柜，查看一下侯芳医生的秘密 6.打开衣柜不知道该干嘛 各位探员，我们可以从衣柜中发现侯芳医生的QQ号，不妨我们尝试登陆一下，看看能否进一步探索 到侯芳医生的秘密（账号：661314 密码:0504） 7.不知道怎么按密码 各位探员，我们可以按照QQ中的聊天记录，查看我们的蛋糕对应着的电话号码，拨打出去。（4107） 8.</description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>https://gyk19950104.github.io/frontend/react/</link>
+      <pubDate>Sun, 28 Feb 2021 00:15:17 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/frontend/react/</guid>
+      <description>1.概念  单页面应用：加载单个HTML页面和所需资源，与页面的任何交互，页面都不会重新加载 jsx：js的扩展集，每个 JSX 元素只是调用 React.createElement的语法糖 组件：分为函数组件和类组件，区别是类组件上添加了许多别的特性 钩子函数：生命周期函数，在特定时间自动触发的函数 Props：jsx传值与子组件的节点组成的对象，props 是只读的 State：组件内部的数据，只能通过setState({ })更改 react非受控组件：用非react处理数据方式处理的组件 状态提升：不同层级子组件传值 组合继承：组件通过组合堆砌而不是继承实现,实质相当于槽的概念 context：复杂组件传值 错误边界：避免出错导致应用崩溃 Ref转发：组件外选中特定的dom refdom：组件内选中特定的dom 高阶组件：传入组件输出组件，实现对组件的加强，比如redux的connect Portals：组件可以脱离父组件层级挂载在DOM树的任何位置 Profiler：任意位置的性能测试 协调： diff算法 webcomponent：w3c支持的组件化标准  2.react细节 1.组件 // 1.获取容器 const domContainer = document.getElementById(&amp;#39;root&amp;#39;); // 2.创建虚拟dom //类组件 class Hello extends React.Component { constructor(props){ super(props); this.state = {name: &amp;#39;hello,world!&amp;#39;}; } componentWillMount(){ // 不能直接修改state  // this.state = { name:&amp;#39;hello&amp;#39;};  // this.setState({ name:&amp;#39;你好&amp;#39;})  } render() { return (&amp;lt;div&amp;gt;{this.state.name}&amp;lt;/div&amp;gt;) } }; //函数组件 function World(props){ console.</description>
+    </item>
+    
+    <item>
+      <title>阿里云部署</title>
+      <link>https://gyk19950104.github.io/skill/3.%E9%98%BF%E9%87%8C%E4%BA%91%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Sat, 20 Feb 2021 16:20:02 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/skill/3.%E9%98%BF%E9%87%8C%E4%BA%91%E9%83%A8%E7%BD%B2/</guid>
+      <description>1.购买云服务器与域名 在阿里云的控制台左侧找到云服务器和域名分别购买，购买后会得到：
+ 服务器公网ip和密码 未认证的域名  2.环境准备 安装node，nginx和pm2
+ node：https://www.cnblogs.com/zhi-leaf/p/10979629.html nginx：https://www.cnblogs.com/-youth/p/9764765.html pm2: npm install pm2 -g  3.配置nginx 在/usr/local/nginx/conf/下vim nginx.conf以下内容后重载nginx配置/usr/local/bin/nginx -s reload
+可能会遇到nginx: [error] open() &amp;quot;/usr/local/nginx/logs/nginx.pid&amp;quot; failed (2: No such f的问题
+可以指定一下nginx的配置文件位置即可/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+worker_processes 1; events { worker_connections 1024; } http { include mime.types; default_type application/octet-stream; sendfile on; keepalive_timeout 65; //配置域名 server { server_name mrx.wiki; } //配置网站根目录 location / { root public; index index.html index.htm; } //配置出错跳转 error_page 500 502 503 504 /50x.</description>
+    </item>
+    
+    <item>
+      <title>胭脂扣</title>
+      <link>https://gyk19950104.github.io/work/%E8%83%AD%E8%84%82%E6%89%A3/</link>
+      <pubDate>Sat, 20 Feb 2021 15:36:24 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/work/%E8%83%AD%E8%84%82%E6%89%A3/</guid>
+      <description>2.游戏流程 1.前台带入后，男npc🟢按Ａ自动关饭厅正门，开场白响起【&amp;hellip;..的小屋】，开场白完后，场控🟢按阿明你来了和🟢缩减模式，响起语音（阿明你来了，这老宅子呀经常停电&amp;hellip;&amp;hellip;.）语音提示将菜放在桌子上
+2.玩家将菜放好并且坐下后，场控🟢按上半场Ａ，响起（阿明，爷爷要去接一个&amp;hellip;&amp;hellip;）后场控按🟢开饭厅门男npc开饭厅门后退到过道尽头🟢再按Ａ表演被拖走，换女npc闪烁前进，场控按🟢关饭厅门，女npc摔门拍窗户
+3.女npc表演完后饭厅抽屉自动打开，拼诗句词条，打开暗格得到（一梦林不见-夕，明月非旧颜-月，君即隐刀去-艮，离人莫聚头-内）的线索后敲击窗沿1423开储藏室门
+4.玩家从储藏室门出去拉闸拿钥匙时提醒女npc吓人，玩家回去后开箱子拿到异事录招魂仪式，坐好念咒语，场控按🟢开始招魂并给npc报位置
+5.女npc🟢按Ａ开门—按B暴闪—按Ａ结束后响起（你们是十三郎的什么人&amp;hellip;&amp;hellip;你们能告诉我真相吗）后场控🟢按开饭厅进小走廊门
+6.玩家进走廊后🟢按雪花视频吸引玩家到窗户，玩家将胭脂扣放入凹槽后开窗户进去，🟢按来啊来啊，玩家进去后拉三次铃铛客厅门开/给女npc开生死轮盘和衣柜门摸手，保证门关好
+7.摆放人偶(杜丽娘/杨贵妃/赵子龙/小青/穆桂英)掉签后插签，第一段语音后🟢按分别插签，玩家插好后四个指示灯亮起🟢按全站在柱子前，拿到解签牌到三角柜左大右小摆放得到鞋，镜子，腰牌和收音机线索
+8.根据线索调好收音机80后出语音衣柜门自动开，进入后🟢按纸人环节，玩家用鞋，镜子，腰牌开衣柜移门后放入引魂和聚魂木，衣柜门开，玩家会合
+9.玩家根据日记转对转盘后开生死轮盘，进入B区，放入胭脂扣后女鬼开始跳舞后玩家从左棺材进入，上床关门后按🟢床上人躺好，给女npc🟢开卧室门，后玩家拿胭脂扣出
+10.放好2个胭脂扣后右棺材门开，玩家开右棺材时🟢开卧室门让npc进入并开抽屉门二次复位
+11.玩家放往生牌后拉铃铛听语音结束时🟢按最后心愿，进入卧室穿衣服后🟢按穿好衣服，站好并敲击乐器时按🟢开始冥婚后结束带出
+3.控场提示   阿明阿明，大家可以寻着声音仔细摸索，找到爷爷为大家准备好的三盘菜，摆到中间桌子上后围坐在桌子旁
+  阿明阿明，大家一定要围坐在桌子旁不要动
+  阿明阿明，大家可以将抽屉中的诗句木签按正确顺序摆放在柜子下面的凹槽中
+  阿明阿明，大家有观察到纸条上的诗句吗➡️一梦林不见即为夕字，找到顺序轻叩窗沿
+  阿明阿明，可以让一位勇敢的小伙伴关门拉绳走到尽头拉闸拿钥匙/关门拉绳会合
+  阿明阿明，大家仔细查看仪式当中的咒语，围坐在桌子旁，手拉手念起咒语，不要回头
+  阿明阿明，大家可以派遣一位勇敢的小伙伴走到尽头左侧的衣柜伸手拉3次铃铛打开客厅门进入房间
+  阿明阿明，大家可以根据如梦日记本里的信息依次摆放人偶/杨贵妃(长生殿)、杜丽娘、手持长枪的银袍小将赵子龙(长坂坡)、身穿蓝衣的小青(白蛇传)、身上布满旌旗的穆桂英(穆柯寨)
+  阿明阿明，大家可以去到蜡烛闪烁的插签处同时插签，饭厅的正门已为你们打开
+  阿明阿明，签牌越大越吉利，左大右小，杜丽娘/杨贵妃/赵子龙/小青/穆桂英
+  阿明阿明，衣柜2侧个派1位小伙伴进入，不需要携带任何物品
+  阿明阿明，衣柜里面的小伙伴可以将引魂木与聚魂木放入生死轮盘卡槽，这样大家就可以会合了
+  阿明阿明，云姑说把鞋子给阿八，衣柜左面的那个纸人就是阿八
+  阿明阿明，大家可以根据如梦日记本中的描述推断她的生辰与忌日，在轮盘上转到对应的日期/生辛亥2-18-12/死甲戌3-8-23
+  阿明阿明，大家进入前除了胭脂扣与对讲机不需要携带任何物品，将它们放在地上即可
+  阿明阿明，大家可以将胭脂扣放在左侧棺木的凹槽中
+  阿明阿明，大家可以派一名勇敢的小伙伴从左侧棺木进入关门拉绳➡️里面的那位小伙伴可以躺在床上关好面前的2扇门➡️里面的那位小伙伴可以拿到床下的胭脂扣后返回和大家会和了➡️大家可以将胭脂扣放在左右2侧的棺木凹槽中从右侧离开这里
+  阿明阿明，大家可以将往生牌放入卡槽后拉动铃铛仔细听取语音
+  阿明阿明，可以让2位小伙伴穿好衣服，敲击乐器开始婚礼</description>
+    </item>
+    
+    <item>
+      <title>绝爱</title>
+      <link>https://gyk19950104.github.io/work/%E7%BB%9D%E7%88%B1/</link>
+      <pubDate>Sat, 20 Feb 2021 15:36:13 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/work/%E7%BB%9D%E7%88%B1/</guid>
+      <description>2.游戏流程 0.出去接玩家时✅先按15再按1触发背景音效
+1.带玩家到达铁门分组后，场控讲解注意事项，男npc锁门后挂好钥匙回到控制室✅按1开始游戏语音
+2.靠门的玩家找到电卡传给队友，队友插卡触发音效，靠门玩家监控亮起
+3.靠门玩家监控指导插卡玩家抬闸，❤️在43拐角处✅按2爆闪，抬完后发电机亮起
+4.双方摇动发电机，靠门玩家去柜子处拿钥匙时✅按1爆闪，拿到钥匙时✅按1开灯
+5.钥匙开门时✅按2跳舞，然后回去推柜子时✅按1提醒去贴福
+6.贴好福字时✅按2开客厅门，摆好道具后出去寻找扑克时✅按2掉扑克牌且提示去爸爸书房（不要砸到玩家）
+7.在去爸爸书房的途中❤️最后一个人走过水房后提醒女npc进客厅/玩家到43拐角✅按1爆闪追回书房后✅按2结束爆闪
+8.调整时钟后出去看密码时✅按2爆闪按1结束，换下个人去看
+9.看到密码后开箱子的时候✅按2关灯，7按铁门，1按木门✅按3伞，4鼓，5碟，6腰带后✅按8关灯，3456语音提示回婴儿房✅按8，放好道具✅按1掉玩具，摆好后生日歌提示去卧室
+10.卧室门前拉响手风琴✅按2掉窗户看表演，吓回时✅按1提示去厨房，此时B区门自动打开
+11.玩家进去B区后✅按A15复位后提醒npc关门，玩家到厨房时✅按2触发厨房音效开始歌谣，开Ａ蜡烛
+12.按完歌谣后语音提示去B区卧室，到达卧室时✅按1，开始解箱子6353后拼图，拼完后提示去灵堂
+13.到达灵堂后✅按2然后开始点蜡烛后破坏仪式后语音提示去到点星星的房间时✅按1⭕️提醒npc去演戏
+14.点完星星走到卧室时✅再按1看表演后结束带出时✅按15复位
+3.地形分布(与监控对应) 新入职员工需要将地形图与监控画面一一对应
+4.控场术语 带场：语音结束将眼罩放入信箱/跟着灯光走不要去黑暗的地方/尊重NPC
+探员们，咱们先来测试一下对讲机，可以收到么 / 现在可以摘下眼罩放入信箱开始游戏了。
+探员们快跑，不要被他抓住，快躲到开着门的房间里。
+探员们，大家知道丽丽最喜欢的怪谈先生是什么时候播放么？如果知道不妨去调节墙上的时钟。
+探员们，咱们现在需要派遣一位勇敢的探员前去查看密码。
+探员们，用衣杆将衣服拨在一旁，查看后面的四位数密码，衣杆就在铁门旁立着。
+探员们，拿XX的探员可以出发了/探员们勇敢一点，跟着灯光走。
+探员们，现在可以出门跟着灯光走，去到卧室门前拉响手风琴就可以见到妈妈了。
+探员们，现在可以出门跟着灯光走，手中不要携带任何物品。
+探员们，仔细观察桌子上的歌词，亮起的按钮代表四种不同角色，将娃娃摆放在柜子里，歌谣响起念到对应角色的名字时按下亮起的按钮
+探员们，仔细观察衣服上不同颜色的扣子数量，找到正确的密码。
+5.控场节点    开铁门 进书房 单人任务     20 35 50       开始表演 进入b区 按完按钮     55 60 70       拼完拼图 破坏仪式 最后表演     75 85 90    6.</description>
+    </item>
+    
+    <item>
+      <title>弥生贰</title>
+      <link>https://gyk19950104.github.io/work/%E5%BC%A5%E7%94%9F%E8%B4%B0/</link>
+      <pubDate>Sat, 20 Feb 2021 15:36:03 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/work/%E5%BC%A5%E7%94%9F%E8%B4%B0/</guid>
+      <description>2.游戏流程 1.前台存完东西，玩家：“我们准备好了”，🟢按【开场白】，语音完了后前台领到第一间房
+2.玩家进入后根据仪式戴好娃娃，一齐喊：“出来吧，出来吧”，🟢按【四更琉璃】，接电话后房间变暗，响起语音，玻璃移门自动开
+3.进入后灯一个个亮起，拼好五角星(风火雷月雨），三谷寺自动打开，玩家进入同时拉铃铛，三谷寺门关，此时提醒玩家到祈愿位祈愿，然后🟢按【阎王】提醒npc出场，房间自动变暗并响起音乐，后指引玩家每人拿个令牌，将佛珠给玩家
+4.npc将玩家引导进鬼市后，挥衣袖开灯（将亮蜡烛准备好），引导玩家走到尽头的时间当铺，用【当】令牌打开门，找到【小马驹和金刚铃】，告知玩家使用方法
+5.接着引导玩家用【杂】打开杂货铺，阎王退场，把小马驹放在杂货铺老板身上摇铃铛，🟢按【杂货铺信物】出一段语音（&amp;hellip;..她留了东西在我这儿，你们去货架上找找看）引导玩家整理货架（从左到右：蝴蝶/檀香/羽毛/玫瑰/鬼/菊花）整理好后掉出【记忆碎片1和梳子】，看梳子上的杏子所以去找杏子
+6.将梳子放在杏子身上，摇动铃铛，🟢按【杏子1】出语音（我在这里等我的丈夫&amp;hellip;..请你们帮我一个忙，把我的梳子挂在树枝顶上）提示梳子挂在树枝上
+7.梳子放树枝上时🟢按【杏子2】出语音（她留了个记忆在我这里，找到生死簿就能打开，对了，万事屋的主人有关于生死薄的线索）提示去万事屋，根据鬼市的告示找到咕咕后喊出咕咕，🟢按【咕咕】进入万事屋，把佛珠放在万事屋老板头顶，摇动铃铛，按【万事屋信物】，语音提示（又要给这个和尚延长100年时间，你们还有事，只要把集市的蜡烛全部吹灭，他就会出现了，这界王阵）在旁边界王阵刷【事】令牌，根据语音提示吹蜡烛(秘密就在每个烛台的下面）(当铺 万事屋 杂货铺 望乡亭 杏子 好运 十三 生死簿)
+8.吹灭蜡烛后语音响起（为什么生死薄里没有奶奶），生死簿转动，看到杏子和小松平的忌日后在杂货铺打开盒子拿到小松平的信物【相框】【成绩单】和杏子给的【记忆碎片2】11 9 4 杏子/ 1 6 10平
+9.将【相框】放在小松平身上摇动铃铛，🟢按【小松平】，语音后开始刷【望】令牌，21181309打电话后语音结束后，盒子打开给一枚金币
+10.去好运商店老板处用一枚金币请神牌，第一次给五色花，确定拿了五色花此时五色花出场，流程自动，完毕后好运老板给算盘，提示去当铺拿新金币
+11.在当铺给算盘摇铃铛，🟢按【当铺信物】触发一段语音，13号门开，刷【13】令牌选人去偷琴【模式A不让】
+刷【13】令牌选人去偷琴，🟢按【模式A】，语音提示不是有缘人
+刷【13】令牌选人去偷琴，🟢按【模式B】，玩家进入后按2次【13前门】关好门时，按【13后移门】开后门，玩家当掀帘时自动语音
+12.偷到琴后，把琴挂在当铺后按【掉金币】自动掉金币，回到好运商店，用金币抽神牌，第二次给九尾牌子，自动流程，语音后神社门开玩家就可以进入B区，然后🟢关【神社左移门】
+13.进入B区后，同时刷6个令牌，进入敲鼓神社，摆好【九尾】令牌后自动出鼓槌，然后语音提示齐鸣八极鼓，🟢按【打鼓】开始语音，🟢【打鼓错误】敲错出五色花，敲对出九尾，响起语音，语音结束后九尾移门开
+14.从九尾移门进入奈何桥，所有人进入时关九尾门，河里灯亮起时🟢按【散雾】，在石洞找彼岸花和【记忆碎片34】时🟢按【进石洞】，摆好彼岸花自动打开水池平移门
+14.所有人进入最后房间，关【水池平移门】，拼碎片，🟢按【挂娃娃】后玻璃移门关，秀一响指后结束游戏
+15.游戏结束时🟢按【水池平移门】让npc进入复位后按【B区复位】
+3.提示术语 1.主动提示：探员们我是佐藤警长，汇报调查进度。（收到玩家回复后按流程语术提示）
+2.四更琉璃仪式：探员们羊皮卷上好像记载着某种古代仪式，尝试启动仪式。
+3.五角星五神阵：探员们相传三谷寺的大门由五位神明镇守，想要进入寺内必须要把五位神明的神牌归位。风火雷月雨逆时针 风神居高调和阴阳为最高位，雨神是风神的右护法为风神右位，火神永不接近雨神为风神左位，月神在雷神一侧为雨神下位，雷神为火神下位。
+4.进入寺内：探员们，三谷寺内神圣而庄严，同时拉动苇芽岛大门前的两个铃铛，来到祈愿位祈祷保佑任务可以顺利完成。
+5。杂货铺柜子：探员们，杂货铺老板的货架上有些凌乱，大家可以仔细观察墙上的处方笺找到正确的顺序依次摆放货物，注意货物上有标记的朝下放
+6.藤原杏子：探员们，梳子好像是女人所用之物，大家还记得鬼市中那位可怜撑伞女子么。
+7.万事屋暗号：探员们，万事屋的主人在门上设下了奇怪的符号，仔细观察鬼市中张贴的告示，找到暗号后在万事屋门前念起即可。
+8.万事屋掌柜：探员们，还记得阎大人嘱托大家的事么，他好像让你们将一串佛珠交给万事屋的掌柜。
+9.界王阵：探员们，仔细查看万事屋界王阵当中的信息，开门为始，死门为终，找到正确的顺序依次吹灭蜡烛，秘密就在每个烛台的下面
+10.当铺柜子：探员们，亡魂们常将自己的心爱之物寄托在时间当铺，找到杏子与小松平的忌日才能获取他们留在当铺柜子中的心爱之物。
+11.找不到小松平：探员们，望乡亭里好像有一个孩子需要帮助。
+12.小松平电话：探员们，阴间的电话想要打回阳间，必须用身份令牌才可以。（电话号码不知道）探员们，小松平一直有一个愿望没有实现。
+13.偷琴：探员们，单独行动的探员必须带好联络器，进入密道一定要关好身后的门
+14.六幅画：探员们，神社中一共有六幅画像找到对应的画像同时熄灭，神社的大门才会为大家打开。
+15.敲鼓：探员们，八鼓齐鸣开始仪式。（玩家启动仪式后没找到敲击方法）探员们，八鼓齐鸣开始仪式，当鼓上的烛火亮起，必须敲击鼓面，切记不可漏敲任何一个。
+16.彼岸花：彼岸花开时，三生一世间，找到奈何桥上的彼岸花将其种到石洞深处，或许才有一线生机。
+17.记忆碎片：所有的探员越过窗户回到真实的世界，切莫在镜中世界停留。
+18.记忆碎片：探员们，拼接奶奶的记忆碎片，唤起曾经的回忆。
+4.控场节点    进三谷寺 阎王进集市 阎王退场 开万事屋     10 15 25 35       吹完蜡烛 出五色花 偷琴完 进奈何桥     45 53 60 70       石洞门开 拼图结束     80 90    5.</description>
+    </item>
+    
+    <item>
+      <title>弥生壹</title>
+      <link>https://gyk19950104.github.io/work/%E5%BC%A5%E7%94%9F%E5%A3%B9/</link>
+      <pubDate>Sat, 20 Feb 2021 15:35:51 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/work/%E5%BC%A5%E7%94%9F%E5%A3%B9/</guid>
+      <description>2.游戏流程 ✅1.前台带场对讲说：“佐藤警长，探员已集结完毕，是否批准进入案发现场”，后台场控回：“批准带入”，前台按开场语音，玩家听完后进入电梯，待所有人出电梯后，提醒前台关电梯后门
+✅2.玩家进场后，及时与其打招呼：“探员们，这里是佐藤警长，收到请回复”，玩家回复后：“探员们，本次案情比较特殊，请即刻前往案发现场展开调查，案发现场就在401号房间，调查过程中请保持联络器畅通”
+✅3.玩家在401床上找到第一天磁带后插入行李箱卡槽，磁带有正反，按播放键听取内容，得知屏幕密码是34713479，打开屏幕锁屏
+✅4.玩家查看屏幕内容，根据仓木工牌开始答特殊信件当中的题目(名字/职业/星座/妻子姓名)，答完后看到笼目歌阴阳之眼仪式和行李箱使用说明书
+✅5.根据行李箱使用说明书(12-顺时针3-逆时针10-顺时针一圈)，操作行李箱旋钮，打开暗格，拿到易字木牌
+✅6.玩家自行或场控提示前往大厅寻求易先生帮助，插入木牌，语音过后掉落蜃字木牌
+✅7.玩家来到404房间插入门牌获得第二天磁带，前往401听取磁带内容知晓404的开门暗号与第一次雇主视频当中雇主手中的信有关
+✅8.玩家查看视频后知道404开门暗号是ka go me ka go me前往404输入暗号进入房间
+✅9.进入房间后，记住墙上的人物名字，拉动中间的绳子开始仪式，念到对应的人物时拉动手中的绳子，通过仪式后长谷川出场，给玩家沉香牌子并让玩家去找小葵
+✅10.玩家用沉香牌子打开403房间，发现了第三天磁带，回到401房间听取，知晓了11号箱子与无色花有关，同时发现墙上的403箱子分布图，知道了4号箱子可以推动
+✅11.玩家回到403房间推动4号箱子进入房间另一侧，在墙上发现了无色花壁画，回到401找到古代地图上它的坐标，在403墙壁的猫眼中找到对应的刻度，
+后爬到了第三层箱子，发现了WE旋钮正好与之对应，调整好旋钮后打开铁门，找到钥匙，打开下面的箱子，拿到小葵
+✅12.玩家把小葵还给长谷川后语音响起，雷声后出鬼将玩家赶到401柜子后Ａ区npc复位
+✅13.玩家通过柜子进入402房间和姐姐玩吹蜡烛的游戏后答应帮她去弥生药铺找小葵
+✅14.玩家进入电梯后进到打鼓通道，找到正确的击鼓顺序后墙壁亮起红光，玩家推开箱子进入骷髅石洞
+✅15.在骷髅石洞中听取语音后找到藏宝图打开保箱拿到2镜子，又找到弥生木牌
+✅16.将木牌插到大鼓下的卡槽射出蓝光，用镜子将蓝光折射到弥生宝珠，弥生药铺大门打开
+✅17.进入弥生药铺后听完语音许下九尾愿望，壁炉下的通道打开，重返人间
+3.NPC表演 所有npc都没有台词，禁止出声
+✅1.长谷川：玩家进入404时穿好服装，带好沉香木牌，当第二轮名字响起时进入，当念到最后一个“娜娜”语音后，一手托住画像，一手按左边的开关，将画缓缓放下，双手作揖拿好令牌，身体站直等待红灯亮起，等语音说到“这个给你”时弯腰将令牌递给玩家，等玩家走出404时，提上画像，结束
+✅2.女鬼：玩家摆好小葵时穿好服装，带好403遥控，等语音中长谷川叹息时进入，念到“快离开这里，躲到衣柜当中”跟随雷声拍地爬出，与玩家保持一定距离绕桩直到玩家全出，开404门追玩家到40 1衣柜后拍门，等衣柜拉走后开始复位：
+ 1.整理仓木服装，确保工牌没被玩家拿走，将第一天磁带放在手边 2.按住右下角按钮，连击屏幕左上角收件直到回复输密码界面 3.将旋钮转到12点方向 4.将第二天磁带放入404卡槽，拿出小葵，用绳子卡住门，拔出蜃牌 5.将蜃牌放在403门上，第三天磁带放在6号箱子，小葵放入箱子锁好，钥匙放在三层的玩偶怀里，WE旋钮转到12点，关上铁门，按遥控松开箱子，拖回原位 6.将沉香和蜃拿到大厅，拔出易牌，朝摄像头挥手，八尾神像灯灭后将蜃牌放入壁炉下的卡槽 7.推拉403门将其锁死，进入404将门锁死，结束  ✅3.拉柜子：出鬼前将铁门推到底后插好插销，电梯柜子拉到对面，当npc拍门时，拔出左手插销，按下关门键和音效键，把401柜子拉到底，等绿灯亮起，按灭绿灯，玩家进入402插牌后，伴随闪电将铁门插销拔起，401柜子与铁门同时推回，插好插销，电梯柜子拉回，插好插销，玩家在语音结束后，进入电梯柜子，关好推门，拔出插销，将电梯柜子拉到对面，按下音效键，等玩家都进入并关好门时，拉回柜子，插好插销，拔出双生木牌
+✅4.B区复位：弥生木牌放到骷髅骨架上，2面镜子放到箱子锁好，羊皮卷放到枯骨上，木桶归位，回来按B区复位，将电梯箱子后门锁好，铁门合上，复盘的人将出口门合上
+4.控场节点    屏幕 暗格 蜃牌 磁带     10 15 17 20       暗号 仪式 出鬼 复位     30 40 55 65    5.</description>
+    </item>
+    
+    <item>
+      <title>三国演义</title>
+      <link>https://gyk19950104.github.io/book/2.%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89/</link>
+      <pubDate>Fri, 15 Jan 2021 00:09:30 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/book/2.%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89/</guid>
+      <description>1.故事梗概 汉灵帝年间，内有宦官谗言媚上，外有酷吏鱼肉百姓，致使天下苍生苦不堪言，张氏三兄弟高呼&amp;quot;苍天已死， 黄天当立，岁在甲子，天下大吉&amp;quot;，拉开了黄巾起义的帷幕，灵帝下令各州郡募兵守卫，涿州刘关张三兄弟 桃园结义，在镇压黄巾起义中屡立战功，被封在安喜县当县尉，当地都邮索要贿赂却被张飞痛打，后三人弃 官，经公孙瓒表刘备前功，被封在平原县当县令。 灵帝驾崩，以何进为首的势力立刘辩为帝，以董太后为首的势力拥立刘协为陈留王，何进假借皇帝之命，遣 董太后回原籍并鸩杀，他痛恨宦官势力，决定采纳袁绍建议，招董卓进京清剿，但十常侍诱骗何进进宫后将 其杀死，曹操等人入宫清剿宦官势力，张让挟持刘辩出逃，曹操等人在追寻刘辩时，遇到了狼子野心的董卓， 宦官势力才被清除，又招来了董卓。 董卓来京后，为非作歹，欲废刘辩立刘协，丁原不允，董卓以赤兔马离间丁原吕布，吕布杀丁原投靠董卓， 董卓立刘协为帝，众臣敢怒不敢言，王允假借寿诞，商讨除去董卓的计策，曹操自告奋勇，借来七星刀行刺， 却被董卓识破，曹操外逃，被中牟县陈宫所救，陈宫决定追随曹操，但在借宿吕伯奢一家时，曹操疑心大发， 杀其全家，说出&amp;quot;宁教我负天下人，休教天下人负我&amp;quot;，陈宫不齿与之为伍，愤然离去。 曹操回到陈留，聚集十八路诸侯联盟，讨伐董卓，讨伐时刘关张三英战吕布，后孙坚获传国玉玺，要离开联 盟，袁绍要他交出玉玺，孙坚坚决不肯，两人结怨，后孙坚离去，在途中遭到受袁绍指派的刘表的截杀，孙 坚中箭身亡，此时董卓接受李儒建议，迁都洛阳，十八路诸侯相互猜忌，任由董卓离去，后各诸侯解散，迁 都洛阳的董卓变本加厉，王允采用美人计，利用貂蝉离间吕布与董卓，凤仪亭前吕布董卓反目，受禅台前吕 布杀死董卓，貂蝉完成美人计后飘然离去。 曹操离开十八路诸侯联盟后，在山东招兵买马，占领山东，派兵接父亲曹嵩前来居住，徐州牧陶谦为讨好曹 操派张凯护送曹操家眷，张凯反杀曹嵩全家，曹操点兵前去报仇，陈宫来劝，曹操不听，于是陈宫投奔吕布， 陶谦请来刘关张救援，此时吕布在陈宫帮助下取得山东，曹操回援，吕布死守，陶谦三让徐州，刘备成为徐 州牧，曹操休整后再次攻打吕布，吕布投奔刘备，屯兵小沛，董卓死后，郭汜李傕挟持天子，曹操回京救援， 后在荀彧建议下挟天子以令诸侯。曹操吕布混战山东时，孙坚之子孙策以传国玉玺向袁绍借兵3千杀回江东， 在好友周瑜帮助下收服太史慈，后历经争斗，取得江东六郡八十一州。 曹操取得挟天子以令诸侯地位后，假借皇命，采用荀彧计策离间刘备吕布，刘备被派去攻打袁术，留张飞守 城，吕布乘机夺得徐州，刘备被袁术打败，吕布安排刘备屯兵小沛，袁术继续攻打，吕布辕门射戟，劝和两 家，张飞抢吕布马匹，刘备吕布日渐不和，刘备弃吕布投靠曹操，此时张绣领兵来犯，曹操不费一兵一卒收 得宛城，但却色心大发，奸张绣之嫂，被张绣用计盗取护卫典韦双戟，典韦战死，张绣投奔刘表，曹操败退 许都，此时袁术称帝，曹操征讨，攻破寿春，刘表借机攻打许都，曹操回援，打败刘表，后接受郭嘉建议， 联系刘备攻打吕布，不料书信被陈宫截获，吕布前来攻打刘备，曹操前来援助，吕布先被陈登用计失去徐州， 后被侯成盗取方天画戟，曹操趁机打败吕布，将其杀死于白门楼，陈宫亦追死，大将张辽投入曹操帐下。 曹操回到许都，刘备亦回，曹操在许都打猎时僭越皇权，汉帝无奈，托付国舅秘密诛杀曹操，刘备也加入其中， 后曹刘二人青梅煮酒，刘备知晓曹操有杀他之心，借口保卫徐州，领兵离开许都，来到徐州的刘备轻而易举攻 下徐州，曹操识破汉帝诛曹的召集，发现刘备也在名单上，于是点兵进攻徐州，刘关张三人分散守护徐州，三 人被曹操杀散，曹操围困关羽，关羽定三条约定后归降，被冲散的刘备投奔袁绍，张飞逃亡芒砀山，刘备激袁 绍攻打曹操，曹操派关羽斩颜良诛文丑，袁绍知是关羽杀了大将，欲杀刘备，刘备写书招关羽回来，关羽过五 关斩六将，在古城与张飞相遇，刘备借口劝降刘表，趁机离开袁绍，与兄弟会合。此时的孙策已经取得了江东， 常有进攻许都的打算，然而他由于性格缺陷，先中毒箭后被于吉气病，不日身亡，临终前托付孙权内事不决问 张昭，外事不决问周瑜。 孙权拒绝和袁绍联合，曹操袁绍决战于官渡，曹操先采取许攸计策偷袭袁绍粮仓乌巢，后设计收得袁绍大将张 郃，袁绍自此颓败，渡河而逃，后吐血而亡，其后袁氏一族衰败，被曹操所破，河北纳入版图，曹操修建铜雀 台表彰战功。 与兄弟会合的刘备投奔刘表，因劝说刘表立长不立幼，得罪蔡瑁，引来追杀，得人告密逃脱，后刘表邀请刘备 主持丰收大会，刘备带赵云赴会，蔡瑁设下陷阱，刘备幸得的卢马相助逃离生天，来到水镜山庄司马徽处，司 马徽指点他去寻找卧龙凤雏辅助，刘备回去的路上遇到徐庶，拜为军师，在他帮助下杀退前来攻打新野的曹仁， 曹操利用徐庶仁孝，假借其母骗其前来，徐庶为刘备推荐诸葛孔明，刘备三顾茅庐，请来诸葛亮，诸葛为其点 明天下大势，此时曹操派夏侯惇出兵新野，诸葛亮初用计火烧博望坡，大败夏侯惇，曹操发怒，派徐庶来劝降 刘备，诸葛亮献计离开樊城，刘备不忍丢下百姓，携民渡江，此时刘表已死，蔡瑁掌控襄阳，刘备不得进，曹 操追兵甚急，来到襄阳，蔡瑁投降，曹操令张郃等人继续追击刘备，刘备苦等不到江东救兵后被曹操围困，他 与家人被冲散，赵子龙万军中救少主阿斗，张飞于当阳桥喝退曹军，逃离后的刘备借居在江夏刘琦处，诸葛亮 献计江东借兵，来到江东的诸葛亮先舌战群儒说服文臣，后激怒周瑜联合抗曹，周瑜几次试探孔明皆败下阵来， 诱骗刘备来江东欲除之，但却惧关羽神威，曹操帐中蒋干前来游说，周瑜带他领略江东精英，名曰群英会，夜 晚，蒋干盗取周瑜假造的蔡瑁投降书，回到曹营，告知曹操，曹操立刻杀死了熟悉水军的蔡瑁，中了周瑜计策， 不料这一切早被诸葛亮看穿，周瑜嫉妒，为难诸葛亮造箭10万，诸葛亮草船借箭，完美解决了周瑜刁难。为了 完美实行火攻，周瑜打黄盖，诈降曹操，为了验证黄盖是否真的投降，曹操派蒋干再去探听虚实，不料蒋干又 中计，将周瑜请来的庞统请回曹营，曹操采用庞统连环计，心中十分得意，横槊赋诗，却不料诸葛亮借来东风 配合周瑜火攻火烧赤壁大败曹军，曹操败逃，路过华容道被关羽放走，曹军经此一役，损兵折将，曹操留曹仁 镇守，自己回撤，周瑜先将计就计进入曹仁陷阱，身中毒箭诈死，引诱曹仁出城，却被诸葛亮趁机诈用兵符夺 得南郡，周瑜气的吐血坠马。 夺得南郡的刘备派关羽张飞赵云等人南下夺取长沙四都，魏延叛变，投降关羽， 刘备又亲自迎得黄忠老将，周瑜又想夺取荆州，于是利用孙尚香设美人计，引诱刘备，赵云带诸葛亮三个锦囊 陪同刘备过江，先是大奏鼓乐使吴国太知晓周瑜计策，后又假传军情使刘备回返，这样破了周瑜的诡计，周瑜 第二次被气晕，经过多次比斗，周瑜病死，诸葛亮过江吊唁，收凤雏庞统为刘备所用，此时曹操想攻西凉，于 是诱骗马腾来许都并杀之，马腾之子马超为报父仇，杀得曹操割须弃袍，幸得曹仁相救，曹操采取贾诩建议， 离间马超韩遂，马超中计，败走西川。 听闻曹操平定西凉，张鲁惧怕曹操侵占汉中，准备进军西川，刘璋知道后，汇集官员商讨对策，张松自荐游说 曹操，但曹操对其无礼，刘备乘机礼贤下士，张松感念刘备仁德，献上益州地形图，此时刘璋邀刘备入川，刘 璋部将死劝，刘璋不听，刘备入川后，孙权欲夺取荆州，就假借吴国太病危，要孙尚香带阿斗回来，幸得赵云 相救，孙尚香只一人前往东吴，至此孙刘二人终身未见，另一面川蜀军士对刘备入川不满，刘备于是假意修书 刘璋要返回荆州，实则趁机要攻取涪水关，然后夺取成都，庞统献计小路攻取雒城，不料在落凤坡前中埋伏， 庞统身亡，刘备请诸葛亮入川相助，诸葛亮留关羽镇守荆州，自己和张飞分水陆两道入川，张飞于途中收服严 颜，一路杀到涪水关，此时马超投奔张鲁，领兵来就刘璋，诸葛亮使计离间马超张鲁，后马超归降，直取成都， 刘璋投降，后刘备又平定川蜀各地，奠定三分天下基础。 以阿斗要挟刘备的计策未能成功，孙权又以诸葛瑾一家性命来要挟诸葛亮，刘备假意退还三郡，实则令关羽严 防死守，孙权气急，要鲁肃邀关羽谈判，关羽单刀赴会，挑明不会归还，挟持鲁肃，后从容离去，此时曹操举 兵来攻东吴，孙权只得作罢荆州之事。此时刘备担心曹操攻打西川，于是答应孙权归还三郡，让孙权发兵合肥， 自己再牵制曹操，驻扎合肥的张辽李典等人打败孙权，后曹操带40万大军支援合肥，甘宁前去劫寨，后张辽来 犯，被射伤眼镜，连败2阵的曹操亲自杀赴濡须口，双方难分胜负，东吴求和，各守边界。回到许都的曹操立曹 丕为世子，后刘备率军攻打汉中，曹操领兵来救，刘备派黄忠攻取定军山，黄忠用计杀夏侯渊。诸葛亮用计大败 曹操，曹操令孙权攻取荆州，意图让刘备遣川军救援，关羽主动出击，曹操派庞德出战，关羽水淹七军，大获全 胜，关羽命人于荆州修建烽火台，后调重兵攻打樊城，吕蒙破烽火台，曹操又派徐晃助曹仁，关羽败走麦城，回 川途中被吕蒙设计俘虏，孙权下令杀之，后关羽英魂未散，于玉泉山守护众人，又魂侵吕蒙，吕蒙死。孙权惧怕 刘备携兵来攻，将关羽首级送于曹操，曹操主簿司马懿看出这是东吴的转祸之计，劝曹操厚葬关羽，曹操听从， 刘备终于知道关羽被害，想要起兵攻打东吴，诸葛亮劝说等吴魏不和，刘备听从。曹操每日受关羽影响，想盖新 宫殿去除邪气，主梁采用跃龙潭的神木，却惊动树神，头痛不止，召集华佗前来医治，华佗说要开颅，曹操将华 佗杀死，不久曹操病逝，立七十二疑冢，立曹丕为继承人，曹丕令曹植七步成诗，曹植逃过一劫，而后废汉帝自 立魏，诸葛亮听闻，立刘备为汉帝与之抗衡，刘备一心要攻打东吴为关羽报仇，张飞自告奋勇为前锋，但他平日 里常鞭挞士卒，被人灌醉杀死后割头投奔东吴，刘备点起大军，杀向东吴，孙权降曹丕，联合魏军抗击蜀军，老 将黄忠中箭身亡，刘备连营七百里，陆逊火烧连营，刘备败退，得赵子龙相助，逃回白帝城，陆逊追来，进入鱼 腹浦八阵图中，得诸葛孔明岳父黄承彦帮助逃出，后自认不如诸葛，退回东吴，刘备逃至白帝城后不久病亡，临 终前托孤诸葛亮，此时魏帝派五路大军攻打蜀军，诸葛亮依次退之，后派邓芝说和东吴共同抗曹魏，曹丕亲自杀 来，却被吴蜀联合杀退，此时南蛮孟获攻来，诸葛亮七擒孟获，折服蛮王，此时魏帝曹丕病亡，司马懿等人拥护 曹睿为帝，马谡设计散布流言挑拨魏帝与司马懿，司马懿被贬，孔明出班，上《出师表》讨伐中原，赵云同邓芝 为先锋大败夏侯渊之子夏侯楙，后又将夏侯楙困在南安城中，天水郡太守马遵想去搭救，姜维用计败退赵云，诸 葛亮用计收服姜维，魏帝又派曹真与王朗前往对敌，诸葛亮阵前骂死王朗，又败退曹真，曹真入羌中求救，诸葛 亮借雪天退敌，魏帝又启用司马懿，蜀将孟达被杀，魏帝又派张郃为先锋，与司马懿一同征进，马谡大意失街亭， 诸葛亮空城计退司马懿大军，挥泪斩马谡，此时周鲂假意叛吴，引诱曹休来攻吴，周鲂断发获取信任，配合陆逊 败退曹休，后遣书蜀主，攻打魏国，时诸葛亮兵强马壮，但赵子龙病亡，诸葛亮二次上表攻打魏国，曹真阻拦， 姜维用计 摘录 1.</description>
+    </item>
+    
+    <item>
+      <title>汽车构造</title>
+      <link>https://gyk19950104.github.io/skill/2.%E6%B1%BD%E8%BD%A6%E6%9E%84%E9%80%A0/</link>
+      <pubDate>Tue, 08 Dec 2020 21:56:58 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/skill/2.%E6%B1%BD%E8%BD%A6%E6%9E%84%E9%80%A0/</guid>
+      <description>汽车构造  轿车包括车身，发动机，底盘和电气件四大部分
+ ✅发动机：当点火启动时，不同缸体内的火花塞轮流点火，油气进入缸体与火花接触爆炸，推动曲轴连杆机构将活塞往复运动转化为曲轴旋转运动，传递给主动轴扭矩与速度
+ ✅底盘: 当需要不同扭矩或速度时，踩下离合器将发动机主轴与变速箱主轴分离，拨动档位，调节不同传动比的齿轮啮合后松开离合器，根据不同传递比，变速箱输出轴带有不同的扭矩或转速，空档时虽然发动机主轴与变速箱主轴链接，但变速箱输出轴与传动齿轮间隙配合所以车体也不会获得动力从而移动，当需要刹车减速时，踩下刹车器经助力放大传递到车轮处增大制动器与轮毂摩擦力减小车速
+——————————————————————
+ 为什么换挡要踩离合器？
+ 换挡时发动机转速与所需转速不同，强行换挡会损坏变速箱
+ 为什么有时候离合类似刹车？
+ 处于半联动的离合发动机主轴与变速箱输出主轴摩擦力处于临界状态，超过半联动时，2者保持相同转速，车子自动滑动，踩下油门只是加强了油气混合，增大了发动机输出功率
+ 为什么车子会熄火？
+ 发动机动力不足以抵消车子受到的静摩擦力从而憋停。
+ 参考资料：
+ 比亚迪汽车讲堂： https://b23.tv/L6InoA</description>
+    </item>
+    
+    <item>
+      <title>1.三体</title>
+      <link>https://gyk19950104.github.io/book/1.%E4%B8%89%E4%BD%93/</link>
+      <pubDate>Tue, 08 Dec 2020 20:54:51 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/book/1.%E4%B8%89%E4%BD%93/</guid>
+      <description>故事梗概 文革时期遭受打击的叶文洁进入红岸基地，向4光年外的三体人发出信号请求他们来协助改造人类的劣根性， 饱受三体问题折磨的三体文明向地球派出舰队准备攻占地球，因惧怕地球文明在舰队赶往的时间中科技进步， 所以将2质子改造成智能计算机后发往地球干扰科技进步，地球大批科学家因智子干扰导致研究基础理论停滞， 纷纷自杀，人们在探查科学家自杀原因的时候逐步知道了三体的存在，出现不同派别，有的希望三体人前来 改造地球，有的希望三体人前来毁灭地球文明，为了应对三体人的到来，地球成立了对应的舰队，并利用三 体人思维透明的不足制定了面壁计划，面壁者罗辑根据叶文洁的提示想出了黑暗森林法则，并以此要挟阻止 了三体探测器水滴的进攻，借此形成了与三体人的短暂战略平衡，在面壁计划开始时，另一项目也开始实施， 通过阶梯计划将云天明的大脑送入三体，后在云天明三个童话故事的暗喻下，人类造出曲率飞船，不料此时 的三体和人类都被歌者文明发现，遭受到了光粒和二向箔打击，三体文明灭亡，地球文明被二维化，程心与 艾aa逃往后到达云天明送她的星球，知道了宇宙中的高级文明想要将宇宙降维从而实现文明重启。 摘录 1.三体的世界观本质是循环，高级文明的终极目的是重启宇宙
+2.其实对于我们遇到的各种事情，我最喜欢的是维德与大史的做法
+3.在宇宙中，你再快都有比你更快的，你再慢都有比你更慢的
+4.任何低墒体都只能两者相权取其轻者
+5.粮食？这不都是粮食？每个人看看你们的周围，都是粮食，活生生的粮食
+6.当年以为天塌下来的事，其实没什么
+7.什么事都等别人做是危险的
+8.不理睬是最大的轻蔑
+9.死亡是唯一一座一直亮着的灯塔
+10.有罪处死，无罪释放
+11.前进，不择手段的前进
+12.像坟墓一样的简洁
+13。我毁灭你，与你何干</description>
+    </item>
+    
+    <item>
+      <title>1.计算机组成原理</title>
+      <link>https://gyk19950104.github.io/cs/1.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Mon, 23 Nov 2020 16:01:52 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/cs/1.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</guid>
+      <description>1.什么是电路？ 物质由原子组成，原子由电子核与核外电子组成，在电场力的作用下核外电子绕原子核做圆周运动，当施加外部电场力时，导体的核外电子脱离原子核的束缚沿着电场力的方向运动：
+ 电子的定向移动就形成了电流 原子核同时也会阻止核外电子的力形成了电阻 核外电子移动后造成正负电子间的势能差形成了电压 在宏观世界，电流，电阻和电压会被转化为其他形式的能量，为了描述这些能量，提出了焦耳定律 q=i^2rt,焦耳反应了电流的做功大小 p=ui,功率反应了做功快慢  2.什么是电子管？ 通电的灯丝处产生大量活跃的电子，在电子管中加入外加正电压的金属板，活跃的电子在电场力的作用下朝着金属板移动产生电流，改变外加电压的正负即可控制通断，在外加正电压金属板与活跃电子之间再加入金属板，可用于加强电场。这样通过电压的正负极转换就能控制电子管的通断，但电子管的体积大，功耗高，难以适应急剧增长的需求 
+3.什么是晶体管？ 纯净的硅原子最外层有4个电子，它既不容易得到电子也不容易失去电子，被叫做本征半导体，
+ 在纯净的硅原子中加入带有5电子的磷原子，整体带负电，叫做N型半导体 在纯净的硅原子中加入带有3电子的硼原子，整体带正电，叫做P型半导体  晶体二极管：将N型半导体和P型半导体结合，前者电子浓度高，后者空穴浓度高，产生扩散运动，随之建立电场，电场力又会驱使电子产生漂移运动，扩散与漂移运动最终达到平衡，当外加电压与内电场方向一致时，漂移运动占据主导，电路导通，当外加电压与内电场方向相反时，扩散运动占据主导，电路中断，这样通过控制电场方向就可以来控制晶体管的通断
+晶体三极管：将三个p型与n型的半导体组合，就会造出类似电子管的装置，
+ 发射极类似通电的灯丝处产生大量活跃的电子 集电极类似在电子管中加入外加正电压的金属板 基极类似在外加正电压金属板与活跃电子之间的增强金属板  以NPN型三极管为例，它包括基极，集电极和发射极，基极负责调控通断
+ 1.b处电流极小时be/bc都不导通，整体出电量几乎为0，处于截止状态 2.b处电流逐渐增大，be/bc慢慢导通，整体出电量慢慢增大，处于放大状态 3.b处电流增大到将bc完全导通时，be/bc全部导通，整体出电量保持最大不变，处于饱和状态  通过调节基极电压就可以控制 集电极 与 发射极 的通断
+放大电路 基极上控制着集电极电流，集电极电阻处的电压就大致等于放大后的基极处电压，外接电容避免回路向发射极灌入电流同时接受信号输入
+4.什么是数字电路？ 将模拟信号进行采样后数字化，用二进制的补码形式来表示这些数字化的信号，然后将这些信号通过以逻辑代数为原理，晶体管制成的逻辑元件 为载体的电路
+模拟信号是指随时间连续变化的信号，但现实中是无法存储无限的模拟信号，所以根据奎斯特原理对模拟信号取样后得到离散信号，这样取样能保证信息不丢失，取样得到的离散信号数值使用数字表示，得到数字信号，这样对模拟量的计算就会转化为对数字量的计算，在计算时为了尽可能的简化，采用了二进制表示，它的基数只有01，易于用晶体管制成的逻辑元件实现。
+二进制数在计算时会对应真实世界的符号位，为了将符号位也引进计算，提出了原码/反码/补码等各种二进制的不同表示形式，真实模拟量被二进制数字化表示后，要想弄清楚它们之间的关系，需要对其进行计算，真实的计算包括逻辑计算和算术计算，由计算机中的cpu部件进行实现，计算过程中可能会产生各种中间量和最终结果，这些数据由计算机中的存储器进行实现。
+在逻辑代数的应用中如何找到最简计算方法，就要明白功能-函数/函数-功能的转化,在设计对应的复杂器件时，通常经过以下步骤：
+ 1.明确输入输出关系 2.画出真值表 3.得到真值表的逻辑函数 4.化简逻辑函数  5.基本门电路 计算机除了包含cpu，存储器，还有大量的输入输出设备，这种体系即为冯诺伊曼体系
+利用晶体管可以搭建出复杂的部件，这些部件可以完成逻辑与算数运算，数据存储等功能
+常见的简单门电路有：与门，或门，非门，与非门，或非门，同或门，异或门
+异或门的输出端再加上一个非门就构成了同或门
+6.基本部件 进行逻辑运算时需要涉及到加减乘除，对应的器件设计如下：
+6.1 多位并行加减法器 全加器：输入是2个一位加数和1个一位进位，输出是1个一位结果和1个一位进位
+一个全加器计算的只是2个一位数，要想同时进行多个一位数的计算，就需要将其串联起来，得到串行四位补码全加器
+串行多位补码全加器只能计算加法，可以通过改造加入p输入控制第二位的正负，得到串行四位补码加减法器
+串行四位补码加减法器在计算时会产生溢出，需要对溢出做处理
+串行四位补码加减法器在计算时下一位的计算需要上一步算好的进位，速度较慢，所以需要将串行打破，改造成并行，得到并行四位补码加减法器
+并行四位补码加减法器要想再次扩充，同样需要按照上面的步骤将串行链改造为并行链，抽象出并行部件
+6.2 多位并行乘除法器 在进行乘法运算时，实际可以转化成加法运算，2位数相乘时的中间量进行累加，每次累加结果右移一位，将右移部分移到乘数寄存器当中 </description>
+    </item>
+    
+    <item>
+      <title>搭建博客</title>
+      <link>https://gyk19950104.github.io/skill/1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Fri, 20 Nov 2020 16:24:14 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/skill/1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>步骤  1.申请GitHub账号并配置ssh 2.brew安装hugo后选择主题 3.熟悉常见hugo指令 4.GitHub pages部署博客  指令 brew install hugo hugo new site blog git clone https://github.com/rmsubekti/the-roots-home.git themes/the-roots-home hugo server -t the-roots-home --buildDrafts hugo --theme=the-roots-home --baseUrl=&amp;#34;https://gyk19950104.github.io&amp;#34; --buildDrafts cd public git init git add . git commit -m &amp;#39;&amp;#39; git remote add origin https://github.com/gyk19950104/gyk19950104.github.io.git git push -u origin master 写博客 1.hugo new life/1.搭建博客.md 2.编写内容 3.运行脚本bash build.sh 4.从2021.3月开始需要使用token登陆，token记录在本地记事录 //build.sh #!/bin/bash hugo --theme=the-roots-home --baseUrl=&amp;#34;https://gyk19950104.github.io&amp;#34; --buildDrafts cd public git add . git commit -m &amp;#39;+1&amp;#39; git remote add origin https://github.</description>
+    </item>
+    
+  </channel>
+</rss>

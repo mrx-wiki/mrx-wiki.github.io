@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Frontends on gyk&#39;s blog</title>
+    <link>https://gyk19950104.github.io/frontend/</link>
+    <description>Recent content in Frontends on gyk&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 14 Feb 2022 04:55:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://gyk19950104.github.io/frontend/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>公众号开发</title>
+      <link>https://gyk19950104.github.io/frontend/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Mon, 14 Feb 2022 04:55:53 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/frontend/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/</guid>
+      <description>1.简介 1.每个用户针对每个公众号会产生一个安全的OpenID 2.一个用户虽然对多个公众号和应用有多个不同的OpenID，但他对所有这些同一开放平台账号下的公众号和应用，只有一个UnionID 3.在申请到认证公众号之前，申请一个接口测试号，立即开始接口测试开发 4.每个接口都有每日接口调用频次限制 5.公众平台以access_token为接口调用凭据，它在2小时内有效，1天内获取次数有限 6.公众平台接口调用仅支持80端口 7.公众号主要通过公众号消息会话 公众号内网页来为用户提供服务 8.公众号消息会话：公众号是以微信用户的一个联系人形式存在的，消息会话是公众号与用户交互的基础 9.消息服务的类型：群发消息，被动回复消息(加解密)，客服消息，模板消息 10.公众号内网页：获取用户的基本信息，微信JS-SDK EncodingAESKey: ZroCcwPJ2wVUemo94iPc8DJHiEXi3lHcJ3aXKDwUI2r 2.步骤 1.申请自己服务器，搭建web服务，申请公众号，在微信公众号平台的设置与开发-基本配置添加url(开发者ip)，token(验证开发者)和EncodingAESKey(消息加密密钥) 2.在微信公众号平台填好开发者信息后点击提交，微信服务器会向开发者服务器发送signature，timestamp，nonce，开发者用token, timestamp, nonce组合加密生成hashcode，对比微信发来的signature和自己生成的hashcode是否一致，如果一致返回echostr到微信服务器 3.用户发送消息到公众号，微信服务器将消息包装成xml格式发往开发者服务器，开发者服务器解析后发回内容到微信服务器，微信服务器解析后发给用户 微信文档：https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Getting_Started_Guide.html
+centos防火墙：https://blog.csdn.net/s_p_j/article/details/80979450 https://blog.csdn.net/Linda_Lindaaaa/article/details/88836146</description>
+    </item>
+    
+    <item>
+      <title>React_native</title>
+      <link>https://gyk19950104.github.io/frontend/react_native/</link>
+      <pubDate>Thu, 20 Jan 2022 03:10:22 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/frontend/react_native/</guid>
+      <description>1.Mac启动react-native项目 ======================启动安卓✅============== 1.安装Nodev12 以上、JDK1.8 和 Android Studio（Android 10 (Q)sdk/ANDROID_HOME） 2.创建项目npx react-native init AwesomeProject、 3.创建虚拟机(机型和系统都要选好) 4.编译运行yarn react-native run-android ======================启动苹果✅================ 1.安装Node12 以上、Watchman、Xcode模拟器13版本 和 CocoaPods代理。 2.创建项目npx react-native init AwesomeProject 3.编译运行yarn react-native run-ios需要先新开shell运行yarn start ======================正常流程================ 1.创建项目npx react-native init JustCodeDict 2.开启重启监控yarn start 3.把profile的use_flipper! 修改为 use_flipper!({ &amp;#39;Flipper-Folly&amp;#39; =&amp;gt; &amp;#39;2.3.0&amp;#39; })后删lock文件后重新pod install 4.开始编译yarn iOS ======================基础=============== React Native 是一个使用react和应用平台的原生功能来构建 Android 和 iOS 应用的开源框架 React Native 中的尺寸都是无单位的 Platform.OS import { StyleSheet, Image, View } from &amp;#39;react-native&amp;#39;; 1.添加css样式。 &amp;lt;View style={styles.container}&amp;gt; &amp;lt;/View&amp;gt; const styles = StyleSheet.</description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>https://gyk19950104.github.io/frontend/react/</link>
+      <pubDate>Sun, 28 Feb 2021 00:15:17 +0800</pubDate>
+      
+      <guid>https://gyk19950104.github.io/frontend/react/</guid>
+      <description>1.概念  单页面应用：加载单个HTML页面和所需资源，与页面的任何交互，页面都不会重新加载 jsx：js的扩展集，每个 JSX 元素只是调用 React.createElement的语法糖 组件：分为函数组件和类组件，区别是类组件上添加了许多别的特性 钩子函数：生命周期函数，在特定时间自动触发的函数 Props：jsx传值与子组件的节点组成的对象，props 是只读的 State：组件内部的数据，只能通过setState({ })更改 react非受控组件：用非react处理数据方式处理的组件 状态提升：不同层级子组件传值 组合继承：组件通过组合堆砌而不是继承实现,实质相当于槽的概念 context：复杂组件传值 错误边界：避免出错导致应用崩溃 Ref转发：组件外选中特定的dom refdom：组件内选中特定的dom 高阶组件：传入组件输出组件，实现对组件的加强，比如redux的connect Portals：组件可以脱离父组件层级挂载在DOM树的任何位置 Profiler：任意位置的性能测试 协调： diff算法 webcomponent：w3c支持的组件化标准  2.react细节 1.组件 // 1.获取容器 const domContainer = document.getElementById(&amp;#39;root&amp;#39;); // 2.创建虚拟dom //类组件 class Hello extends React.Component { constructor(props){ super(props); this.state = {name: &amp;#39;hello,world!&amp;#39;}; } componentWillMount(){ // 不能直接修改state  // this.state = { name:&amp;#39;hello&amp;#39;};  // this.setState({ name:&amp;#39;你好&amp;#39;})  } render() { return (&amp;lt;div&amp;gt;{this.state.name}&amp;lt;/div&amp;gt;) } }; //函数组件 function World(props){ console.</description>
+    </item>
+    
+  </channel>
+</rss>

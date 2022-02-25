@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang=><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 搭建博客 - gyk&#39;s blog</title>
+    <meta name="description" content="步骤  1.申请GitHub账号并配置ssh 2.brew安装hugo后选择主题 3.熟悉常见hugo指令 4.GitHub pages部署博客  指令 brew install hugo hugo new site blog git clone https://github.com/rmsubekti/the-roots-home.git themes/the-roots-home hugo server -t the-roots-home --buildDrafts hugo --theme=the-roots-home --baseUrl=&#34;https://gyk19950104.github.io&#34; --buildDrafts cd public git init git add . git commit -m &#39;&#39; git remote add origin https://github.com/gyk19950104/gyk19950104.github.io.git git push -u origin master 写博客 1.hugo new life/1.搭建博客.md 2.编写内容 3.运行脚本bash build.sh 4.从2021.3月开始需要使用token登陆，token记录在本地记事录 //build.sh #!/bin/bash hugo --theme=the-roots-home --baseUrl=&#34;https://gyk19950104.github.io&#34; --buildDrafts cd public git add . git commit -m &#39;&#43;1&#39; git remote add origin https://github.">
+    <link rel="canonical" href="https://gyk19950104.github.io/skill/1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+    <meta property="og:title" content="搭建博客">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://gyk19950104.github.io/skill/1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+    <meta property="og:description" content="步骤  1.申请GitHub账号并配置ssh 2.brew安装hugo后选择主题 3.熟悉常见hugo指令 4.GitHub pages部署博客  指令 brew install hugo hugo new site blog git clone https://github.com/rmsubekti/the-roots-home.git themes/the-roots-home hugo server -t the-roots-home --buildDrafts hugo --theme=the-roots-home --baseUrl=&#34;https://gyk19950104.github.io&#34; --buildDrafts cd public git init git add . git commit -m &#39;&#39; git remote add origin https://github.com/gyk19950104/gyk19950104.github.io.git git push -u origin master 写博客 1.hugo new life/1.搭建博客.md 2.编写内容 3.运行脚本bash build.sh 4.从2021.3月开始需要使用token登陆，token记录在本地记事录 //build.sh #!/bin/bash hugo --theme=the-roots-home --baseUrl=&#34;https://gyk19950104.github.io&#34; --buildDrafts cd public git add . git commit -m &#39;&#43;1&#39; git remote add origin https://github.">
+    <meta property="og:site_name" content="gyk&#39;s blog">
+    <link rel="stylesheet" href="https://gyk19950104.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
+    <meta name="generator" content="Hugo 0.73.0" />
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+
+    
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body><header class="site-header">
+    <nav class="site-nav" role="navigation" aria-label="breadcrumb">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb"><li class="breadcrumb-item  " 
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/">
+    <span itemprop="name">gyk&#39;s blog</span>
+  </a>
+  <meta itemprop="position" content="0" />
+</li>/<li class="breadcrumb-item  " 
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/skill/">
+    <span itemprop="name">skill</span>
+  </a>
+  <meta itemprop="position" content="0" />
+</li>/<li class="breadcrumb-item active hidden" aria-current="page"
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/skill/1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+    <span itemprop="name">1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2</span>
+  </a>
+  <meta itemprop="position" content="1" />
+</li></ol>
+    </nav>
+    <h1 class="site-title hidden">
+    <a href="https://gyk19950104.github.io/">gyk&#39;s blog</a>
+    </h1>
+</header>
+<div>先有逻辑正确的思路，剩余的是重复的实践与积累</div>
+<main id="content">
+<article role="article" class="content post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">        
+        <h2 class="post-title" itemprop="name headline">搭建博客</h2>
+        <span class="post-meta">
+            <time class="date-published" datetime="2020-11-20T16:24:14&#43;07:00" itemprop="datePublished">
+                Fri, 20 Nov 2020
+            </time>
+            
+        </span>
+    </header>
+    <div class="post-content" itemprop="articleBody">
+        <h2 id="步骤">步骤</h2>
+<ul>
+<li>1.申请GitHub账号并配置ssh</li>
+<li>2.brew安装hugo后选择主题</li>
+<li>3.熟悉常见hugo指令</li>
+<li>4.GitHub pages部署博客</li>
+</ul>
+<h2 id="指令">指令</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">brew install hugo
+
+hugo new site blog
+
+git clone https://github.com/rmsubekti/the-roots-home.git themes/the-roots-home
+
+hugo server -t the-roots-home --buildDrafts
+
+hugo --theme<span style="color:#f92672">=</span>the-roots-home --baseUrl<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://gyk19950104.github.io&#34;</span> --buildDrafts
+
+cd public
+git init
+git add .
+git commit -m <span style="color:#e6db74">&#39;&#39;</span>
+git remote add origin https://github.com/gyk19950104/gyk19950104.github.io.git
+git push -u origin master
+
+</code></pre></div><h2 id="写博客">写博客</h2>
+<pre><code>1.hugo new life/1.搭建博客.md 
+2.编写内容
+3.运行脚本bash build.sh
+4.从2021.3月开始需要使用token登陆，token记录在本地记事录
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">//build.sh
+<span style="color:#75715e">#!/bin/bash</span>
+hugo --theme<span style="color:#f92672">=</span>the-roots-home --baseUrl<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://gyk19950104.github.io&#34;</span> --buildDrafts
+cd public
+git add .
+git commit -m <span style="color:#e6db74">&#39;+1&#39;</span>
+git remote add origin https://github.com/gyk19950104/gyk19950104.github.io.git
+git push -u origin master
+</code></pre></div><h2 id="hugo博客加视频">hugo博客加视频</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">//直接更改主题，在主题模板里更改
+
+//1.添加video标签
+&lt;video id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;my_video&#34;</span> style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;height: 300px;width:100%&#34;</span> controls<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;controls&#34;</span>&gt;&lt;/video&gt;
+
+//2.动态添加视频源
+let src <span style="color:#f92672">=</span> document.getElementsByTagName<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;code&#39;</span><span style="color:#f92672">)[</span>0<span style="color:#f92672">]</span>.innerText;
+document.getElementById<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;my_video&#39;</span><span style="color:#f92672">)</span>.setAttribute<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;src&#34;</span>,src<span style="color:#f92672">)</span>
+
+//3.七牛云生成视频外链
+
+//4.新建页面，将链接直接写在页面即可
+
+</code></pre></div><p><code>github登陆机制变了https://liaosp.blog.csdn.net/article/details/119827438</code></p>
+
+    </div>
+    <video id="my_video" style="height: 300px;width:100%" controls="controls"></video>
+</article>
+
+<div class="pagination">
+    
+    
+    <div class="next"> <a href="https://gyk19950104.github.io/skill/2.%E6%B1%BD%E8%BD%A6%E6%9E%84%E9%80%A0/">Next Post</a> </div>
+    
+</div>
+
+
+<script type="text/javascript">
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+</script>
+<script>
+    try{
+        
+        let src = document.getElementsByTagName('code')[0].innerText;
+        
+        if(src.indexOf("mp4")!=-1){
+            document.getElementById('my_video').setAttribute("src",src)
+        }else{
+            
+            let video = document.getElementById('my_video');
+            if (video != null){
+                video.parentNode.removeChild(video);
+            }
+            
+            
+        }
+    }catch(e){
+        
+        let video = document.getElementById('my_video');
+        if (video != null){
+            video.parentNode.removeChild(video);
+        }
+    }
+    
+    
+    
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </main><footer class="site-footer">
+	<span class="right">
+		<em>gyk&#39;s blog</em>
+	</span>
+</footer>
+</body>
+</html>

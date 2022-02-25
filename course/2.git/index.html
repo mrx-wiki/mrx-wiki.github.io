@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang=><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> git教程 - gyk&#39;s blog</title>
+    <meta name="description" content="1.版本控制 1.1 简介 版本控制系统(DVCS)：一种记录并可以回溯文件的系统
+它经历了三个阶段：
+ 本地版本控制系统 集中式版本控制系统 分布式版本控制系统  最常用最简单的版本控制是通过复制完整文件制作副本，它有很多缺点：
+ 整个复制保存手动完成，耗费大量时间 需要自定义文件命名规则，体现不同版本文件差异 不便于协同工作  1.2 差异 1.本 地：保存整体文件，通过补丁（指文件修订前后的变化）对比来计算各版本文件内容在使用这种控制系统时，它会自动比较前后版本的区别，将差异的部分做成补丁保存，当需要回溯某个版本时就从File文件中找出它关联的文件之间的补丁经过计算生成需要回溯的文件，但比较前后变化是非常耗时的操作，并且这些都是在本地操作系统完成的内容，如果是团队合作，那应该怎样实现协同版本的控制系统，于是集中化的版本控制系统就出现了
+2.集中化：为了让不同系统上的开发者协同工作，集中化的版本控制系统会设立单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。但它的缺点是使用时必须要联网，中央服务器可能单点故障，比如服务器宕机，磁盘损坏等，会有丢失历史更新记录的风险。
+​ 其实集中式版本控制系统最大的不足就是中央服务器只有1个，服务器出问题就会导致一系列问题，你可能会说，中央服务器有问题，那成员之间交换代码不就行了么，为什么非得去中央服务器拉取，这是因为本地成员拉取的只是当前版本的代码，而关于版本的变更信息并没有拉取，最完整的内容只保存在中央服务器，从本质上来说是有丢失数据的可能存在，于是人们又研发了分布式的版本控制系统
+3.分布式：在分布式的版本控制系统中，客户端并不只提取最新版本的文件快照， 而是把代码仓库完整地镜像下来，包括完整的历史录。这么一来，任何一处协同工作用的服务器发生故障，事后都可以用任何一个镜像出来的本地仓库恢复。 因为每一次的克隆操作，实际上都是一次对代码仓库的完整备份。git作为分布式版本控制系统，每个拥有git客户端的地方都是中央服务器，它们都可以交换所有变更信息，它最大限度的保护了我们的数据安全。
+这节我们学习了：
+ 什么是版本控制系统 版本控制系统的三大演变 分布式为什么优于本地存储和集中式  大家要确保能够回答这些问题，这对于我们理解版本控制系统非常重要
+2.git的下载 2.1 下载 第一节课已经了解版本控制系统的演变，可以说git作为分布式的版本控制系统，相比于本地
+数据库模式和集中控制系统具有无法取代的安全性，所以我们来学习一下git的详细使用，最
+权威的资料应该就是官网的资料:
+官网：https://git-scm.com
+文档：https://gitee.com/progit/index.html
+git是一个能快速高效处理大小项目的，免费的，开源的，分布式版本控制系统，git易于学习， 它体积小却性能高，因特色的本地分支，便利的暂存区和多样化的工作流等特色战胜了Subversion, CVS, Perforce, and ClearCase等一系列SCM工具，它直接记录快照，而非差异比较，并不是 复制了所有的文件数据块，而是复制了文件的数据块描述结构序列。 这是git官网对它的描述，不过这属于git特性，是下节课要说的内容，这节课先来安装设置一
+下git：
+ 源代码安装 预编译安装包  1️⃣源代码安装，能获得最新的版本, 这里只讲解linux下的源码安装
+👉linux(ubuntu)：依赖工具&#43;源代码&#43;编译安装
+换源：https://www.jb51.net/article/185775.htm 下载编译工具：apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev 报错：Some packages could not be installed.">
+    <link rel="canonical" href="https://gyk19950104.github.io/course/2.git/">
+    <meta property="og:title" content="git教程">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://gyk19950104.github.io/course/2.git/">
+    <meta property="og:description" content="1.版本控制 1.1 简介 版本控制系统(DVCS)：一种记录并可以回溯文件的系统
+它经历了三个阶段：
+ 本地版本控制系统 集中式版本控制系统 分布式版本控制系统  最常用最简单的版本控制是通过复制完整文件制作副本，它有很多缺点：
+ 整个复制保存手动完成，耗费大量时间 需要自定义文件命名规则，体现不同版本文件差异 不便于协同工作  1.2 差异 1.本 地：保存整体文件，通过补丁（指文件修订前后的变化）对比来计算各版本文件内容在使用这种控制系统时，它会自动比较前后版本的区别，将差异的部分做成补丁保存，当需要回溯某个版本时就从File文件中找出它关联的文件之间的补丁经过计算生成需要回溯的文件，但比较前后变化是非常耗时的操作，并且这些都是在本地操作系统完成的内容，如果是团队合作，那应该怎样实现协同版本的控制系统，于是集中化的版本控制系统就出现了
+2.集中化：为了让不同系统上的开发者协同工作，集中化的版本控制系统会设立单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。但它的缺点是使用时必须要联网，中央服务器可能单点故障，比如服务器宕机，磁盘损坏等，会有丢失历史更新记录的风险。
+​ 其实集中式版本控制系统最大的不足就是中央服务器只有1个，服务器出问题就会导致一系列问题，你可能会说，中央服务器有问题，那成员之间交换代码不就行了么，为什么非得去中央服务器拉取，这是因为本地成员拉取的只是当前版本的代码，而关于版本的变更信息并没有拉取，最完整的内容只保存在中央服务器，从本质上来说是有丢失数据的可能存在，于是人们又研发了分布式的版本控制系统
+3.分布式：在分布式的版本控制系统中，客户端并不只提取最新版本的文件快照， 而是把代码仓库完整地镜像下来，包括完整的历史录。这么一来，任何一处协同工作用的服务器发生故障，事后都可以用任何一个镜像出来的本地仓库恢复。 因为每一次的克隆操作，实际上都是一次对代码仓库的完整备份。git作为分布式版本控制系统，每个拥有git客户端的地方都是中央服务器，它们都可以交换所有变更信息，它最大限度的保护了我们的数据安全。
+这节我们学习了：
+ 什么是版本控制系统 版本控制系统的三大演变 分布式为什么优于本地存储和集中式  大家要确保能够回答这些问题，这对于我们理解版本控制系统非常重要
+2.git的下载 2.1 下载 第一节课已经了解版本控制系统的演变，可以说git作为分布式的版本控制系统，相比于本地
+数据库模式和集中控制系统具有无法取代的安全性，所以我们来学习一下git的详细使用，最
+权威的资料应该就是官网的资料:
+官网：https://git-scm.com
+文档：https://gitee.com/progit/index.html
+git是一个能快速高效处理大小项目的，免费的，开源的，分布式版本控制系统，git易于学习， 它体积小却性能高，因特色的本地分支，便利的暂存区和多样化的工作流等特色战胜了Subversion, CVS, Perforce, and ClearCase等一系列SCM工具，它直接记录快照，而非差异比较，并不是 复制了所有的文件数据块，而是复制了文件的数据块描述结构序列。 这是git官网对它的描述，不过这属于git特性，是下节课要说的内容，这节课先来安装设置一
+下git：
+ 源代码安装 预编译安装包  1️⃣源代码安装，能获得最新的版本, 这里只讲解linux下的源码安装
+👉linux(ubuntu)：依赖工具&#43;源代码&#43;编译安装
+换源：https://www.jb51.net/article/185775.htm 下载编译工具：apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev 报错：Some packages could not be installed.">
+    <meta property="og:site_name" content="gyk&#39;s blog">
+    <link rel="stylesheet" href="https://gyk19950104.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
+    <meta name="generator" content="Hugo 0.73.0" />
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+
+    
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body><header class="site-header">
+    <nav class="site-nav" role="navigation" aria-label="breadcrumb">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb"><li class="breadcrumb-item  " 
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/">
+    <span itemprop="name">gyk&#39;s blog</span>
+  </a>
+  <meta itemprop="position" content="0" />
+</li>/<li class="breadcrumb-item  " 
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/course/">
+    <span itemprop="name">course</span>
+  </a>
+  <meta itemprop="position" content="0" />
+</li>/<li class="breadcrumb-item active hidden" aria-current="page"
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/course/2.git/">
+    <span itemprop="name">2.git</span>
+  </a>
+  <meta itemprop="position" content="1" />
+</li></ol>
+    </nav>
+    <h1 class="site-title hidden">
+    <a href="https://gyk19950104.github.io/">gyk&#39;s blog</a>
+    </h1>
+</header>
+<div>先有逻辑正确的思路，剩余的是重复的实践与积累</div>
+<main id="content">
+<article role="article" class="content post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">        
+        <h2 class="post-title" itemprop="name headline">git教程</h2>
+        <span class="post-meta">
+            <time class="date-published" datetime="2022-01-13T14:46:18&#43;07:00" itemprop="datePublished">
+                Thu, 13 Jan 2022
+            </time>
+            
+        </span>
+    </header>
+    <div class="post-content" itemprop="articleBody">
+        <h2 id="1版本控制">1.版本控制</h2>
+<h3 id="11-简介">1.1 简介</h3>
+<p><strong>版本控制系统(DVCS)</strong>：一种记录并可以回溯文件的系统</p>
+<p>它经历了<strong>三个阶段</strong>：</p>
+<ul>
+<li>本地版本控制系统</li>
+<li>集中式版本控制系统</li>
+<li>分布式版本控制系统</li>
+</ul>
+<p>最常用最简单的版本控制是通过复制完整文件制作副本，它有很多缺点：</p>
+<ul>
+<li>整个复制保存手动完成，耗费大量时间</li>
+<li>需要自定义文件命名规则，体现不同版本文件差异</li>
+<li>不便于协同工作</li>
+</ul>
+<h3 id="12-差异">1.2 差异</h3>
+<p><strong>1.本    地</strong>：保存整体文件，通过补丁（指文件修订前后的变化）对比来计算各版本文件内容在使用这种控制系统时，它会自动比较前后版本的区别，将差异的部分做成补丁保存，当需要回溯某个版本时就从File文件中找出它关联的文件之间的补丁经过计算生成需要回溯的文件，但比较前后变化是非常耗时的操作，并且这些都是在本地操作系统完成的内容，如果是团队合作，那应该怎样实现协同版本的控制系统，于是集中化的版本控制系统就出现了</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/01/9184d37a7e25ebfb.png" alt=""></p>
+<p><strong>2.集中化</strong>：为了让不同系统上的开发者协同工作，集中化的版本控制系统会设立单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。但它的缺点是使用时必须要联网，中央服务器可能单点故障，比如服务器宕机，磁盘损坏等，会有丢失历史更新记录的风险。</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/01/ba33f02eed1331e6.png" alt=""></p>
+<p>​   其实集中式版本控制系统最大的不足就是中央服务器只有1个，服务器出问题就会导致一系列问题，你可能会说，中央服务器有问题，那成员之间交换代码不就行了么，为什么非得去中央服务器拉取，这是因为本地成员拉取的只是当前版本的代码，而关于版本的变更信息并没有拉取，最完整的内容只保存在中央服务器，从本质上来说是有丢失数据的可能存在，于是人们又研发了分布式的版本控制系统</p>
+<p><strong>3.分布式</strong>：在分布式的版本控制系统中，客户端并不只提取最新版本的文件快照， 而是把代码仓库完整地镜像下来，包括完整的历史录。这么一来，任何一处协同工作用的服务器发生故障，事后都可以用任何一个镜像出来的本地仓库恢复。 因为每一次的克隆操作，实际上都是一次对代码仓库的完整备份。git作为分布式版本控制系统，每个拥有git客户端的地方都是中央服务器，它们都可以交换所有变更信息，它最大限度的保护了我们的数据安全。</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/01/b5aab40033b6e2e8.png" alt=""></p>
+<p>这节我们学习了：</p>
+<ul>
+<li>什么是版本控制系统</li>
+<li>版本控制系统的三大演变</li>
+<li>分布式为什么优于本地存储和集中式</li>
+</ul>
+<p>大家要确保能够回答这些问题，这对于我们理解版本控制系统非常重要</p>
+<h2 id="2git的下载">2.git的下载</h2>
+<h3 id="21-下载">2.1 下载</h3>
+<p>第一节课已经了解版本控制系统的演变，可以说git作为分布式的版本控制系统，相比于本地</p>
+<p>数据库模式和集中控制系统具有无法取代的安全性，所以我们来学习一下git的详细使用，最</p>
+<p>权威的资料应该就是官网的资料:</p>
+<p><strong>官网</strong>：https://git-scm.com</p>
+<p><strong>文档</strong>：https://gitee.com/progit/index.html</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">   <span style="color:#a6e22e">git是一个能快速高效处理大小项目的</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">免费的</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">开源的</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">分布式版本控制系统</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">git易于学习</span><span style="color:#960050;background-color:#1e0010">，</span>
+   
+<span style="color:#a6e22e">它体积小却性能高</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">因特色的本地分支</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">便利的暂存区和多样化的工作流等特色战胜了Subversion</span>, 
+
+<span style="color:#a6e22e">CVS</span>, <span style="color:#a6e22e">Perforce</span>, <span style="color:#a6e22e">and</span> <span style="color:#a6e22e">ClearCase等一系列SCM工具</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">它直接记录快照</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">而非差异比较</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">并不是</span>
+ 
+<span style="color:#a6e22e">复制了所有的文件数据块</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">而是复制了文件的数据块描述结构序列</span><span style="color:#960050;background-color:#1e0010">。</span>
+</code></pre></div><p>这是git官网对它的描述，不过这属于git特性，是下节课要说的内容，这节课先来安装设置一</p>
+<p>下git：</p>
+<ul>
+<li>源代码安装</li>
+<li>预编译安装包</li>
+</ul>
+<p>1️⃣源代码安装，能获得最新的版本, 这里只讲解linux下的源码安装</p>
+<p>👉linux(ubuntu)：依赖工具+源代码+编译安装</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">换源：https://www.jb51.net/article/185775.htm
+下载编译工具：apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">报错：Some packages could not be installed. This may mean that you have requested
+解决：apt-get install libssl1.1<span style="color:#f92672">=</span>1.1.1-1ubuntu2.1~18.04.14
+</code></pre></div><pre><code>下载源码：https://mirrors.edge.kernel.org/pub/software/scm/git/
+
+上传源码：scp -r /Users/gyk/Desktop/git-2.9.5.tar.gz root@123.56.85.105:/tmp
+
+源码解压：
+cd /tmp 
+mv git-2.9.5.tar.gz ~
+cd
+tar -zxf git-2.9.5.tar.gz
+cd git-2.9.5.tar.gz
+
+源码编译：
+make prefix=/usr/local all
+sudo make prefix=/usr/local install
+
+克隆仓库：
+cd
+git clone git://git.kernel.org/pub/scm/git/git.git
+
+</code></pre><p>2️⃣ 预编译好的安装包，简单</p>
+<p>mac和windows下载：</p>
+<p><a href="https://git-scm.com/download">https://git-scm.com/download</a></p>
+<p>linux下载：</p>
+<pre><code>apt-get install git
+</code></pre><p>我们可以验证一下：</p>
+<pre><code>git version
+git version 2.9.5
+</code></pre><p>历史版本：https://mirrors.edge.kernel.org/pub/software/scm/git/</p>
+<h3 id="22-配置">2.2 配置</h3>
+<p>在新的系统上，需要先配置下自己的 Git 工作环境，它们决定了git各个环节具体的工作方式</p>
+<p>和行为，这些配置文件可以分为3个级别，每一个级别的配置都会覆盖上层的相同配置，在</p>
+<p>Windows 系统上，Git 会找寻用户主目录下的 .gitconfig 文件，现在演示的是mac系统：</p>
+<ul>
+<li>/etc/gitconfig 文件：系统级别，git config &ndash;system对当前操作系统所有用户生效</li>
+<li>~/.gitconfig 文件：用户级别，git config &ndash;global 对当前操作系统该用户生效</li>
+<li>.git/config 文件：当前文件级别，git config &ndash;local仅针对当前项目有效</li>
+</ul>
+<p>下面是一些基础的配置选项：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git config —list 配置列表
+git config --global user.name 用户名
+git config --global user.email 用户邮箱
+git config --global core.editor编辑器
+git config --global merge.tool 差异分析器
+
+//如果遇到不清楚的指令，可以自行查找
+git help &lt;verb&gt;
+git &lt;verb&gt; --help
+man git-&lt;verb&gt;
+</code></pre></div><p>这节我们将git下载到本地并对它进行了相应的设置</p>
+<h2 id="3git特性">3.git特性</h2>
+<p>git的特性其实比较多，我们主要说它与其他版本控制系统不同的地方：</p>
+<ul>
+<li>1️⃣ 直接记录快照，而非差异比较</li>
+<li>2️⃣ 近乎所有操作都是本地执行</li>
+<li>3️⃣ 时刻保持数据完整性</li>
+<li>4️⃣ 暂存区</li>
+<li>5️⃣分支模型</li>
+</ul>
+<h3 id="31-记录快照">3.1 记录快照</h3>
+<p>👉其他版本控制系统关心的是文件内容的具体差异，它会记录哪些文件做了更新，更新了什么内容(差异的部分被做成补丁保存下来)</p>
+<p>👉git 并不会去将所有内容全部读出来对比一遍找出不同，而是给每个文件（文件只要修改过就算一个新文件）生成指纹，底层使用sha-1算法，只要文件有修改，算法最后得出的值就不相同，这个值就被称为指纹，git只去比较这些指纹就能得出哪些文件被修改过。每次有新的提交时，它会对比指纹信息，这比其他版本控制系统去遍历文件内容查找差异快得多，如果指纹发生变化它就会自动生成文件快照(底层实际上是生成了blob对象将文件内容放入blob中保存)，保存指向当前快照的索引，指纹无变化时，直接链接到上一次生成的快照</p>
+<h3 id="32-本地执行">3.2 本地执行</h3>
+<p>当使用集中式的版本控制系统时，只有1个中央服务器，对网络的依赖非常严重，而Git 因为在本地磁盘上就保存着所有当前项目的历史更新，所以可以频繁提交更新，等到了有网络的时候再上传到远程仓库</p>
+<h3 id="33-保持数据完整">3.3 保持数据完整</h3>
+<p>在保存到 Git 之前，所有数据都要进行内容的校验和（checksum）计算，并将此结果作为数据的唯一标识和索引
+Git 使用 SHA-1 算法计算数据的校验和，通过对文件的内容或目录的结构计算出一个 SHA-1 哈希值，作为指纹字符串。该字串由 40 个十六进制字符（0-9 及 a-f）组成</p>
+<h3 id="34--暂存区">3.4  暂存区</h3>
+<p>对于任何一个文件，在 Git 内都只有三种状态：</p>
+<p>👉已提交（committed）：该文件已经被安全地保存在本地数据库中了</p>
+<p>👉已修改（modified）：修改了某个文件</p>
+<p>👉已暂存（staged）：已修改的文件放在下次提交时要保存的清单中</p>
+<p>因此我们看到 Git 管理项目时，文件流转的三个工作区域：</p>
+<p>👉工作目录：编辑代码</p>
+<p>👉暂存区域：完成编辑但未提交</p>
+<p>👉本地仓库：.git目录，存放数据和修改信息</p>
+<h3 id="35-分支模型">3.5 分支模型</h3>
+<p>git鼓励大量使用分支，因为它不仅速度非常快，而且功能强大，你可以用它做很多事：</p>
+<p>👉快速切换，可以快速的新建分支来验证自己的想法，如果成熟就可以合并</p>
+<p>👉分工明确，开发时可以设置production，test，dev等多条线路各司其职</p>
+<p>👉多样化的工作流，使用git时可以采用多种工作流</p>
+<p>👉选择性提交，分支可以选择完成的，生产性质的进行提交</p>
+<h2 id="4git-创建保存">4.git 创建保存</h2>
+<p>接下来我们会学习到以后常用的git操作，</p>
+<h3 id="41-初始配置">4.1 初始配置：</h3>
+<p>(不同级别配置可覆盖)</p>
+<p>这部分在安装git时就已经搞定，这里不再赘述</p>
+<h3 id="42-git-init">4.2 git init</h3>
+<p>1️⃣未进行版本控制的本地目录转换为 Git 仓库</p>
+<p>2️⃣从其它服务器 克隆 一个已存在的 Git 仓库。</p>
+<pre><code>git init或git clone
+</code></pre><p>该命令将创建一个名为 .git 的子目录,它就是本地的仓库，后面所有的文件实际都存储在这里，我们可以进入该目录查看：</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/01/eca3eb32dadc0d1c.png" alt=""></p>
+<ul>
+<li>
+<p>HEAD：指向当前所处分支</p>
+</li>
+<li>
+<p>description：仅供 GitWeb 程序使用，无需关心</p>
+</li>
+<li>
+<p>info/：全局性排除文件</p>
+</li>
+<li>
+<p>config：配置文件</p>
+</li>
+<li>
+<p>hooks/：客户端或服务端的钩子脚本</p>
+</li>
+<li>
+<p>index：暂存区信息</p>
+</li>
+<li>
+<p>objects/：所有存储的数据</p>
+</li>
+<li>
+<p>refs/：存储指向数据（分支、远程仓库和标签等)的提交对象的指针</p>
+</li>
+</ul>
+<p>这些文件以后会依次介绍，我们先对它有大概印象即可，我们创建出的.git文件即为本地数据库，以后所有数据及其变更信息都存在这里</p>
+<h3 id="43-git-status">4.3 git status</h3>
+<p>当初始文件创建好后，我们除了可以去.git文件中查看相关信息，还可以直接用命令查看</p>
+<pre><code>git status
+</code></pre><p>此时没有添加任何的内容，所以它只会显示所处的分支，可以在工作区添加一些文件，然后再去<code>git status</code>，该命令将查看工作区和暂存区状态，文件的状态会有以下几种：</p>
+<ul>
+<li>未跟踪的文件：工作区中未曾添加的文件</li>
+<li>要提交的变更：新添加到暂存区中的文件</li>
+<li>尚未暂存以备提交的变更：新添加到暂存区中的文件又被修改</li>
+</ul>
+<h3 id="44-git-add">4.4 git add</h3>
+<p>该命令将未跟踪的内容添加到暂存区，可以来演示一下上面所说的文件状态：</p>
+<p>1.未跟踪的文件</p>
+<p>在工作区创建first.js后直接运行<code>git status</code>：</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/01/705cefa2e3726a2d.png" alt=""></p>
+<p>2.要提交的变更</p>
+<p>运行<code>git add first.js</code>将文件提交到暂存区后<code>git status </code>：</p>
+<p><!-- raw HTML omitted --></p>
+<p>3.尚未暂存以备提交的变更</p>
+<p>将刚才的文件再次修改后<code>git status</code>：</p>
+<p><!-- raw HTML omitted --></p>
+<h3 id="45-git-reset">4.5 git reset</h3>
+<p>前面将工作区的内容提交到了暂存区，但当发现有遗漏的内容未曾添加时，往往需要将暂存</p>
+<p>区内的内容回退，就需要使用<code>git reset</code>,原本处于暂存区的文件就会回到工作区，显示未曾</p>
+<p>被跟踪</p>
+<p><!-- raw HTML omitted --></p>
+<h3 id="46-git-rm">4.6 git rm</h3>
+<p>有时保存到缓存区的文件并不需要回退，而是需要直接删除，这里有2种选择：</p>
+<pre><code>git rm first.js --cached
+git rm first.js -f
+</code></pre><p><code>git rm first.js --cached</code>只会将文件移出暂存区，保存在工作区</p>
+<p><!-- raw HTML omitted --></p>
+<p><code>git rm first.js -f</code>会将文件直接删除</p>
+<p><!-- raw HTML omitted --></p>
+<h3 id="49-git-commit">4.9 git commit</h3>
+<p>添加到暂存区的内容还需要经过入库才能保证数据的安全性，而入库的命令为：</p>
+<pre><code>git commit -m 'first commit'
+</code></pre><p>该命令将为添加的内容加以说明，便于以后回看，它应该简洁的概括所提交的内容</p>
+<p><!-- raw HTML omitted -->加</p>
+<p>在前面add与commit分开写比较麻烦，可以直接用 以下命令简化：</p>
+<pre><code>git commit -a -m 'message'
+</code></pre><p><!-- raw HTML omitted --></p>
+<p>有时候提交完了才发现漏掉了几个文件没有加，或者提交信息写错了。想要撤消刚才的提交操作，可以使用 <code>--amend</code> 选项重新提交：</p>
+<pre><code>git commit --amend
+</code></pre><p>经过以上步骤，我们已经:</p>
+<ul>
+<li>成功初始化了git仓库</li>
+<li>了解了工作区，缓存区和git仓库</li>
+<li>了解了文件状态</li>
+<li>了解了常用的命令</li>
+</ul>
+<h2 id="5git-查看修改">5.git 查看修改</h2>
+<h3 id="51-git-diff">5.1 git diff</h3>
+<p>在前面<code>git status</code>检查状态时，仅列出了文件变化状态，但想知道哪些文件修改了哪些内容，需要使用<code>git diff</code>来查看</p>
+<ul>
+<li>git diff ：比较的是工作区当前文件和暂存区域快照之间的差异</li>
+</ul>
+<p><!-- raw HTML omitted --></p>
+<ul>
+<li>
+<p>git diff &ndash;cached：暂存区文件和提交的快照之间的差异</p>
+<p><!-- raw HTML omitted --></p>
+</li>
+</ul>
+<h3 id="52-git-log">5.2 git log</h3>
+<p>在提交了若干更新之后，又或者克隆了某个项目，想回顾下提交历史，可以使用 <code>git log</code> 命令查看</p>
+<pre><code>git log
+1.默认不用任何参数的话，git log 会按提交时间列出所有的更新，最近的更新排在最上面
+2.-p 选项展开显示每次提交的内容差异，用 -2 则仅显示最近的两次更新
+3.--stat，仅显示简要的增改行数统计
+4.--pretty 选项，可以指定使用完全不同于默认格式的方式展示提交历史
+   4.1 oneline 将每个提交放在一行显示
+   4.2 format 可以定制要显示的记录格式
+   4.3 --graph 展示每个提交所在的分支及其分化衍合情况
+5.--since 和 --until 按照时间作限制的选项
+6.--author 选项显示指定作者的提交
+7.--grep 选项搜索提交说明中的关键字
+   
+</code></pre><h3 id="53-git-mv">5.3 git mv</h3>
+<p>Git 并不显式跟踪文件移动操作。 如果在 Git 中重命名了某个文件，仓库中存储的数据并不会体现出这是一次改名操作，它会推断出究竟发生了什么</p>
+<pre><code> git mv first.js first.txt
+</code></pre><p><!-- raw HTML omitted --></p>
+<pre><code>本质上它运行了以下3条命令：
+1.mv first.js first.txt
+2.git rm first.js
+3.git first.txt
+</code></pre><h3 id="54-alias">5.4 alias</h3>
+<p>随着 Git 使用的深入，会有很多经常要用到的命令，遇到这种情况，可以建个别名提高效率</p>
+<pre><code>git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.last 'log -1 HEAD'
+</code></pre><h3 id="55-git-tag">5.5 git tag</h3>
+<p>Git可以对某一时间点上的版本打上标签，它使用的标签有两种类型：</p>
+<ul>
+<li>轻量级的，本质是指向特定提交对象的引用</li>
+<li>含附注的，本质上是存储在仓库中的一个独立对象</li>
+</ul>
+<pre><code>git tag 列出现有标签
+git tag -a v1.4 -m 'my version 1.4'创建一个含附注类型的标签
+git tag v1.4-lw 创建一个轻量级的标签
+git show v1.4 查看相应标签的版本信息，并连同显示打标签时的提交对象。
+git tag -a v1.2 指纹 在后期对早先的某次提交加注标签
+git push origin v1.5 推送指定标签到远端仓库
+git push origin --tags 一次推送所有本地新增的标签
+</code></pre><h3 id="56-gitignore">5.6 .gitignore</h3>
+<p>✅忽略某些文件.gitignore
+1.所有空行或者以 # 开头的行都会被 Git 忽略。
+2.可以使用标准的 glob 模式（shell 所使用的简化了的正则表达式）匹配，它会递归地应用在整个工作区中。
+3.匹配模式可以以（/）开头防止递归。
+4.匹配模式可以以（/）结尾指定目录。
+5.要忽略指定模式以外的文件或目录，可以在模式前加上叹号（!）取反。
+<a href="https://github.com/github/gitignore">https://github.com/github/gitignore</a></p>
+<h2 id="6git-远程仓库">6.git 远程仓库</h2>
+<p>远程仓库是指托管在网络上的项目仓库，同他人协作开发某个项目时，需要管理这些远程仓库，以便推送或拉取数据，分享各自的工作进展，管理远程仓库的工作，包括：</p>
+<ul>
+<li>添加远程库</li>
+<li>移除废弃的远程库</li>
+<li>管理各式远程库分支</li>
+<li>定义是否跟踪这些分支</li>
+</ul>
+<h3 id="61-git-remote">6.1 git remote</h3>
+<pre><code>git remote -v: 列出每个远程库的简短名字
+git remote add 名字 地址: 添加远程仓库
+git remote show:查看某个远程仓库的详细信息
+git remote rename a b:修改某个远程仓库在本地的简称
+</code></pre><h3 id="62-git-fetch">6.2 git fetch</h3>
+<pre><code>git fetch 名称：将远端的数据拉到本地仓库，并不自动合并到当前工作分支
+
+</code></pre><h3 id="63-git-pull">6.3 git pull</h3>
+<pre><code>git pull :自动抓取数据下来，然后将远端分支自动合并到本地仓库中当前分支
+
+</code></pre><h3 id="64-git-push">6.4 git push</h3>
+<pre><code>it push origin master :将本地仓库中的数据推送到远程仓库
+</code></pre><h2 id="7git-分支">7.git 分支</h2>
+<h3 id="71-分支的本质">7.1 分支的本质</h3>
+<p>使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作，在其他</p>
+<p>版本控制系统创建分支需要创建一个源代码目录的完整副本，对大型项目会花费很长时间，</p>
+<p>而Git 的分支可以在瞬间完成</p>
+<p>Git 保存的不是文件差异或者变化量，而只是一系列文件快照。</p>
+<p>在 Git 中提交时，会保存一个提交（commit）对象</p>
+<ul>
+<li>包含一个指向暂存内容快照的指针</li>
+<li>包含本次提交的作者等相关附属信息</li>
+<li>包含零个或多个指向该提交对象的父对象指针</li>
+</ul>
+<h3 id="72-新建合并分支">7.2 新建合并分支</h3>
+<h3 id="73-管理分支">7.3 管理分支</h3>
+<h3 id="74-工作模式">7.4 工作模式</h3>
+<h3 id="75远程分支">7.5远程分支</h3>
+<h3 id="76分支变基">7.6分支变基</h3>
+
+    </div>
+    <video id="my_video" style="height: 300px;width:100%" controls="controls"></video>
+</article>
+
+<div class="pagination">
+    
+    <div class="prev"> <a href="https://gyk19950104.github.io/course/1.jquery%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">Previous Post</a> </div>
+    
+    
+</div>
+
+
+<script type="text/javascript">
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+</script>
+<script>
+    try{
+        
+        let src = document.getElementsByTagName('code')[0].innerText;
+        
+        if(src.indexOf("mp4")!=-1){
+            document.getElementById('my_video').setAttribute("src",src)
+        }else{
+            
+            let video = document.getElementById('my_video');
+            if (video != null){
+                video.parentNode.removeChild(video);
+            }
+            
+            
+        }
+    }catch(e){
+        
+        let video = document.getElementById('my_video');
+        if (video != null){
+            video.parentNode.removeChild(video);
+        }
+    }
+    
+    
+    
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </main><footer class="site-footer">
+	<span class="right">
+		<em>gyk&#39;s blog</em>
+	</span>
+</footer>
+</body>
+</html>

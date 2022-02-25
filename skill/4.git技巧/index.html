@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang=><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 4.git技巧 - gyk&#39;s blog</title>
+    <meta name="description" content="0.理解 无法推送时，先新建后删除
+//新建代理 git config --global http.proxy http://127.0.0.1:1080 git config --global https.proxy http://127.0.0.1:1080 //删除代理 git config --global --unset http.proxy git config --global --unset https.proxy 1.版本控制系统：可以回溯文件修改内容与历史记录的软件 2.分布式控制系统会复制所有记录，不止当前版本的文件，包括所有修改历史 3.对于任何一个文件，在 Git 内都只有三种状态： 👉已提交（committed）：该文件已经被安全地保存在本地数据库中了 👉已修改（modified）：修改了某个文件 👉已暂存（staged）：已修改的文件放在下次提交时要保存的清单中 4.Git 分支，本质是一个指向 commit 对象(1. 指向暂存内容快照的指针2. 本次提交的作者等相关附属信息 3. 零个或多个指向该提交对象的父对象指针)的可变指针，一个包含commit对象 校验和（40 个字符长度 SHA-1 字串）的文件 它默认名为master，在每次提交的时候都会自动向前移动，永远指向最后一次提交对象的 master 分支 git branch 会创建一个新的分支指针，它也指向最后一次提交对象，但并不会自动切换过去 git checkout会将HEAD指针(指向正在工作中的本地分支的指针)修改为创建好的新分支指针， git merge 会用两个分支的末端和它们共同祖先进行三方合并计算结果重新做一个新的快照， 自动创建一个指向它的提交对象作为最终节点 git rebase 变基是把在一个分支里提交的改变移到另一个分支里重放一遍。 它的原理是回到两个分支最近的共同祖先，根据当前分支(fix)后续的历次提交对象 生成一系列文件补丁，然后以基底分支(master)最后一个 提交对象为新的出发点，逐个应用之前准备好的补丁文件，最后会生成一个新的 合并提交对象，使它成为 master 分支的最后commit对象，它可以得到一个在 远程分支上干净应用的补丁，但一旦分支中的提交对象发布到公共仓库，就千万 不要对该分支进行衍合操作，因为rebase会丢弃需要合并的信息，当别人提前 获取了未丢弃的合并信息继续开发时获得rebase后的代码会重复提交 1.密钥 首次下载git后需要设置">
+    <link rel="canonical" href="https://gyk19950104.github.io/skill/4.git%E6%8A%80%E5%B7%A7/">
+    <meta property="og:title" content="4.git技巧">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://gyk19950104.github.io/skill/4.git%E6%8A%80%E5%B7%A7/">
+    <meta property="og:description" content="0.理解 无法推送时，先新建后删除
+//新建代理 git config --global http.proxy http://127.0.0.1:1080 git config --global https.proxy http://127.0.0.1:1080 //删除代理 git config --global --unset http.proxy git config --global --unset https.proxy 1.版本控制系统：可以回溯文件修改内容与历史记录的软件 2.分布式控制系统会复制所有记录，不止当前版本的文件，包括所有修改历史 3.对于任何一个文件，在 Git 内都只有三种状态： 👉已提交（committed）：该文件已经被安全地保存在本地数据库中了 👉已修改（modified）：修改了某个文件 👉已暂存（staged）：已修改的文件放在下次提交时要保存的清单中 4.Git 分支，本质是一个指向 commit 对象(1. 指向暂存内容快照的指针2. 本次提交的作者等相关附属信息 3. 零个或多个指向该提交对象的父对象指针)的可变指针，一个包含commit对象 校验和（40 个字符长度 SHA-1 字串）的文件 它默认名为master，在每次提交的时候都会自动向前移动，永远指向最后一次提交对象的 master 分支 git branch 会创建一个新的分支指针，它也指向最后一次提交对象，但并不会自动切换过去 git checkout会将HEAD指针(指向正在工作中的本地分支的指针)修改为创建好的新分支指针， git merge 会用两个分支的末端和它们共同祖先进行三方合并计算结果重新做一个新的快照， 自动创建一个指向它的提交对象作为最终节点 git rebase 变基是把在一个分支里提交的改变移到另一个分支里重放一遍。 它的原理是回到两个分支最近的共同祖先，根据当前分支(fix)后续的历次提交对象 生成一系列文件补丁，然后以基底分支(master)最后一个 提交对象为新的出发点，逐个应用之前准备好的补丁文件，最后会生成一个新的 合并提交对象，使它成为 master 分支的最后commit对象，它可以得到一个在 远程分支上干净应用的补丁，但一旦分支中的提交对象发布到公共仓库，就千万 不要对该分支进行衍合操作，因为rebase会丢弃需要合并的信息，当别人提前 获取了未丢弃的合并信息继续开发时获得rebase后的代码会重复提交 1.密钥 首次下载git后需要设置">
+    <meta property="og:site_name" content="gyk&#39;s blog">
+    <link rel="stylesheet" href="https://gyk19950104.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
+    <meta name="generator" content="Hugo 0.73.0" />
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+
+    
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body><header class="site-header">
+    <nav class="site-nav" role="navigation" aria-label="breadcrumb">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb"><li class="breadcrumb-item  " 
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/">
+    <span itemprop="name">gyk&#39;s blog</span>
+  </a>
+  <meta itemprop="position" content="0" />
+</li>/<li class="breadcrumb-item  " 
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/skill/">
+    <span itemprop="name">skill</span>
+  </a>
+  <meta itemprop="position" content="0" />
+</li>/<li class="breadcrumb-item active hidden" aria-current="page"
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/skill/4.git%E6%8A%80%E5%B7%A7/">
+    <span itemprop="name">4.git%E6%8A%80%E5%B7%A7</span>
+  </a>
+  <meta itemprop="position" content="1" />
+</li></ol>
+    </nav>
+    <h1 class="site-title hidden">
+    <a href="https://gyk19950104.github.io/">gyk&#39;s blog</a>
+    </h1>
+</header>
+<div>先有逻辑正确的思路，剩余的是重复的实践与积累</div>
+<main id="content">
+<article role="article" class="content post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">        
+        <h2 class="post-title" itemprop="name headline">4.git技巧</h2>
+        <span class="post-meta">
+            <time class="date-published" datetime="2021-11-20T03:33:29&#43;07:00" itemprop="datePublished">
+                Sat, 20 Nov 2021
+            </time>
+            
+        </span>
+    </header>
+    <div class="post-content" itemprop="articleBody">
+        <h2 id="0理解">0.理解</h2>
+<p>无法推送时，先新建后删除</p>
+<pre><code>//新建代理
+git config --global http.proxy http://127.0.0.1:1080
+git config --global https.proxy http://127.0.0.1:1080
+
+//删除代理
+git config --global --unset http.proxy
+
+git config --global --unset https.proxy
+
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">1.版本控制系统：可以回溯文件修改内容与历史记录的软件
+
+2.分布式控制系统会复制所有记录，不止当前版本的文件，包括所有修改历史
+
+3.对于任何一个文件，在 Git 内都只有三种状态：
+👉已提交（committed）：该文件已经被安全地保存在本地数据库中了
+👉已修改（modified）：修改了某个文件
+👉已暂存（staged）：已修改的文件放在下次提交时要保存的清单中
+
+4.Git 分支，本质是一个指向 commit 对象<span style="color:#f92672">(</span>1. 指向暂存内容快照的指针2. 本次提交的作者等相关附属信息
+3. 零个或多个指向该提交对象的父对象指针<span style="color:#f92672">)</span>的可变指针，一个包含commit对象
+校验和（40 个字符长度 SHA-1 字串）的文件
+它默认名为master，在每次提交的时候都会自动向前移动，永远指向最后一次提交对象的 master 分支
+
+git branch 会创建一个新的分支指针，它也指向最后一次提交对象，但并不会自动切换过去
+
+git checkout会将HEAD指针<span style="color:#f92672">(</span>指向正在工作中的本地分支的指针<span style="color:#f92672">)</span>修改为创建好的新分支指针，
+
+git merge 会用两个分支的末端和它们共同祖先进行三方合并计算结果重新做一个新的快照，
+自动创建一个指向它的提交对象作为最终节点
+
+git rebase 变基是把在一个分支里提交的改变移到另一个分支里重放一遍。
+它的原理是回到两个分支最近的共同祖先，根据当前分支<span style="color:#f92672">(</span>fix<span style="color:#f92672">)</span>后续的历次提交对象
+生成一系列文件补丁，然后以基底分支<span style="color:#f92672">(</span>master<span style="color:#f92672">)</span>最后一个
+提交对象为新的出发点，逐个应用之前准备好的补丁文件，最后会生成一个新的
+合并提交对象，使它成为 master 分支的最后commit对象，它可以得到一个在
+远程分支上干净应用的补丁，但一旦分支中的提交对象发布到公共仓库，就千万
+不要对该分支进行衍合操作，因为rebase会丢弃需要合并的信息，当别人提前
+获取了未丢弃的合并信息继续开发时获得rebase后的代码会重复提交
+</code></pre></div><h2 id="1密钥">1.密钥</h2>
+<p><code>首次下载git后需要设置</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git config --global user.name <span style="color:#e6db74">&#39;xxxx&#39;</span>
+git config --global user.email <span style="color:#e6db74">&#39;xxxxx&#39;</span>
+</code></pre></div><p><code>然后在本地生成私钥和公钥，公钥保存在云端</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">//是否已拥有密钥
+cd ~/.ssh
+ls
+
+//创建
+ssh-keygen -o
+
+//找到公钥
+cat ~/.ssh/id_rsa.pub
+
+</code></pre></div><h2 id="2原理">2.原理</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">———————对象创建方式————————
+1️⃣需要存储的内容
+content <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;what is up, doc?&#34;</span>
+2️⃣对象头部信息
+header <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;blob #{content.length}\0&#34;</span>
+3️⃣sha-1校验和
+store <span style="color:#f92672">=</span> header + content
+sha1 <span style="color:#f92672">=</span> Digest::SHA1.hexdigest<span style="color:#f92672">(</span>store<span style="color:#f92672">)</span>
+4️⃣压缩
+zlib_content <span style="color:#f92672">=</span> Zlib::Deflate.deflate<span style="color:#f92672">(</span>store<span style="color:#f92672">)</span>
+5️⃣写入磁盘
+path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;.git/objects/&#39;</span> + sha1<span style="color:#f92672">[</span>0,2<span style="color:#f92672">]</span> + <span style="color:#e6db74">&#39;/&#39;</span> + sha1<span style="color:#f92672">[</span>2,38<span style="color:#f92672">]</span>
+FileUtils.mkdir_p<span style="color:#f92672">(</span>File.dirname<span style="color:#f92672">(</span>path<span style="color:#f92672">))</span>
+File.open<span style="color:#f92672">(</span>path, <span style="color:#e6db74">&#39;w&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> |f| f.write zlib_content <span style="color:#f92672">}</span>
+
+
+———————————blob对象————————
+👉git init
+objects 目录存储所有数据内容
+refs 存储指向数据 <span style="color:#f92672">(</span>分支<span style="color:#f92672">)</span> 的提交对象的指针
+HEAD 文件指向当前分支
+index 文件保存了暂存区域信息
+
+Git 初始化了 objects 目录，同时在该目录下创建了 pack 和 info 子目录
+
+👉 echo <span style="color:#e6db74">&#39;test&#39;</span> | git hash-object -w --stdin
+向数据库提交一些数据会返回：
+长度为 <span style="color:#ae81ff">40</span> 个字符的校验和<span style="color:#f92672">(</span>sha-1哈希值<span style="color:#f92672">)</span>
+d670460b4b4aece5915caf5c68d12f56
+
+👉 find .git/objects -type f
+objects目录下出现：
+.git/objects/d6/70460b4b4aece5915caf
+
+👉 git cat-file d670460b4b4aece5915ca
+返回“test”内容
+
+👉 echo <span style="color:#e6db74">&#39;hello&#39;</span> | git hash-object -w --stdin
+返回83baae61804e65cc73a7201a7252
+
+👉 find .git/objects -type f
+objects目录下出现：
+.git/objects/d6/70460b4b4aece5915caf
+.git/objects/83/baae61804e65cc73a720
+前2个字符是文件夹
+后38个字符是存储着所有内容的blob对象
+
+👉 git cat-file -p d670460b4b4aece5915c
+回溯到test内容
+
+
+
+———————————tree对象————————
+
+blob对象：实际文件的存储空间
+tree对象：既可以存储文件名，又可以存储文件，它包含多条tree记录，每一条记录含有一个指向 blob 或子 tree 对象的 SHA-1 指针，并附有该对象的权限模式 <span style="color:#f92672">(</span>mode<span style="color:#f92672">)</span>、类型和文件名信息
+
+文件模式：
+1️⃣100644普通文件
+2️⃣100755可执行文件
+3️⃣120000 符号链接
+4️⃣040000
+
+👉 git update-index --add --cacheinfo <span style="color:#ae81ff">100644</span>  83baae61804e65cc test.txt
+创建暂存区
+update-index：创建index的指令
+--add ：添加到缓存区
+--cacheinfo ：指定文件位置
+<span style="color:#ae81ff">100644</span>  ：文件模式
+83baae61804e65cc ：sha-1值
+test.txt：文件名
+
+👉 git write-tree
+返回tree对象d8329fc1cc938780f579
+将暂存区内容写到tree对象，如果没有tree对象，git会自动根据index状态创建tree对象
+
+👉 git cat-file -p d8329fc1c
+返回100644 blob 83baae61804 test.txt
+
+👉 git cat-file -t d8329fc1cc93
+返回tree，说明tree对象已经创建
+
+👉 echo <span style="color:#e6db74">&#39;new file&#39;</span> &gt; new.txt
+git update-index test.txt
+git update-index --add new.txt
+更新test.txt内容，新建new.txt
+
+👉 git write-tree
+再次写入tree对象，返回新tree对象0155eb4
+
+👉 git cat-file -p 0155eb4229
+返回0155tree对象包含的2记录:
+<span style="color:#ae81ff">100644</span> blob fa49b07797239 new.txt
+<span style="color:#ae81ff">100644</span> blob 1f7a7a472abf3dd test.txt
+
+
+👉 git read-tree --prefix<span style="color:#f92672">=</span>bak d8329fc1c
+git write-tree
+返回：3c4e9cd789d8
+将前面生成的tree对象作为子tree对象读入缓冲区后写进新tree
+👉 git cat-file -p 3c4e9cd789d8
+返回：
+<span style="color:#ae81ff">040000</span> tree d8329fc1cc938780ffd bak
+<span style="color:#ae81ff">100644</span> blob fa49b077972391ad new.txt
+<span style="color:#ae81ff">100644</span> blob 1f7a7a472abf3dd9 test.txt
+
+
+
+——————————commit对象————————
+
+👉 echo <span style="color:#e6db74">&#39;first&#39;</span> | git commit-tree d8329f
+第一棵tree作为顶层
+返回commit对象：fdf4fc3344
+
+👉 git cat-file -p fdf4fc3
+返回：
+tree d8329fc1cc938780ffd
+author 名字  &lt;邮箱&gt; 时间戳
+committer 名字  &lt;邮箱&gt; 时间戳
+
+first commit
+
+👉 echo <span style="color:#e6db74">&#39;second&#39;</span> | git commit-tree 0155eb -p fdf4fc3
+第二棵树
+返回：cac0cab538b9
+
+👉 echo <span style="color:#e6db74">&#39;third&#39;</span> | git commit-tree 3c4e9c -p cac0cab
+第三棵树
+返回：1a410efbd13591
+
+
+👉 git log --stat 1a410e
+查看提交历史
+
+——————————tags对象————————
+tags对象包含一个标签，一组数据，一个消息和一个指针，指向一个 commit 对象
+
+👉 git update-ref refs/tags/v1.0 cac0cab53
+创建lightweight tag
+
+
+
+
+
+
+
+——————————引用————————
+
+👉 echo <span style="color:#e6db74">&#34;1a410e&#34;</span> &gt; .git/refs/heads/master
+将最后一次sha-1值加入引用
+
+👉 git log --pretty<span style="color:#f92672">=</span>oneline master
+查看提交记录
+
+——————————HEAD标记————————
+head是指向当前所在分支的引用标识符，本质是一个指向其他引用的指针
+
+👉 cat .git/HEAD
+返回：ref: refs/heads/master
+
+👉 git checkout test &amp; cat .git/HEAD
+返回：ref: refs/heads/test
+
+
+👉 git commit &amp; cat .git/HEAD
+返回：当前commit 对象的父级的指纹
+
+👉 git symbolic-ref HEAD
+读取当前head值
+
+👉 git symbolic-ref HEAD refs/heads/test
+设置当前head值
+
+——————————HEAD标记————————
+
+</code></pre></div><p>git快照: <a href="https://segmentfault.com/q/1010000008914409">https://segmentfault.com/q/1010000008914409</a></p>
+<p>git3对象: <a href="https://gitee.com/progit/9-Git-">https://gitee.com/progit/9-Git-</a>内部原理.html#9.3-Git-References</p>
+
+    </div>
+    <video id="my_video" style="height: 300px;width:100%" controls="controls"></video>
+</article>
+
+<div class="pagination">
+    
+    <div class="prev"> <a href="https://gyk19950104.github.io/skill/3.%E9%98%BF%E9%87%8C%E4%BA%91%E9%83%A8%E7%BD%B2/">Previous Post</a> </div>
+    
+    
+    <div class="next"> <a href="https://gyk19950104.github.io/skill/5.mac%E6%8A%80%E5%B7%A7/">Next Post</a> </div>
+    
+</div>
+
+
+<script type="text/javascript">
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+</script>
+<script>
+    try{
+        
+        let src = document.getElementsByTagName('code')[0].innerText;
+        
+        if(src.indexOf("mp4")!=-1){
+            document.getElementById('my_video').setAttribute("src",src)
+        }else{
+            
+            let video = document.getElementById('my_video');
+            if (video != null){
+                video.parentNode.removeChild(video);
+            }
+            
+            
+        }
+    }catch(e){
+        
+        let video = document.getElementById('my_video');
+        if (video != null){
+            video.parentNode.removeChild(video);
+        }
+    }
+    
+    
+    
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </main><footer class="site-footer">
+	<span class="right">
+		<em>gyk&#39;s blog</em>
+	</span>
+</footer>
+</body>
+</html>
