@@ -28,10 +28,10 @@
 串行四位补码加减法器在计算时下一位的计算需要上一步算好的进位，速度较慢，所以需要将串行打破，改造成并行，得到并行四位补码加减法器
 并行四位补码加减法器要想再次扩充，同样需要按照上面的步骤将串行链改造为并行链，抽象出并行部件
 6.2 多位并行乘除法器 在进行乘法运算时，实际可以转化成加法运算，2位数相乘时的中间量进行累加，每次累加结果右移一位，将右移部分移到乘数寄存器当中 ">
-    <link rel="canonical" href="https://gyk19950104.github.io/cs/1.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+    <link rel="canonical" href="https://mrx-wiki.github.io/cs/1.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
     <meta property="og:title" content="1.计算机组成原理">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://gyk19950104.github.io/cs/1.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+    <meta property="og:url" content="https://mrx-wiki.github.io/cs/1.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
     <meta property="og:description" content="1.什么是电路？ 物质由原子组成，原子由电子核与核外电子组成，在电场力的作用下核外电子绕原子核做圆周运动，当施加外部电场力时，导体的核外电子脱离原子核的束缚沿着电场力的方向运动：
  电子的定向移动就形成了电流 原子核同时也会阻止核外电子的力形成了电阻 核外电子移动后造成正负电子间的势能差形成了电压 在宏观世界，电流，电阻和电压会被转化为其他形式的能量，为了描述这些能量，提出了焦耳定律 q=i^2rt,焦耳反应了电流的做功大小 p=ui,功率反应了做功快慢  2.什么是电子管？ 通电的灯丝处产生大量活跃的电子，在电子管中加入外加正电压的金属板，活跃的电子在电场力的作用下朝着金属板移动产生电流，改变外加电压的正负即可控制通断，在外加正电压金属板与活跃电子之间再加入金属板，可用于加强电场。这样通过电压的正负极转换就能控制电子管的通断，但电子管的体积大，功耗高，难以适应急剧增长的需求 
 3.什么是晶体管？ 纯净的硅原子最外层有4个电子，它既不容易得到电子也不容易失去电子，被叫做本征半导体，
@@ -57,49 +57,39 @@
 并行四位补码加减法器要想再次扩充，同样需要按照上面的步骤将串行链改造为并行链，抽象出并行部件
 6.2 多位并行乘除法器 在进行乘法运算时，实际可以转化成加法运算，2位数相乘时的中间量进行累加，每次累加结果右移一位，将右移部分移到乘数寄存器当中 ">
     <meta property="og:site_name" content="gyk&#39;s blog">
-    <link rel="stylesheet" href="https://gyk19950104.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
+    <link rel="stylesheet" href="https://mrx-wiki.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
     <meta name="generator" content="Hugo 0.73.0" />
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
 
     
-    <script type="text/javascript">
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
 </head>
 <body><header class="site-header">
     <nav class="site-nav" role="navigation" aria-label="breadcrumb">
     <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb"><li class="breadcrumb-item  " 
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/">
     <span itemprop="name">gyk&#39;s blog</span>
   </a>
   <meta itemprop="position" content="0" />
 </li>/<li class="breadcrumb-item  " 
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/cs/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/cs/">
     <span itemprop="name">cs</span>
   </a>
   <meta itemprop="position" content="0" />
 </li>/<li class="breadcrumb-item active hidden" aria-current="page"
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/cs/1.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/cs/1.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
     <span itemprop="name">1.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86</span>
   </a>
   <meta itemprop="position" content="1" />
 </li></ol>
     </nav>
     <h1 class="site-title hidden">
-    <a href="https://gyk19950104.github.io/">gyk&#39;s blog</a>
+    <a href="https://mrx-wiki.github.io/">gyk&#39;s blog</a>
     </h1>
 </header>
-<div>先有逻辑正确的思路，剩余的是重复的实践与积累</div>
 <main id="content">
 <article role="article" class="content post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
     <header class="post-header">        
@@ -203,21 +193,12 @@
 <div class="pagination">
     
     
-    <div class="next"> <a href="https://gyk19950104.github.io/cs/2.%E7%AE%97%E6%B3%95/">Next Post</a> </div>
+    <div class="next"> <a href="https://mrx-wiki.github.io/cs/2.%E7%AE%97%E6%B3%95/">Next Post</a> </div>
     
 </div>
 
 
-<script type="text/javascript">
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+
 
 </script>
 <script>

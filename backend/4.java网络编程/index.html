@@ -8,58 +8,48 @@
  应用层http 传输层udp,tcp 网络层ip 链路层  2.tcp协议 三次握手：客户端与服务器建立连接
 四次挥手：客户端与服务器断开连接
 //客户端 package wiki.mrx.www; import java.io.*; import java.net.Socket; import java.util.Scanner; public class TestClient { public static void main(String[] args){ System.out.println(&#34;客户端启动了&#34;); //1.创建套接字，指定ip和端口  Socket s = null; OutputStream os = null; ObjectOutputStream oos = null; InputStream is = null; DataInputStream dis = null; try { s = new Socket(&#34;192.168.18.5&#34;,8888); //录入账号密码  Scanner sc = new Scanner(System.in); System.out.println(&#34;请录入账号：&#34;); String name = sc.next(); System.">
-    <link rel="canonical" href="https://gyk19950104.github.io/backend/4.java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
+    <link rel="canonical" href="https://mrx-wiki.github.io/backend/4.java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
     <meta property="og:title" content="4.java网络编程">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://gyk19950104.github.io/backend/4.java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
+    <meta property="og:url" content="https://mrx-wiki.github.io/backend/4.java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
     <meta property="og:description" content="1.基础知识 网络互联需要ip和端口，传输时需要遵守一定的规则，这个规则就是网络传输协议，即四层传输协议：
  应用层http 传输层udp,tcp 网络层ip 链路层  2.tcp协议 三次握手：客户端与服务器建立连接
 四次挥手：客户端与服务器断开连接
 //客户端 package wiki.mrx.www; import java.io.*; import java.net.Socket; import java.util.Scanner; public class TestClient { public static void main(String[] args){ System.out.println(&#34;客户端启动了&#34;); //1.创建套接字，指定ip和端口  Socket s = null; OutputStream os = null; ObjectOutputStream oos = null; InputStream is = null; DataInputStream dis = null; try { s = new Socket(&#34;192.168.18.5&#34;,8888); //录入账号密码  Scanner sc = new Scanner(System.in); System.out.println(&#34;请录入账号：&#34;); String name = sc.next(); System.">
     <meta property="og:site_name" content="gyk&#39;s blog">
-    <link rel="stylesheet" href="https://gyk19950104.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
+    <link rel="stylesheet" href="https://mrx-wiki.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
     <meta name="generator" content="Hugo 0.73.0" />
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
 
     
-    <script type="text/javascript">
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
 </head>
 <body><header class="site-header">
     <nav class="site-nav" role="navigation" aria-label="breadcrumb">
     <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb"><li class="breadcrumb-item  " 
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/">
     <span itemprop="name">gyk&#39;s blog</span>
   </a>
   <meta itemprop="position" content="0" />
 </li>/<li class="breadcrumb-item  " 
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/backend/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/backend/">
     <span itemprop="name">backend</span>
   </a>
   <meta itemprop="position" content="0" />
 </li>/<li class="breadcrumb-item active hidden" aria-current="page"
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/backend/4.java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/backend/4.java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
     <span itemprop="name">4.java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B</span>
   </a>
   <meta itemprop="position" content="1" />
 </li></ol>
     </nav>
     <h1 class="site-title hidden">
-    <a href="https://gyk19950104.github.io/">gyk&#39;s blog</a>
+    <a href="https://mrx-wiki.github.io/">gyk&#39;s blog</a>
     </h1>
 </header>
-<div>先有逻辑正确的思路，剩余的是重复的实践与积累</div>
 <main id="content">
 <article role="article" class="content post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
     <header class="post-header">        
@@ -382,24 +372,15 @@ read
 
 <div class="pagination">
     
-    <div class="prev"> <a href="https://gyk19950104.github.io/backend/3.javaio%E6%B5%81/">Previous Post</a> </div>
+    <div class="prev"> <a href="https://mrx-wiki.github.io/backend/3.javaio%E6%B5%81/">Previous Post</a> </div>
     
     
-    <div class="next"> <a href="https://gyk19950104.github.io/backend/5.java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/">Next Post</a> </div>
+    <div class="next"> <a href="https://mrx-wiki.github.io/backend/5.java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/">Next Post</a> </div>
     
 </div>
 
 
-<script type="text/javascript">
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+
 
 </script>
 <script>

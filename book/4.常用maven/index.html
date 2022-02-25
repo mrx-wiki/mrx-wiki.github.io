@@ -5,55 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> 4.常用maven - gyk&#39;s blog</title>
     <meta name="description" content="1.mybatis-spring &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;parent&gt; &lt;artifactId&gt;spring-study&lt;/artifactId&gt; &lt;groupId&gt;org.example&lt;/groupId&gt; &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt; &lt;/parent&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;artifactId&gt;spring-mybatis&lt;/artifactId&gt; &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;junit&lt;/groupId&gt; &lt;artifactId&gt;junit&lt;/artifactId&gt; &lt;version&gt;4.12&lt;/version&gt; &lt;scope&gt;test&lt;/scope&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;mysql&lt;/groupId&gt; &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt; &lt;version&gt;5.1.47&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.mybatis&lt;/groupId&gt; &lt;artifactId&gt;mybatis&lt;/artifactId&gt; &lt;version&gt;3.5.9&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework&lt;/groupId&gt; &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt; &lt;version&gt;5.3.15&lt;/version&gt; &lt;/dependency&gt; &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc --&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework&lt;/groupId&gt; &lt;artifactId&gt;spring-jdbc&lt;/artifactId&gt; &lt;version&gt;5.3.16&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.aspectj&lt;/groupId&gt; &lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt; &lt;version&gt;1.9.8&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.mybatis&lt;/groupId&gt; &lt;artifactId&gt;mybatis-spring&lt;/artifactId&gt; &lt;version&gt;2.0.2&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.projectlombok&lt;/groupId&gt; &lt;artifactId&gt;lombok&lt;/artifactId&gt; &lt;version&gt;1.18.22&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;log4j&lt;/groupId&gt; &lt;artifactId&gt;log4j&lt;/artifactId&gt; &lt;version&gt;1.2.17&lt;/version&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 2.mybatis-config.xml &lt;?xml version=&#34;1.">
-    <link rel="canonical" href="https://gyk19950104.github.io/book/4.%E5%B8%B8%E7%94%A8maven/">
+    <link rel="canonical" href="https://mrx-wiki.github.io/book/4.%E5%B8%B8%E7%94%A8maven/">
     <meta property="og:title" content="4.常用maven">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://gyk19950104.github.io/book/4.%E5%B8%B8%E7%94%A8maven/">
+    <meta property="og:url" content="https://mrx-wiki.github.io/book/4.%E5%B8%B8%E7%94%A8maven/">
     <meta property="og:description" content="1.mybatis-spring &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;parent&gt; &lt;artifactId&gt;spring-study&lt;/artifactId&gt; &lt;groupId&gt;org.example&lt;/groupId&gt; &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt; &lt;/parent&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;artifactId&gt;spring-mybatis&lt;/artifactId&gt; &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;junit&lt;/groupId&gt; &lt;artifactId&gt;junit&lt;/artifactId&gt; &lt;version&gt;4.12&lt;/version&gt; &lt;scope&gt;test&lt;/scope&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;mysql&lt;/groupId&gt; &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt; &lt;version&gt;5.1.47&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.mybatis&lt;/groupId&gt; &lt;artifactId&gt;mybatis&lt;/artifactId&gt; &lt;version&gt;3.5.9&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework&lt;/groupId&gt; &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt; &lt;version&gt;5.3.15&lt;/version&gt; &lt;/dependency&gt; &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc --&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework&lt;/groupId&gt; &lt;artifactId&gt;spring-jdbc&lt;/artifactId&gt; &lt;version&gt;5.3.16&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.aspectj&lt;/groupId&gt; &lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt; &lt;version&gt;1.9.8&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.mybatis&lt;/groupId&gt; &lt;artifactId&gt;mybatis-spring&lt;/artifactId&gt; &lt;version&gt;2.0.2&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.projectlombok&lt;/groupId&gt; &lt;artifactId&gt;lombok&lt;/artifactId&gt; &lt;version&gt;1.18.22&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;log4j&lt;/groupId&gt; &lt;artifactId&gt;log4j&lt;/artifactId&gt; &lt;version&gt;1.2.17&lt;/version&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 2.mybatis-config.xml &lt;?xml version=&#34;1.">
     <meta property="og:site_name" content="gyk&#39;s blog">
-    <link rel="stylesheet" href="https://gyk19950104.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
+    <link rel="stylesheet" href="https://mrx-wiki.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
     <meta name="generator" content="Hugo 0.73.0" />
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
 
     
-    <script type="text/javascript">
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
 </head>
 <body><header class="site-header">
     <nav class="site-nav" role="navigation" aria-label="breadcrumb">
     <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb"><li class="breadcrumb-item  " 
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/">
     <span itemprop="name">gyk&#39;s blog</span>
   </a>
   <meta itemprop="position" content="0" />
 </li>/<li class="breadcrumb-item  " 
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/book/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/book/">
     <span itemprop="name">book</span>
   </a>
   <meta itemprop="position" content="0" />
 </li>/<li class="breadcrumb-item active hidden" aria-current="page"
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/book/4.%E5%B8%B8%E7%94%A8maven/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/book/4.%E5%B8%B8%E7%94%A8maven/">
     <span itemprop="name">4.%E5%B8%B8%E7%94%A8maven</span>
   </a>
   <meta itemprop="position" content="1" />
 </li></ol>
     </nav>
     <h1 class="site-title hidden">
-    <a href="https://gyk19950104.github.io/">gyk&#39;s blog</a>
+    <a href="https://mrx-wiki.github.io/">gyk&#39;s blog</a>
     </h1>
 </header>
-<div>先有逻辑正确的思路，剩余的是重复的实践与积累</div>
 <main id="content">
 <article role="article" class="content post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
     <header class="post-header">        
@@ -270,22 +260,13 @@ password=rootroot
 
 <div class="pagination">
     
-    <div class="prev"> <a href="https://gyk19950104.github.io/book/3.%E8%B7%AF%E7%BA%BF/">Previous Post</a> </div>
+    <div class="prev"> <a href="https://mrx-wiki.github.io/book/3.%E8%B7%AF%E7%BA%BF/">Previous Post</a> </div>
     
     
 </div>
 
 
-<script type="text/javascript">
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+
 
 </script>
 <script>

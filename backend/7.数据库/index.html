@@ -8,58 +8,48 @@
  关系数据库：oracle，mysql 非关系数据库：mongodb，redis  基本概念|基本概念|基本概念|基本概念|基本概念|基本概念|基本概念|
  1.DQL数据查询语句，DDL数据定义语言，DCL数据控制语言，TCL事务控制语言。 2.主键：可查询到唯一对应的数据，是非空且唯一的,如果是整数类型则需要自增。 3.非外键约束：对单表字段的限定条件 4.外键约束：多表间有联系的字段添加限制条件,student表某字段可以是class表外键 5.级联操作：操作主表时影响从表的外键信息 6.事务：多条sql命令完成一件事，具有原子性，一致性，隔离性，持久性 7.脏读：一个事务读取了另一个没提交的事务 8.幻读：同一事务中，读取了其他插入的数据，导致前后结果不一致  ===常用sql命令=== | ===常用sql命令=== | ===常用sql命令=== |===常用sql命令=== |
 数据库：登陆，查看，增删改查，事务； //1.登陆数据库 mysql -h localhost -u root -p //2.查看信息 show databases;//显示所有数据库 use 数据库名字;//进入该数据库 show tables;//显示该数据库下的锁哟表 desc t_student;//列出该表的所有字段 select * from t_student;//列出该表的所有数据 show create table t_student;//显示创建该字段的sql语句 exit;或者\q;//退出数据库 //3.操作数据 ## 创建表格 create table t_student( sno int(6) primary key auto_increment, sname varchar(5) not null, sex char(1) default &#39;男&#39; check(sex=&#39;男&#39;|| sex=&#39;女&#39;), sage int(3) check(sage&gt;=18 and sage&lt;=50), enterdate date, classname varchar(10), email varchar(15) unique ); ## 插入数据 insert into t_student values(); alter table t_student add score double(5,2) first/after; alter table t_student drop score; ## 修改数据 update t_student set sex = &#39;女&#39; where sno = 1; ## 删除数据 delete from t_student where sno=1; drop table t_student; ## 外键 ## 班级表 create table t_class( cno int(6) primary key auto_increment, cname varchar(10) not null, room char(4) ); insert into t_class values(null,&#39;java001&#39;,&#39;r803&#39;); insert into t_class values(null,&#39;java002&#39;,&#39;r416&#39;); insert into t_class values(null,&#39;java002&#39;,&#39;r103&#39;); ## 学生表 create table t_student( sno int(6) primary key auto_increment, sname varchar(5) not null, cno int(4), constraint fk_stu_cno foreign key(cno) references t_class(cno) ); insert into t_student values(null,&#39;章三&#39;,1),(null,&#39;里斯&#39;,1),(null,&#39;王武&#39;,2); ## 事务 commit ===JDBC=== | ===JDBC=== | ===JDBC=== | ===JDBC=== | ===JDBC=== |">
-    <link rel="canonical" href="https://gyk19950104.github.io/backend/7.%E6%95%B0%E6%8D%AE%E5%BA%93/">
+    <link rel="canonical" href="https://mrx-wiki.github.io/backend/7.%E6%95%B0%E6%8D%AE%E5%BA%93/">
     <meta property="og:title" content="7.数据库">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://gyk19950104.github.io/backend/7.%E6%95%B0%E6%8D%AE%E5%BA%93/">
+    <meta property="og:url" content="https://mrx-wiki.github.io/backend/7.%E6%95%B0%E6%8D%AE%E5%BA%93/">
     <meta property="og:description" content="==数据库分类==|====数据库分类==|====数据库分类==|====数据库分类==|
  关系数据库：oracle，mysql 非关系数据库：mongodb，redis  基本概念|基本概念|基本概念|基本概念|基本概念|基本概念|基本概念|
  1.DQL数据查询语句，DDL数据定义语言，DCL数据控制语言，TCL事务控制语言。 2.主键：可查询到唯一对应的数据，是非空且唯一的,如果是整数类型则需要自增。 3.非外键约束：对单表字段的限定条件 4.外键约束：多表间有联系的字段添加限制条件,student表某字段可以是class表外键 5.级联操作：操作主表时影响从表的外键信息 6.事务：多条sql命令完成一件事，具有原子性，一致性，隔离性，持久性 7.脏读：一个事务读取了另一个没提交的事务 8.幻读：同一事务中，读取了其他插入的数据，导致前后结果不一致  ===常用sql命令=== | ===常用sql命令=== | ===常用sql命令=== |===常用sql命令=== |
 数据库：登陆，查看，增删改查，事务； //1.登陆数据库 mysql -h localhost -u root -p //2.查看信息 show databases;//显示所有数据库 use 数据库名字;//进入该数据库 show tables;//显示该数据库下的锁哟表 desc t_student;//列出该表的所有字段 select * from t_student;//列出该表的所有数据 show create table t_student;//显示创建该字段的sql语句 exit;或者\q;//退出数据库 //3.操作数据 ## 创建表格 create table t_student( sno int(6) primary key auto_increment, sname varchar(5) not null, sex char(1) default &#39;男&#39; check(sex=&#39;男&#39;|| sex=&#39;女&#39;), sage int(3) check(sage&gt;=18 and sage&lt;=50), enterdate date, classname varchar(10), email varchar(15) unique ); ## 插入数据 insert into t_student values(); alter table t_student add score double(5,2) first/after; alter table t_student drop score; ## 修改数据 update t_student set sex = &#39;女&#39; where sno = 1; ## 删除数据 delete from t_student where sno=1; drop table t_student; ## 外键 ## 班级表 create table t_class( cno int(6) primary key auto_increment, cname varchar(10) not null, room char(4) ); insert into t_class values(null,&#39;java001&#39;,&#39;r803&#39;); insert into t_class values(null,&#39;java002&#39;,&#39;r416&#39;); insert into t_class values(null,&#39;java002&#39;,&#39;r103&#39;); ## 学生表 create table t_student( sno int(6) primary key auto_increment, sname varchar(5) not null, cno int(4), constraint fk_stu_cno foreign key(cno) references t_class(cno) ); insert into t_student values(null,&#39;章三&#39;,1),(null,&#39;里斯&#39;,1),(null,&#39;王武&#39;,2); ## 事务 commit ===JDBC=== | ===JDBC=== | ===JDBC=== | ===JDBC=== | ===JDBC=== |">
     <meta property="og:site_name" content="gyk&#39;s blog">
-    <link rel="stylesheet" href="https://gyk19950104.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
+    <link rel="stylesheet" href="https://mrx-wiki.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
     <meta name="generator" content="Hugo 0.73.0" />
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
 
     
-    <script type="text/javascript">
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
 </head>
 <body><header class="site-header">
     <nav class="site-nav" role="navigation" aria-label="breadcrumb">
     <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb"><li class="breadcrumb-item  " 
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/">
     <span itemprop="name">gyk&#39;s blog</span>
   </a>
   <meta itemprop="position" content="0" />
 </li>/<li class="breadcrumb-item  " 
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/backend/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/backend/">
     <span itemprop="name">backend</span>
   </a>
   <meta itemprop="position" content="0" />
 </li>/<li class="breadcrumb-item active hidden" aria-current="page"
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/backend/7.%E6%95%B0%E6%8D%AE%E5%BA%93/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/backend/7.%E6%95%B0%E6%8D%AE%E5%BA%93/">
     <span itemprop="name">7.%E6%95%B0%E6%8D%AE%E5%BA%93</span>
   </a>
   <meta itemprop="position" content="1" />
 </li></ol>
     </nav>
     <h1 class="site-title hidden">
-    <a href="https://gyk19950104.github.io/">gyk&#39;s blog</a>
+    <a href="https://mrx-wiki.github.io/">gyk&#39;s blog</a>
     </h1>
 </header>
-<div>先有逻辑正确的思路，剩余的是重复的实践与积累</div>
 <main id="content">
 <article role="article" class="content post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
     <header class="post-header">        
@@ -271,24 +261,15 @@ password = rootroot
 
 <div class="pagination">
     
-    <div class="prev"> <a href="https://gyk19950104.github.io/backend/6.java%E6%9D%82%E9%A1%B9/">Previous Post</a> </div>
+    <div class="prev"> <a href="https://mrx-wiki.github.io/backend/6.java%E6%9D%82%E9%A1%B9/">Previous Post</a> </div>
     
     
-    <div class="next"> <a href="https://gyk19950104.github.io/backend/8.javaweb/">Next Post</a> </div>
+    <div class="next"> <a href="https://mrx-wiki.github.io/backend/8.javaweb/">Next Post</a> </div>
     
 </div>
 
 
-<script type="text/javascript">
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+
 
 </script>
 <script>

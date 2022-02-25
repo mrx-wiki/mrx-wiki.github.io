@@ -8,58 +8,48 @@
  1.下载模拟器 https://mumu.163.com/mac/index.html 2.下载编辑器 https://code.visualstudio.com/ 3.下载插件 Auto.js-Pro-Ext 4.下载autojs https://pro.autojs.org/ 5.申请坚果云账号  ====================连接步骤=======================
  1.在模拟器的autojs中连接电脑-客户端模式中输入电脑ip地址 2.编写代码 3.在编辑器中command &#43; shift &#43; p调出命令窗口输入autojs保存到指定设备 4.在模拟器的autojs中下拉刷新找到脚本运行  2.热更新原理 ======================热更新============================
  1.nodemon monitor.js后会自动监控源码main.js,发生改变后自动上传到坚果云 2.将热更新代码写入main.js，连接模拟器打包文件生成apk 3.每次修改代码后保存，视图自动更新  // 从坚果云下载脚本并执行 const CONFIG = { &#34;path&#34;: &#34;热更新/&#34;, &#34;scriptName&#34;:&#34;main.js&#34;, &#34;user&#34;: &#34;&#34;, &#34;key&#34;: &#34;&#34; } //定时下载脚本比对更新执行 let prevContent=&#34;&#34;; let currContent=&#34;&#34;; setInterval(() =&gt; { try { http.__okhttp__.setTimeout(20000); let currContent = http.get(&#39;http://dav.jianguoyun.com/dav/&#39;&#43;CONFIG.path&#43;CONFIG.scriptName, { headers: { &#34;Authorization&#34;: &#34;Basic &#34; &#43; java.lang.String(android.util.Base64.encode(java.lang.String(CONFIG.user &#43;&#39;:&#39; &#43; CONFIG.">
-    <link rel="canonical" href="https://gyk19950104.github.io/skill/9.autojs/">
+    <link rel="canonical" href="https://mrx-wiki.github.io/skill/9.autojs/">
     <meta property="og:title" content="9.autojs脚本">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://gyk19950104.github.io/skill/9.autojs/">
+    <meta property="og:url" content="https://mrx-wiki.github.io/skill/9.autojs/">
     <meta property="og:description" content="1.mac搭建环境 ====================下载软件=======================
  1.下载模拟器 https://mumu.163.com/mac/index.html 2.下载编辑器 https://code.visualstudio.com/ 3.下载插件 Auto.js-Pro-Ext 4.下载autojs https://pro.autojs.org/ 5.申请坚果云账号  ====================连接步骤=======================
  1.在模拟器的autojs中连接电脑-客户端模式中输入电脑ip地址 2.编写代码 3.在编辑器中command &#43; shift &#43; p调出命令窗口输入autojs保存到指定设备 4.在模拟器的autojs中下拉刷新找到脚本运行  2.热更新原理 ======================热更新============================
  1.nodemon monitor.js后会自动监控源码main.js,发生改变后自动上传到坚果云 2.将热更新代码写入main.js，连接模拟器打包文件生成apk 3.每次修改代码后保存，视图自动更新  // 从坚果云下载脚本并执行 const CONFIG = { &#34;path&#34;: &#34;热更新/&#34;, &#34;scriptName&#34;:&#34;main.js&#34;, &#34;user&#34;: &#34;&#34;, &#34;key&#34;: &#34;&#34; } //定时下载脚本比对更新执行 let prevContent=&#34;&#34;; let currContent=&#34;&#34;; setInterval(() =&gt; { try { http.__okhttp__.setTimeout(20000); let currContent = http.get(&#39;http://dav.jianguoyun.com/dav/&#39;&#43;CONFIG.path&#43;CONFIG.scriptName, { headers: { &#34;Authorization&#34;: &#34;Basic &#34; &#43; java.lang.String(android.util.Base64.encode(java.lang.String(CONFIG.user &#43;&#39;:&#39; &#43; CONFIG.">
     <meta property="og:site_name" content="gyk&#39;s blog">
-    <link rel="stylesheet" href="https://gyk19950104.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
+    <link rel="stylesheet" href="https://mrx-wiki.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
     <meta name="generator" content="Hugo 0.73.0" />
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
 
     
-    <script type="text/javascript">
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
 </head>
 <body><header class="site-header">
     <nav class="site-nav" role="navigation" aria-label="breadcrumb">
     <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb"><li class="breadcrumb-item  " 
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/">
     <span itemprop="name">gyk&#39;s blog</span>
   </a>
   <meta itemprop="position" content="0" />
 </li>/<li class="breadcrumb-item  " 
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/skill/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/skill/">
     <span itemprop="name">skill</span>
   </a>
   <meta itemprop="position" content="0" />
 </li>/<li class="breadcrumb-item active hidden" aria-current="page"
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/skill/9.autojs/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/skill/9.autojs/">
     <span itemprop="name">9.autojs</span>
   </a>
   <meta itemprop="position" content="1" />
 </li></ol>
     </nav>
     <h1 class="site-title hidden">
-    <a href="https://gyk19950104.github.io/">gyk&#39;s blog</a>
+    <a href="https://mrx-wiki.github.io/">gyk&#39;s blog</a>
     </h1>
 </header>
-<div>先有逻辑正确的思路，剩余的是重复的实践与积累</div>
 <main id="content">
 <article role="article" class="content post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
     <header class="post-header">        
@@ -420,22 +410,13 @@
 
 <div class="pagination">
     
-    <div class="prev"> <a href="https://gyk19950104.github.io/skill/8.%E4%BD%93%E5%BD%A9/">Previous Post</a> </div>
+    <div class="prev"> <a href="https://mrx-wiki.github.io/skill/8.%E4%BD%93%E5%BD%A9/">Previous Post</a> </div>
     
     
 </div>
 
 
-<script type="text/javascript">
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+
 
 </script>
 <script>

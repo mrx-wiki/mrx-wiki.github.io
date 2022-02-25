@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gyk&#39;s blog</title>
-    <link>https://gyk19950104.github.io/</link>
+    <link>https://mrx-wiki.github.io/</link>
     <description>Recent content on gyk&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 22 Feb 2022 23:54:24 +0800</lastBuildDate>
     
-	<atom:link href="https://gyk19950104.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mrx-wiki.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>4.常用maven</title>
-      <link>https://gyk19950104.github.io/book/4.%E5%B8%B8%E7%94%A8maven/</link>
+      <link>https://mrx-wiki.github.io/book/4.%E5%B8%B8%E7%94%A8maven/</link>
       <pubDate>Tue, 22 Feb 2022 23:54:24 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/book/4.%E5%B8%B8%E7%94%A8maven/</guid>
+      <guid>https://mrx-wiki.github.io/book/4.%E5%B8%B8%E7%94%A8maven/</guid>
       <description>1.mybatis-spring &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt; &amp;lt;parent&amp;gt; &amp;lt;artifactId&amp;gt;spring-study&amp;lt;/artifactId&amp;gt; &amp;lt;groupId&amp;gt;org.example&amp;lt;/groupId&amp;gt; &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;/parent&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;artifactId&amp;gt;spring-mybatis&amp;lt;/artifactId&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;4.12&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.1.47&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.5.9&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-webmvc&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.3.15&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-jdbc&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.3.16&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.aspectj&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;aspectjweaver&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.9.8&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis-spring&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.0.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.projectlombok&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;lombok&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.18.22&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;log4j&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;log4j&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.2.17&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;/project&amp;gt; 2.mybatis-config.xml &amp;lt;?xml version=&amp;#34;1.</description>
     </item>
     
     <item>
       <title>9.autojs脚本</title>
-      <link>https://gyk19950104.github.io/skill/9.autojs/</link>
+      <link>https://mrx-wiki.github.io/skill/9.autojs/</link>
       <pubDate>Fri, 18 Feb 2022 04:19:44 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/skill/9.autojs/</guid>
+      <guid>https://mrx-wiki.github.io/skill/9.autojs/</guid>
       <description>1.mac搭建环境 ====================下载软件=======================
  1.下载模拟器 https://mumu.163.com/mac/index.html 2.下载编辑器 https://code.visualstudio.com/ 3.下载插件 Auto.js-Pro-Ext 4.下载autojs https://pro.autojs.org/ 5.申请坚果云账号  ====================连接步骤=======================
  1.在模拟器的autojs中连接电脑-客户端模式中输入电脑ip地址 2.编写代码 3.在编辑器中command + shift + p调出命令窗口输入autojs保存到指定设备 4.在模拟器的autojs中下拉刷新找到脚本运行  2.热更新原理 ======================热更新============================
@@ -33,19 +33,19 @@
     
     <item>
       <title>2.算法</title>
-      <link>https://gyk19950104.github.io/cs/2.%E7%AE%97%E6%B3%95/</link>
+      <link>https://mrx-wiki.github.io/cs/2.%E7%AE%97%E6%B3%95/</link>
       <pubDate>Thu, 17 Feb 2022 17:19:47 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/cs/2.%E7%AE%97%E6%B3%95/</guid>
+      <guid>https://mrx-wiki.github.io/cs/2.%E7%AE%97%E6%B3%95/</guid>
       <description>1.算法简介 2.选择排序 </description>
     </item>
     
     <item>
       <title>10.spring</title>
-      <link>https://gyk19950104.github.io/backend/10.spring/</link>
+      <link>https://mrx-wiki.github.io/backend/10.spring/</link>
       <pubDate>Thu, 17 Feb 2022 01:53:32 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/backend/10.spring/</guid>
+      <guid>https://mrx-wiki.github.io/backend/10.spring/</guid>
       <description>===spring简介===｜===spring简介===｜===spring简介===
 https://docs.spring.io/spring-framework/docs/5.2.0.RELEASE/spring-framework-reference/
   spring是容器，支持IOC(控制反转)和AOP(面向切面编程)
@@ -59,10 +59,10 @@ package wiki.mrx.pojo; public class Hello { private String str; public String ge
     
     <item>
       <title>mybatis</title>
-      <link>https://gyk19950104.github.io/backend/9.mybatis/</link>
+      <link>https://mrx-wiki.github.io/backend/9.mybatis/</link>
       <pubDate>Wed, 16 Feb 2022 19:58:49 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/backend/9.mybatis/</guid>
+      <guid>https://mrx-wiki.github.io/backend/9.mybatis/</guid>
       <description>mybatis简介|mybatis简介|mybatis简介|mybatis简介|mybatis简介|
 mybatis是持久层框架，免除了 JDBC 代码以及设置参数和获取结果集的工作，通过XML 或注解来映射为数据库中的记录，MyBatis有个 Resources的工具类帮助获取配置文件内容，获取顺序为：
  1.mybatis-config.xml中的configuration &amp;mdash;&amp;ndash;&amp;gt; 配置文件 2.SqlSessionFactoryBuilder &amp;mdash;&amp;ndash;&amp;gt; 读取配置的类 3.SqlSessionFactory&amp;mdash;&amp;ndash;&amp;gt; 创建SqlSession的工厂类 4.SqlSession&amp;mdash;&amp;ndash;&amp;gt; 包含了执行sql的所有方法  ===增删改查===| ===增删改查===| ===增删改查===| ===增删改查===|
@@ -72,20 +72,20 @@ CREATE DATABASE `mybatis`; USE `mybatis`; CREATE TABLE `user`( `id` INT(20) NOT 
     
     <item>
       <title>公众号开发</title>
-      <link>https://gyk19950104.github.io/frontend/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/</link>
+      <link>https://mrx-wiki.github.io/frontend/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/</link>
       <pubDate>Mon, 14 Feb 2022 04:55:53 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/frontend/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/</guid>
+      <guid>https://mrx-wiki.github.io/frontend/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/</guid>
       <description>1.简介 1.每个用户针对每个公众号会产生一个安全的OpenID 2.一个用户虽然对多个公众号和应用有多个不同的OpenID，但他对所有这些同一开放平台账号下的公众号和应用，只有一个UnionID 3.在申请到认证公众号之前，申请一个接口测试号，立即开始接口测试开发 4.每个接口都有每日接口调用频次限制 5.公众平台以access_token为接口调用凭据，它在2小时内有效，1天内获取次数有限 6.公众平台接口调用仅支持80端口 7.公众号主要通过公众号消息会话 公众号内网页来为用户提供服务 8.公众号消息会话：公众号是以微信用户的一个联系人形式存在的，消息会话是公众号与用户交互的基础 9.消息服务的类型：群发消息，被动回复消息(加解密)，客服消息，模板消息 10.公众号内网页：获取用户的基本信息，微信JS-SDK EncodingAESKey: ZroCcwPJ2wVUemo94iPc8DJHiEXi3lHcJ3aXKDwUI2r 2.步骤 1.申请自己服务器，搭建web服务，申请公众号，在微信公众号平台的设置与开发-基本配置添加url(开发者ip)，token(验证开发者)和EncodingAESKey(消息加密密钥) 2.在微信公众号平台填好开发者信息后点击提交，微信服务器会向开发者服务器发送signature，timestamp，nonce，开发者用token, timestamp, nonce组合加密生成hashcode，对比微信发来的signature和自己生成的hashcode是否一致，如果一致返回echostr到微信服务器 3.用户发送消息到公众号，微信服务器将消息包装成xml格式发往开发者服务器，开发者服务器解析后发回内容到微信服务器，微信服务器解析后发给用户 微信文档：https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Getting_Started_Guide.html
 centos防火墙：https://blog.csdn.net/s_p_j/article/details/80979450 https://blog.csdn.net/Linda_Lindaaaa/article/details/88836146</description>
     </item>
     
     <item>
       <title>3.路线</title>
-      <link>https://gyk19950104.github.io/book/3.%E8%B7%AF%E7%BA%BF/</link>
+      <link>https://mrx-wiki.github.io/book/3.%E8%B7%AF%E7%BA%BF/</link>
       <pubDate>Tue, 08 Feb 2022 12:50:27 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/book/3.%E8%B7%AF%E7%BA%BF/</guid>
+      <guid>https://mrx-wiki.github.io/book/3.%E8%B7%AF%E7%BA%BF/</guid>
       <description>学习路线整理 具体知识学习 熟练程度累积 项目实战检测
 1.html html是Tim Berners-Lee1990年创造的标记语言
 HTML 1.0——1993年6月——IETF草案 HTML 2.0——1995年1 1月——RFC 1866 HTML 3.2——1997年1月——W3C标准 HTML 4.0——1997年12月——W3C标准 HTML 5.0——2008年5月——W3C标准 1️⃣标准：https://html.spec.whatwg.org/multipage/
@@ -112,10 +112,10 @@ JS1.0——1996年——ES1 JS1.3——1998年——ES2 JS1.5——1999年——
     
     <item>
       <title>8.javaweb</title>
-      <link>https://gyk19950104.github.io/backend/8.javaweb/</link>
+      <link>https://mrx-wiki.github.io/backend/8.javaweb/</link>
       <pubDate>Fri, 21 Jan 2022 01:17:00 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/backend/8.javaweb/</guid>
+      <guid>https://mrx-wiki.github.io/backend/8.javaweb/</guid>
       <description>1.下载完全版idea 1.1 下载软件 idea软件：
 链接: https://pan.baidu.com/s/1OH0ybMuGvhkXie5EJ10uEg 密码: vjli
 破解包：
@@ -131,46 +131,46 @@ JS1.0——1996年——ES1 JS1.3——1998年——ES2 JS1.5——1999年——
     
     <item>
       <title>体彩</title>
-      <link>https://gyk19950104.github.io/skill/8.%E4%BD%93%E5%BD%A9/</link>
+      <link>https://mrx-wiki.github.io/skill/8.%E4%BD%93%E5%BD%A9/</link>
       <pubDate>Thu, 20 Jan 2022 03:26:23 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/skill/8.%E4%BD%93%E5%BD%A9/</guid>
+      <guid>https://mrx-wiki.github.io/skill/8.%E4%BD%93%E5%BD%A9/</guid>
       <description>1.大乐透基础 1.2007.05.28国家体育总局发行，每周1，3，6的20:25开奖 2.兑奖时间是60天，节假日顺延 3. 1万以下不交税凭票在销售点兑换，1w以上交税凭票和身份证在省级体彩机构兑奖 4.单注封顶可中500万 5.投注仅对浮动奖有效，为0.8单注奖金 6.彩票玷污损坏后不能兑奖 2.大乐透选注  1.基本投注  前区(01-35选5) 后区(01-12选2)   2.复式投注  前区(01-35选6/6个以上) 后区(01-12选3/3个以上)   3.胆拖投注  前区  胆码拖码个数共6/6个以上 胆码:01-35选1到4个 拖码:01-35选除胆码的数   后区  胆码: 01-12选1个 拖码: 01-12选非胆码的2/2个以上的数      3.大乐透奖金 一等奖：5+2 &amp;lt;1亿: 当期奖金-0.22固定奖金-奖池累积 1-8亿: 当期奖金-0.58固定奖金-奖池累积 当期总额-0.2固定总额 &amp;gt;8亿: 当期奖金-0.28固定奖金-奖池累积 当期总额-0.5固定总额 二等奖：5+1 👉当期奖金-0.22固定奖金 三等奖：5+0 👉1万元 四等奖：4+2 👉3000元 五等奖：4+1 👉300元 六等奖：3+2👉200元 七等奖：4+0👉100元 八等奖：3+1，2+2👉15元 九等奖：3+0，2+1，1+2，0+2👉5元 4.大乐透数据 https://m.lottery.gov.cn/mkjdlt/</description>
     </item>
     
     <item>
       <title>欧姆龙plc</title>
-      <link>https://gyk19950104.github.io/skill/7.%E6%AC%A7%E5%A7%86%E9%BE%99plc/</link>
+      <link>https://mrx-wiki.github.io/skill/7.%E6%AC%A7%E5%A7%86%E9%BE%99plc/</link>
       <pubDate>Thu, 20 Jan 2022 03:17:45 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/skill/7.%E6%AC%A7%E5%A7%86%E9%BE%99plc/</guid>
+      <guid>https://mrx-wiki.github.io/skill/7.%E6%AC%A7%E5%A7%86%E9%BE%99plc/</guid>
       <description>1.欧姆龙plc </description>
     </item>
     
     <item>
       <title>乐高机械组</title>
-      <link>https://gyk19950104.github.io/skill/6.%E4%B9%90%E9%AB%98/</link>
+      <link>https://mrx-wiki.github.io/skill/6.%E4%B9%90%E9%AB%98/</link>
       <pubDate>Thu, 20 Jan 2022 03:17:28 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/skill/6.%E4%B9%90%E9%AB%98/</guid>
+      <guid>https://mrx-wiki.github.io/skill/6.%E4%B9%90%E9%AB%98/</guid>
       <description>1.乐高机械组 </description>
     </item>
     
     <item>
       <title>React_native</title>
-      <link>https://gyk19950104.github.io/frontend/react_native/</link>
+      <link>https://mrx-wiki.github.io/frontend/react_native/</link>
       <pubDate>Thu, 20 Jan 2022 03:10:22 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/frontend/react_native/</guid>
+      <guid>https://mrx-wiki.github.io/frontend/react_native/</guid>
       <description>1.Mac启动react-native项目 ======================启动安卓✅============== 1.安装Nodev12 以上、JDK1.8 和 Android Studio（Android 10 (Q)sdk/ANDROID_HOME） 2.创建项目npx react-native init AwesomeProject、 3.创建虚拟机(机型和系统都要选好) 4.编译运行yarn react-native run-android ======================启动苹果✅================ 1.安装Node12 以上、Watchman、Xcode模拟器13版本 和 CocoaPods代理。 2.创建项目npx react-native init AwesomeProject 3.编译运行yarn react-native run-ios需要先新开shell运行yarn start ======================正常流程================ 1.创建项目npx react-native init JustCodeDict 2.开启重启监控yarn start 3.把profile的use_flipper! 修改为 use_flipper!({ &amp;#39;Flipper-Folly&amp;#39; =&amp;gt; &amp;#39;2.3.0&amp;#39; })后删lock文件后重新pod install 4.开始编译yarn iOS ======================基础=============== React Native 是一个使用react和应用平台的原生功能来构建 Android 和 iOS 应用的开源框架 React Native 中的尺寸都是无单位的 Platform.OS import { StyleSheet, Image, View } from &amp;#39;react-native&amp;#39;; 1.添加css样式。 &amp;lt;View style={styles.container}&amp;gt; &amp;lt;/View&amp;gt; const styles = StyleSheet.</description>
     </item>
     
     <item>
       <title>mac技巧</title>
-      <link>https://gyk19950104.github.io/skill/5.mac%E6%8A%80%E5%B7%A7/</link>
+      <link>https://mrx-wiki.github.io/skill/5.mac%E6%8A%80%E5%B7%A7/</link>
       <pubDate>Thu, 20 Jan 2022 02:53:11 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/skill/5.mac%E6%8A%80%E5%B7%A7/</guid>
+      <guid>https://mrx-wiki.github.io/skill/5.mac%E6%8A%80%E5%B7%A7/</guid>
       <description>1.终端 0.iTerm2是默认终端的替代品 oh-my-zsh是为了简化zsh的配置的shell
 1.查看所有shell
 cat /etc/shells 2.默认shell
@@ -181,10 +181,10 @@ cat /etc/shells 2.默认shell
     
     <item>
       <title>git教程</title>
-      <link>https://gyk19950104.github.io/course/2.git/</link>
+      <link>https://mrx-wiki.github.io/course/2.git/</link>
       <pubDate>Thu, 13 Jan 2022 14:46:18 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/course/2.git/</guid>
+      <guid>https://mrx-wiki.github.io/course/2.git/</guid>
       <description>1.版本控制 1.1 简介 版本控制系统(DVCS)：一种记录并可以回溯文件的系统
 它经历了三个阶段：
  本地版本控制系统 集中式版本控制系统 分布式版本控制系统  最常用最简单的版本控制是通过复制完整文件制作副本，它有很多缺点：
@@ -208,29 +208,29 @@ git是一个能快速高效处理大小项目的，免费的，开源的，分�
     
     <item>
       <title>Mrx</title>
-      <link>https://gyk19950104.github.io/video/mrx/</link>
+      <link>https://mrx-wiki.github.io/video/mrx/</link>
       <pubDate>Sun, 09 Jan 2022 04:59:55 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/video/mrx/</guid>
+      <guid>https://mrx-wiki.github.io/video/mrx/</guid>
       <description>http://r5exz302v.hn-bkt.clouddn.com/%E9%BB%98%202022-01-01%2006.35.53.mp4</description>
     </item>
     
     <item>
       <title>4.git技巧</title>
-      <link>https://gyk19950104.github.io/skill/4.git%E6%8A%80%E5%B7%A7/</link>
+      <link>https://mrx-wiki.github.io/skill/4.git%E6%8A%80%E5%B7%A7/</link>
       <pubDate>Sat, 20 Nov 2021 03:33:29 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/skill/4.git%E6%8A%80%E5%B7%A7/</guid>
+      <guid>https://mrx-wiki.github.io/skill/4.git%E6%8A%80%E5%B7%A7/</guid>
       <description>0.理解 无法推送时，先新建后删除
 //新建代理 git config --global http.proxy http://127.0.0.1:1080 git config --global https.proxy http://127.0.0.1:1080 //删除代理 git config --global --unset http.proxy git config --global --unset https.proxy 1.版本控制系统：可以回溯文件修改内容与历史记录的软件 2.分布式控制系统会复制所有记录，不止当前版本的文件，包括所有修改历史 3.对于任何一个文件，在 Git 内都只有三种状态： 👉已提交（committed）：该文件已经被安全地保存在本地数据库中了 👉已修改（modified）：修改了某个文件 👉已暂存（staged）：已修改的文件放在下次提交时要保存的清单中 4.Git 分支，本质是一个指向 commit 对象(1. 指向暂存内容快照的指针2. 本次提交的作者等相关附属信息 3. 零个或多个指向该提交对象的父对象指针)的可变指针，一个包含commit对象 校验和（40 个字符长度 SHA-1 字串）的文件 它默认名为master，在每次提交的时候都会自动向前移动，永远指向最后一次提交对象的 master 分支 git branch 会创建一个新的分支指针，它也指向最后一次提交对象，但并不会自动切换过去 git checkout会将HEAD指针(指向正在工作中的本地分支的指针)修改为创建好的新分支指针， git merge 会用两个分支的末端和它们共同祖先进行三方合并计算结果重新做一个新的快照， 自动创建一个指向它的提交对象作为最终节点 git rebase 变基是把在一个分支里提交的改变移到另一个分支里重放一遍。 它的原理是回到两个分支最近的共同祖先，根据当前分支(fix)后续的历次提交对象 生成一系列文件补丁，然后以基底分支(master)最后一个 提交对象为新的出发点，逐个应用之前准备好的补丁文件，最后会生成一个新的 合并提交对象，使它成为 master 分支的最后commit对象，它可以得到一个在 远程分支上干净应用的补丁，但一旦分支中的提交对象发布到公共仓库，就千万 不要对该分支进行衍合操作，因为rebase会丢弃需要合并的信息，当别人提前 获取了未丢弃的合并信息继续开发时获得rebase后的代码会重复提交 1.密钥 首次下载git后需要设置</description>
     </item>
     
     <item>
       <title>1.jquery源码分析</title>
-      <link>https://gyk19950104.github.io/course/1.jquery%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/</link>
+      <link>https://mrx-wiki.github.io/course/1.jquery%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/</link>
       <pubDate>Sun, 07 Nov 2021 14:23:42 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/course/1.jquery%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/</guid>
+      <guid>https://mrx-wiki.github.io/course/1.jquery%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/</guid>
       <description>1.匿名函数自执行 jquery2.0.3中，源码首先是一个自执行的匿名函数, 匿名函数就是没有函数名的函数，目的是为了保护变量不被污染,如下：
 (function(window,undefined){ //具体源码  })(window); 要理解它需要先来了解js的函数命名：
 js函数有2种命名方式：声明式和函数表达式
@@ -245,10 +245,10 @@ $()或者jQuery() 在jquery2.0.3中，它是将其挂载到了window全局对象
     
     <item>
       <title>7.数据库</title>
-      <link>https://gyk19950104.github.io/backend/7.%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <link>https://mrx-wiki.github.io/backend/7.%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
       <pubDate>Thu, 10 Jun 2021 20:03:59 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/backend/7.%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <guid>https://mrx-wiki.github.io/backend/7.%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
       <description>==数据库分类==|====数据库分类==|====数据库分类==|====数据库分类==|
  关系数据库：oracle，mysql 非关系数据库：mongodb，redis  基本概念|基本概念|基本概念|基本概念|基本概念|基本概念|基本概念|
  1.DQL数据查询语句，DDL数据定义语言，DCL数据控制语言，TCL事务控制语言。 2.主键：可查询到唯一对应的数据，是非空且唯一的,如果是整数类型则需要自增。 3.非外键约束：对单表字段的限定条件 4.外键约束：多表间有联系的字段添加限制条件,student表某字段可以是class表外键 5.级联操作：操作主表时影响从表的外键信息 6.事务：多条sql命令完成一件事，具有原子性，一致性，隔离性，持久性 7.脏读：一个事务读取了另一个没提交的事务 8.幻读：同一事务中，读取了其他插入的数据，导致前后结果不一致  ===常用sql命令=== | ===常用sql命令=== | ===常用sql命令=== |===常用sql命令=== |
@@ -257,10 +257,10 @@ $()或者jQuery() 在jquery2.0.3中，它是将其挂载到了window全局对象
     
     <item>
       <title>6.java杂项</title>
-      <link>https://gyk19950104.github.io/backend/6.java%E6%9D%82%E9%A1%B9/</link>
+      <link>https://mrx-wiki.github.io/backend/6.java%E6%9D%82%E9%A1%B9/</link>
       <pubDate>Tue, 01 Jun 2021 17:40:00 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/backend/6.java%E6%9D%82%E9%A1%B9/</guid>
+      <guid>https://mrx-wiki.github.io/backend/6.java%E6%9D%82%E9%A1%B9/</guid>
       <description>1.泛型 泛型：检测或设置引用数据类型
  在集合中加泛型可以规定存入集合的数据类型，便于后续遍历 在类中加泛型可以后期传入具体的数据类型，而不必提前规定  package wiki.mrx.www; class Testa&amp;lt;E&amp;gt; { public void test(E m){ } } public class Test { public static void main(String[] args) { Testa&amp;lt;String&amp;gt; t = new Testa&amp;lt;&amp;gt;(); t.test(&amp;#34;test&amp;#34;); } } 2.异常 异常都继承于Throwable类，具体分类如下：
  Error Exception  检查异常 运行时异常 可以使用如下结构处理异常：    try{ }catch (Exception e){ e.printStackTrace(); }finally { } 3.注解 注解Annotation：代码编译时会被读取并自动操作标记好的内容
@@ -272,10 +272,10 @@ package wiki.mrx; public class Season { private final String seasonName; private
     
     <item>
       <title>5。java集合容器</title>
-      <link>https://gyk19950104.github.io/backend/5.java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/</link>
+      <link>https://mrx-wiki.github.io/backend/5.java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/</link>
       <pubDate>Tue, 01 Jun 2021 17:39:34 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/backend/5.java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/</guid>
+      <guid>https://mrx-wiki.github.io/backend/5.java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/</guid>
       <description>1.基础知识 算法：解决问题的方法，可用时间复杂度，空间复杂度来评判效率
 数据结构：组织管理数据
 逻辑上表现为：线性表，图，树，堆，栈
@@ -286,10 +286,10 @@ package wiki.mrx; public class Season { private final String seasonName; private
     
     <item>
       <title>4.java网络编程</title>
-      <link>https://gyk19950104.github.io/backend/4.java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</link>
+      <link>https://mrx-wiki.github.io/backend/4.java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</link>
       <pubDate>Tue, 01 Jun 2021 17:37:49 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/backend/4.java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</guid>
+      <guid>https://mrx-wiki.github.io/backend/4.java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</guid>
       <description>1.基础知识 网络互联需要ip和端口，传输时需要遵守一定的规则，这个规则就是网络传输协议，即四层传输协议：
  应用层http 传输层udp,tcp 网络层ip 链路层  2.tcp协议 三次握手：客户端与服务器建立连接
 四次挥手：客户端与服务器断开连接
@@ -298,10 +298,10 @@ package wiki.mrx; public class Season { private final String seasonName; private
     
     <item>
       <title>3.javaio流</title>
-      <link>https://gyk19950104.github.io/backend/3.javaio%E6%B5%81/</link>
+      <link>https://mrx-wiki.github.io/backend/3.javaio%E6%B5%81/</link>
       <pubDate>Tue, 01 Jun 2021 17:37:33 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/backend/3.javaio%E6%B5%81/</guid>
+      <guid>https://mrx-wiki.github.io/backend/3.javaio%E6%B5%81/</guid>
       <description>1.文件外 java将文件抽象为file类可以操作盘符上的文件
 package wiki.mrx.www; import java.io.File; public class FileTest { public static void main(String[] args) { File f = new File(&amp;#34;/Users/gyk/desktop/test.txt&amp;#34;); System.out.println(f.canExecute() ); System.out.println(f.canRead()); System.out.println(f.getName()); System.out.println(f.canWrite()); System.out.println(f.exists()); System.out.println(f.getAbsoluteFile()); System.out.println(f.getAbsolutePath()); System.out.println(f.getParentFile()); System.out.println(f.getPath()); System.out.println(f.isDirectory()); System.out.println(f.isHidden()); System.out.println(f.lastModified()); System.out.println(f.length()); System.out.println(f.list()); } } 2.文件内 文件的本质是二进制的数据，可以把他们想像成水源和管道，他们都有进有出，根据传输的用途分为：
   处理文本文件的字符流
@@ -318,10 +318,10 @@ package wiki.mrx.www; import java.io.File; public class FileTest { public static
     
     <item>
       <title>Java多线程</title>
-      <link>https://gyk19950104.github.io/backend/2.java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
+      <link>https://mrx-wiki.github.io/backend/2.java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
       <pubDate>Tue, 01 Jun 2021 17:22:28 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/backend/2.java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
+      <guid>https://mrx-wiki.github.io/backend/2.java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
       <description>1.多线程 多线程就是指多核CPU同时干多件事 在java中开启多线程有三种方法： 继承Thread类， 实现Runnable接口 实现Callable接口 但Thread因为是类的继承，所以有单继承的弊端， Runnable是接口实现，可以进行多继承， 使用时implements实现接口重写run方法，但无返回值， Callable是接口实现，可以进行多继承，也有返回值， 根据不同情况，合理选择使用Runnable和Callable接口 开启多线程后，由于多个线程执行顺序是由CPU自行调度， 这种不确定性会引起执行结果的不稳定性，除执行顺序外， 还可能出现多个线程同时操作同一份资源的情况，这会导 致资源不安全，所以需要线程同步，它的本质是一种等待 的机制，在JDK5之前，我们可以通过synchronized方 法或者synchronized同步块来对资源进行隐式加锁，保 证安全，在JDK5之后，我们可以通过lock锁机制来显式加 锁，保证安全，一般少量代码用synchronized，大量代码 用lock锁 👉synchronized方法： 可以通过private关键字来保证数据对象只能被方法访问， 所以只需要对这个方法提出一套机制，这套机制就是 synchronized 关键字，即synchronized方法 👉synchronized同步块： 有时并不需要对数据添加private关键字 ，而是在代码 中直接使用synchronized( Obj ){ }同步块，obj是 类似于上面的私有数据对象 👉lock锁机制： 多线程编程时同步队列会出现很多常见涉及到锁的情形， 在java中将这些多线程常见情形抽象封装成开箱即用的 工具包，叫做JUC，常见的JUC.locks，JUC.automic 等，它包含了很多接口和实现类，可以拿来即用 ===========================================
 2.1创建：thread，runnable，callable
 ===========================================
@@ -330,10 +330,10 @@ package wiki.mrx.www; import java.io.File; public class FileTest { public static
     
     <item>
       <title>java面向对象</title>
-      <link>https://gyk19950104.github.io/backend/1.java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
+      <link>https://mrx-wiki.github.io/backend/1.java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
       <pubDate>Tue, 01 Jun 2021 17:22:15 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/backend/1.java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
+      <guid>https://mrx-wiki.github.io/backend/1.java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
       <description>先有逻辑正确的思路，剩余的是重复的实践与积累
 1.面向对象 ===========================================
 1.1 类是有属性，方法和构造器的模版，对象是实例
@@ -345,10 +345,10 @@ package wiki.mrx.www; import java.io.File; public class FileTest { public static
     
     <item>
       <title>黑血病毒</title>
-      <link>https://gyk19950104.github.io/work/%E9%BB%91%E8%A1%80%E7%97%85%E6%AF%92/</link>
+      <link>https://mrx-wiki.github.io/work/%E9%BB%91%E8%A1%80%E7%97%85%E6%AF%92/</link>
       <pubDate>Tue, 04 May 2021 00:45:59 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/work/%E9%BB%91%E8%A1%80%E7%97%85%E6%AF%92/</guid>
+      <guid>https://mrx-wiki.github.io/work/%E9%BB%91%E8%A1%80%E7%97%85%E6%AF%92/</guid>
       <description>1.游戏流程 1.进场存包，给玩家游戏背包（书/U盘/鞋套），告知玩家需要假扮成民政局人员前往慰问灾情，实际是调查黑血病毒并寻找火眼
 2.雇佣军npc搜身后将玩家关入面包车，玩家插入U盘听取密码（987）打开包中书里的密码锁，拿到手电筒，根据车四周文字方向（手提箱在树上）打开方向锁，按下按钮听取车钥匙使用方法后用车钥匙发动车，车下降后从通道进入酒店外面
 3.进入酒店外面，根据（手提箱在树上）找到箱子，拿到信箱钥匙，黑色旗子和收音机，用钥匙打开电梯旁边的信箱拿到黑色旗子摆放方法，此时开始刮风并伴有闪电，将旗子挂好后根据摆放方法得到密码（9527）打开树上鸟笼，拿到上半份几何图形，开始下雨，上半份图摆好后接水倒入水箱，对应图旁边的图形得到电梯密码（930124），进入电梯
@@ -364,19 +364,19 @@ package wiki.mrx.www; import java.io.File; public class FileTest { public static
     
     <item>
       <title>React</title>
-      <link>https://gyk19950104.github.io/frontend/react/</link>
+      <link>https://mrx-wiki.github.io/frontend/react/</link>
       <pubDate>Sun, 28 Feb 2021 00:15:17 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/frontend/react/</guid>
+      <guid>https://mrx-wiki.github.io/frontend/react/</guid>
       <description>1.概念  单页面应用：加载单个HTML页面和所需资源，与页面的任何交互，页面都不会重新加载 jsx：js的扩展集，每个 JSX 元素只是调用 React.createElement的语法糖 组件：分为函数组件和类组件，区别是类组件上添加了许多别的特性 钩子函数：生命周期函数，在特定时间自动触发的函数 Props：jsx传值与子组件的节点组成的对象，props 是只读的 State：组件内部的数据，只能通过setState({ })更改 react非受控组件：用非react处理数据方式处理的组件 状态提升：不同层级子组件传值 组合继承：组件通过组合堆砌而不是继承实现,实质相当于槽的概念 context：复杂组件传值 错误边界：避免出错导致应用崩溃 Ref转发：组件外选中特定的dom refdom：组件内选中特定的dom 高阶组件：传入组件输出组件，实现对组件的加强，比如redux的connect Portals：组件可以脱离父组件层级挂载在DOM树的任何位置 Profiler：任意位置的性能测试 协调： diff算法 webcomponent：w3c支持的组件化标准  2.react细节 1.组件 // 1.获取容器 const domContainer = document.getElementById(&amp;#39;root&amp;#39;); // 2.创建虚拟dom //类组件 class Hello extends React.Component { constructor(props){ super(props); this.state = {name: &amp;#39;hello,world!&amp;#39;}; } componentWillMount(){ // 不能直接修改state  // this.state = { name:&amp;#39;hello&amp;#39;};  // this.setState({ name:&amp;#39;你好&amp;#39;})  } render() { return (&amp;lt;div&amp;gt;{this.state.name}&amp;lt;/div&amp;gt;) } }; //函数组件 function World(props){ console.</description>
     </item>
     
     <item>
       <title>阿里云部署</title>
-      <link>https://gyk19950104.github.io/skill/3.%E9%98%BF%E9%87%8C%E4%BA%91%E9%83%A8%E7%BD%B2/</link>
+      <link>https://mrx-wiki.github.io/skill/3.%E9%98%BF%E9%87%8C%E4%BA%91%E9%83%A8%E7%BD%B2/</link>
       <pubDate>Sat, 20 Feb 2021 16:20:02 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/skill/3.%E9%98%BF%E9%87%8C%E4%BA%91%E9%83%A8%E7%BD%B2/</guid>
+      <guid>https://mrx-wiki.github.io/skill/3.%E9%98%BF%E9%87%8C%E4%BA%91%E9%83%A8%E7%BD%B2/</guid>
       <description>1.购买云服务器与域名 在阿里云的控制台左侧找到云服务器和域名分别购买，购买后会得到：
  服务器公网ip和密码 未认证的域名  2.环境准备 安装node，nginx和pm2
  node：https://www.cnblogs.com/zhi-leaf/p/10979629.html nginx：https://www.cnblogs.com/-youth/p/9764765.html pm2: npm install pm2 -g  3.配置nginx 在/usr/local/nginx/conf/下vim nginx.conf以下内容后重载nginx配置/usr/local/bin/nginx -s reload
@@ -387,10 +387,10 @@ worker_processes 1; events { worker_connections 1024; } http { include mime.type
     
     <item>
       <title>胭脂扣</title>
-      <link>https://gyk19950104.github.io/work/%E8%83%AD%E8%84%82%E6%89%A3/</link>
+      <link>https://mrx-wiki.github.io/work/%E8%83%AD%E8%84%82%E6%89%A3/</link>
       <pubDate>Sat, 20 Feb 2021 15:36:24 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/work/%E8%83%AD%E8%84%82%E6%89%A3/</guid>
+      <guid>https://mrx-wiki.github.io/work/%E8%83%AD%E8%84%82%E6%89%A3/</guid>
       <description>2.游戏流程 1.前台带入后，男npc🟢按Ａ自动关饭厅正门，开场白响起【&amp;hellip;..的小屋】，开场白完后，场控🟢按阿明你来了和🟢缩减模式，响起语音（阿明你来了，这老宅子呀经常停电&amp;hellip;&amp;hellip;.）语音提示将菜放在桌子上
 2.玩家将菜放好并且坐下后，场控🟢按上半场Ａ，响起（阿明，爷爷要去接一个&amp;hellip;&amp;hellip;）后场控按🟢开饭厅门男npc开饭厅门后退到过道尽头🟢再按Ａ表演被拖走，换女npc闪烁前进，场控按🟢关饭厅门，女npc摔门拍窗户
 3.女npc表演完后饭厅抽屉自动打开，拼诗句词条，打开暗格得到（一梦林不见-夕，明月非旧颜-月，君即隐刀去-艮，离人莫聚头-内）的线索后敲击窗沿1423开储藏室门
@@ -425,10 +425,10 @@ worker_processes 1; events { worker_connections 1024; } http { include mime.type
     
     <item>
       <title>绝爱</title>
-      <link>https://gyk19950104.github.io/work/%E7%BB%9D%E7%88%B1/</link>
+      <link>https://mrx-wiki.github.io/work/%E7%BB%9D%E7%88%B1/</link>
       <pubDate>Sat, 20 Feb 2021 15:36:13 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/work/%E7%BB%9D%E7%88%B1/</guid>
+      <guid>https://mrx-wiki.github.io/work/%E7%BB%9D%E7%88%B1/</guid>
       <description>2.游戏流程 0.出去接玩家时✅先按15再按1触发背景音效
 1.带玩家到达铁门分组后，场控讲解注意事项，男npc锁门后挂好钥匙回到控制室✅按1开始游戏语音
 2.靠门的玩家找到电卡传给队友，队友插卡触发音效，靠门玩家监控亮起
@@ -461,10 +461,10 @@ worker_processes 1; events { worker_connections 1024; } http { include mime.type
     
     <item>
       <title>弥生贰</title>
-      <link>https://gyk19950104.github.io/work/%E5%BC%A5%E7%94%9F%E8%B4%B0/</link>
+      <link>https://mrx-wiki.github.io/work/%E5%BC%A5%E7%94%9F%E8%B4%B0/</link>
       <pubDate>Sat, 20 Feb 2021 15:36:03 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/work/%E5%BC%A5%E7%94%9F%E8%B4%B0/</guid>
+      <guid>https://mrx-wiki.github.io/work/%E5%BC%A5%E7%94%9F%E8%B4%B0/</guid>
       <description>2.游戏流程 1.前台存完东西，玩家：“我们准备好了”，🟢按【开场白】，语音完了后前台领到第一间房
 2.玩家进入后根据仪式戴好娃娃，一齐喊：“出来吧，出来吧”，🟢按【四更琉璃】，接电话后房间变暗，响起语音，玻璃移门自动开
 3.进入后灯一个个亮起，拼好五角星(风火雷月雨），三谷寺自动打开，玩家进入同时拉铃铛，三谷寺门关，此时提醒玩家到祈愿位祈愿，然后🟢按【阎王】提醒npc出场，房间自动变暗并响起音乐，后指引玩家每人拿个令牌，将佛珠给玩家
@@ -506,10 +506,10 @@ worker_processes 1; events { worker_connections 1024; } http { include mime.type
     
     <item>
       <title>弥生壹</title>
-      <link>https://gyk19950104.github.io/work/%E5%BC%A5%E7%94%9F%E5%A3%B9/</link>
+      <link>https://mrx-wiki.github.io/work/%E5%BC%A5%E7%94%9F%E5%A3%B9/</link>
       <pubDate>Sat, 20 Feb 2021 15:35:51 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/work/%E5%BC%A5%E7%94%9F%E5%A3%B9/</guid>
+      <guid>https://mrx-wiki.github.io/work/%E5%BC%A5%E7%94%9F%E5%A3%B9/</guid>
       <description>2.游戏流程 ✅1.前台带场对讲说：“佐藤警长，探员已集结完毕，是否批准进入案发现场”，后台场控回：“批准带入”，前台按开场语音，玩家听完后进入电梯，待所有人出电梯后，提醒前台关电梯后门
 ✅2.玩家进场后，及时与其打招呼：“探员们，这里是佐藤警长，收到请回复”，玩家回复后：“探员们，本次案情比较特殊，请即刻前往案发现场展开调查，案发现场就在401号房间，调查过程中请保持联络器畅通”
 ✅3.玩家在401床上找到第一天磁带后插入行李箱卡槽，磁带有正反，按播放键听取内容，得知屏幕密码是34713479，打开屏幕锁屏
@@ -538,19 +538,19 @@ worker_processes 1; events { worker_connections 1024; } http { include mime.type
     
     <item>
       <title>三国演义</title>
-      <link>https://gyk19950104.github.io/book/2.%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89/</link>
+      <link>https://mrx-wiki.github.io/book/2.%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89/</link>
       <pubDate>Fri, 15 Jan 2021 00:09:30 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/book/2.%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89/</guid>
+      <guid>https://mrx-wiki.github.io/book/2.%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89/</guid>
       <description>1.故事梗概 汉灵帝年间，内有宦官谗言媚上，外有酷吏鱼肉百姓，致使天下苍生苦不堪言，张氏三兄弟高呼&amp;quot;苍天已死， 黄天当立，岁在甲子，天下大吉&amp;quot;，拉开了黄巾起义的帷幕，灵帝下令各州郡募兵守卫，涿州刘关张三兄弟 桃园结义，在镇压黄巾起义中屡立战功，被封在安喜县当县尉，当地都邮索要贿赂却被张飞痛打，后三人弃 官，经公孙瓒表刘备前功，被封在平原县当县令。 灵帝驾崩，以何进为首的势力立刘辩为帝，以董太后为首的势力拥立刘协为陈留王，何进假借皇帝之命，遣 董太后回原籍并鸩杀，他痛恨宦官势力，决定采纳袁绍建议，招董卓进京清剿，但十常侍诱骗何进进宫后将 其杀死，曹操等人入宫清剿宦官势力，张让挟持刘辩出逃，曹操等人在追寻刘辩时，遇到了狼子野心的董卓， 宦官势力才被清除，又招来了董卓。 董卓来京后，为非作歹，欲废刘辩立刘协，丁原不允，董卓以赤兔马离间丁原吕布，吕布杀丁原投靠董卓， 董卓立刘协为帝，众臣敢怒不敢言，王允假借寿诞，商讨除去董卓的计策，曹操自告奋勇，借来七星刀行刺， 却被董卓识破，曹操外逃，被中牟县陈宫所救，陈宫决定追随曹操，但在借宿吕伯奢一家时，曹操疑心大发， 杀其全家，说出&amp;quot;宁教我负天下人，休教天下人负我&amp;quot;，陈宫不齿与之为伍，愤然离去。 曹操回到陈留，聚集十八路诸侯联盟，讨伐董卓，讨伐时刘关张三英战吕布，后孙坚获传国玉玺，要离开联 盟，袁绍要他交出玉玺，孙坚坚决不肯，两人结怨，后孙坚离去，在途中遭到受袁绍指派的刘表的截杀，孙 坚中箭身亡，此时董卓接受李儒建议，迁都洛阳，十八路诸侯相互猜忌，任由董卓离去，后各诸侯解散，迁 都洛阳的董卓变本加厉，王允采用美人计，利用貂蝉离间吕布与董卓，凤仪亭前吕布董卓反目，受禅台前吕 布杀死董卓，貂蝉完成美人计后飘然离去。 曹操离开十八路诸侯联盟后，在山东招兵买马，占领山东，派兵接父亲曹嵩前来居住，徐州牧陶谦为讨好曹 操派张凯护送曹操家眷，张凯反杀曹嵩全家，曹操点兵前去报仇，陈宫来劝，曹操不听，于是陈宫投奔吕布， 陶谦请来刘关张救援，此时吕布在陈宫帮助下取得山东，曹操回援，吕布死守，陶谦三让徐州，刘备成为徐 州牧，曹操休整后再次攻打吕布，吕布投奔刘备，屯兵小沛，董卓死后，郭汜李傕挟持天子，曹操回京救援， 后在荀彧建议下挟天子以令诸侯。曹操吕布混战山东时，孙坚之子孙策以传国玉玺向袁绍借兵3千杀回江东， 在好友周瑜帮助下收服太史慈，后历经争斗，取得江东六郡八十一州。 曹操取得挟天子以令诸侯地位后，假借皇命，采用荀彧计策离间刘备吕布，刘备被派去攻打袁术，留张飞守 城，吕布乘机夺得徐州，刘备被袁术打败，吕布安排刘备屯兵小沛，袁术继续攻打，吕布辕门射戟，劝和两 家，张飞抢吕布马匹，刘备吕布日渐不和，刘备弃吕布投靠曹操，此时张绣领兵来犯，曹操不费一兵一卒收 得宛城，但却色心大发，奸张绣之嫂，被张绣用计盗取护卫典韦双戟，典韦战死，张绣投奔刘表，曹操败退 许都，此时袁术称帝，曹操征讨，攻破寿春，刘表借机攻打许都，曹操回援，打败刘表，后接受郭嘉建议， 联系刘备攻打吕布，不料书信被陈宫截获，吕布前来攻打刘备，曹操前来援助，吕布先被陈登用计失去徐州， 后被侯成盗取方天画戟，曹操趁机打败吕布，将其杀死于白门楼，陈宫亦追死，大将张辽投入曹操帐下。 曹操回到许都，刘备亦回，曹操在许都打猎时僭越皇权，汉帝无奈，托付国舅秘密诛杀曹操，刘备也加入其中， 后曹刘二人青梅煮酒，刘备知晓曹操有杀他之心，借口保卫徐州，领兵离开许都，来到徐州的刘备轻而易举攻 下徐州，曹操识破汉帝诛曹的召集，发现刘备也在名单上，于是点兵进攻徐州，刘关张三人分散守护徐州，三 人被曹操杀散，曹操围困关羽，关羽定三条约定后归降，被冲散的刘备投奔袁绍，张飞逃亡芒砀山，刘备激袁 绍攻打曹操，曹操派关羽斩颜良诛文丑，袁绍知是关羽杀了大将，欲杀刘备，刘备写书招关羽回来，关羽过五 关斩六将，在古城与张飞相遇，刘备借口劝降刘表，趁机离开袁绍，与兄弟会合。此时的孙策已经取得了江东， 常有进攻许都的打算，然而他由于性格缺陷，先中毒箭后被于吉气病，不日身亡，临终前托付孙权内事不决问 张昭，外事不决问周瑜。 孙权拒绝和袁绍联合，曹操袁绍决战于官渡，曹操先采取许攸计策偷袭袁绍粮仓乌巢，后设计收得袁绍大将张 郃，袁绍自此颓败，渡河而逃，后吐血而亡，其后袁氏一族衰败，被曹操所破，河北纳入版图，曹操修建铜雀 台表彰战功。 与兄弟会合的刘备投奔刘表，因劝说刘表立长不立幼，得罪蔡瑁，引来追杀，得人告密逃脱，后刘表邀请刘备 主持丰收大会，刘备带赵云赴会，蔡瑁设下陷阱，刘备幸得的卢马相助逃离生天，来到水镜山庄司马徽处，司 马徽指点他去寻找卧龙凤雏辅助，刘备回去的路上遇到徐庶，拜为军师，在他帮助下杀退前来攻打新野的曹仁， 曹操利用徐庶仁孝，假借其母骗其前来，徐庶为刘备推荐诸葛孔明，刘备三顾茅庐，请来诸葛亮，诸葛为其点 明天下大势，此时曹操派夏侯惇出兵新野，诸葛亮初用计火烧博望坡，大败夏侯惇，曹操发怒，派徐庶来劝降 刘备，诸葛亮献计离开樊城，刘备不忍丢下百姓，携民渡江，此时刘表已死，蔡瑁掌控襄阳，刘备不得进，曹 操追兵甚急，来到襄阳，蔡瑁投降，曹操令张郃等人继续追击刘备，刘备苦等不到江东救兵后被曹操围困，他 与家人被冲散，赵子龙万军中救少主阿斗，张飞于当阳桥喝退曹军，逃离后的刘备借居在江夏刘琦处，诸葛亮 献计江东借兵，来到江东的诸葛亮先舌战群儒说服文臣，后激怒周瑜联合抗曹，周瑜几次试探孔明皆败下阵来， 诱骗刘备来江东欲除之，但却惧关羽神威，曹操帐中蒋干前来游说，周瑜带他领略江东精英，名曰群英会，夜 晚，蒋干盗取周瑜假造的蔡瑁投降书，回到曹营，告知曹操，曹操立刻杀死了熟悉水军的蔡瑁，中了周瑜计策， 不料这一切早被诸葛亮看穿，周瑜嫉妒，为难诸葛亮造箭10万，诸葛亮草船借箭，完美解决了周瑜刁难。为了 完美实行火攻，周瑜打黄盖，诈降曹操，为了验证黄盖是否真的投降，曹操派蒋干再去探听虚实，不料蒋干又 中计，将周瑜请来的庞统请回曹营，曹操采用庞统连环计，心中十分得意，横槊赋诗，却不料诸葛亮借来东风 配合周瑜火攻火烧赤壁大败曹军，曹操败逃，路过华容道被关羽放走，曹军经此一役，损兵折将，曹操留曹仁 镇守，自己回撤，周瑜先将计就计进入曹仁陷阱，身中毒箭诈死，引诱曹仁出城，却被诸葛亮趁机诈用兵符夺 得南郡，周瑜气的吐血坠马。 夺得南郡的刘备派关羽张飞赵云等人南下夺取长沙四都，魏延叛变，投降关羽， 刘备又亲自迎得黄忠老将，周瑜又想夺取荆州，于是利用孙尚香设美人计，引诱刘备，赵云带诸葛亮三个锦囊 陪同刘备过江，先是大奏鼓乐使吴国太知晓周瑜计策，后又假传军情使刘备回返，这样破了周瑜的诡计，周瑜 第二次被气晕，经过多次比斗，周瑜病死，诸葛亮过江吊唁，收凤雏庞统为刘备所用，此时曹操想攻西凉，于 是诱骗马腾来许都并杀之，马腾之子马超为报父仇，杀得曹操割须弃袍，幸得曹仁相救，曹操采取贾诩建议， 离间马超韩遂，马超中计，败走西川。 听闻曹操平定西凉，张鲁惧怕曹操侵占汉中，准备进军西川，刘璋知道后，汇集官员商讨对策，张松自荐游说 曹操，但曹操对其无礼，刘备乘机礼贤下士，张松感念刘备仁德，献上益州地形图，此时刘璋邀刘备入川，刘 璋部将死劝，刘璋不听，刘备入川后，孙权欲夺取荆州，就假借吴国太病危，要孙尚香带阿斗回来，幸得赵云 相救，孙尚香只一人前往东吴，至此孙刘二人终身未见，另一面川蜀军士对刘备入川不满，刘备于是假意修书 刘璋要返回荆州，实则趁机要攻取涪水关，然后夺取成都，庞统献计小路攻取雒城，不料在落凤坡前中埋伏， 庞统身亡，刘备请诸葛亮入川相助，诸葛亮留关羽镇守荆州，自己和张飞分水陆两道入川，张飞于途中收服严 颜，一路杀到涪水关，此时马超投奔张鲁，领兵来就刘璋，诸葛亮使计离间马超张鲁，后马超归降，直取成都， 刘璋投降，后刘备又平定川蜀各地，奠定三分天下基础。 以阿斗要挟刘备的计策未能成功，孙权又以诸葛瑾一家性命来要挟诸葛亮，刘备假意退还三郡，实则令关羽严 防死守，孙权气急，要鲁肃邀关羽谈判，关羽单刀赴会，挑明不会归还，挟持鲁肃，后从容离去，此时曹操举 兵来攻东吴，孙权只得作罢荆州之事。此时刘备担心曹操攻打西川，于是答应孙权归还三郡，让孙权发兵合肥， 自己再牵制曹操，驻扎合肥的张辽李典等人打败孙权，后曹操带40万大军支援合肥，甘宁前去劫寨，后张辽来 犯，被射伤眼镜，连败2阵的曹操亲自杀赴濡须口，双方难分胜负，东吴求和，各守边界。回到许都的曹操立曹 丕为世子，后刘备率军攻打汉中，曹操领兵来救，刘备派黄忠攻取定军山，黄忠用计杀夏侯渊。诸葛亮用计大败 曹操，曹操令孙权攻取荆州，意图让刘备遣川军救援，关羽主动出击，曹操派庞德出战，关羽水淹七军，大获全 胜，关羽命人于荆州修建烽火台，后调重兵攻打樊城，吕蒙破烽火台，曹操又派徐晃助曹仁，关羽败走麦城，回 川途中被吕蒙设计俘虏，孙权下令杀之，后关羽英魂未散，于玉泉山守护众人，又魂侵吕蒙，吕蒙死。孙权惧怕 刘备携兵来攻，将关羽首级送于曹操，曹操主簿司马懿看出这是东吴的转祸之计，劝曹操厚葬关羽，曹操听从， 刘备终于知道关羽被害，想要起兵攻打东吴，诸葛亮劝说等吴魏不和，刘备听从。曹操每日受关羽影响，想盖新 宫殿去除邪气，主梁采用跃龙潭的神木，却惊动树神，头痛不止，召集华佗前来医治，华佗说要开颅，曹操将华 佗杀死，不久曹操病逝，立七十二疑冢，立曹丕为继承人，曹丕令曹植七步成诗，曹植逃过一劫，而后废汉帝自 立魏，诸葛亮听闻，立刘备为汉帝与之抗衡，刘备一心要攻打东吴为关羽报仇，张飞自告奋勇为前锋，但他平日 里常鞭挞士卒，被人灌醉杀死后割头投奔东吴，刘备点起大军，杀向东吴，孙权降曹丕，联合魏军抗击蜀军，老 将黄忠中箭身亡，刘备连营七百里，陆逊火烧连营，刘备败退，得赵子龙相助，逃回白帝城，陆逊追来，进入鱼 腹浦八阵图中，得诸葛孔明岳父黄承彦帮助逃出，后自认不如诸葛，退回东吴，刘备逃至白帝城后不久病亡，临 终前托孤诸葛亮，此时魏帝派五路大军攻打蜀军，诸葛亮依次退之，后派邓芝说和东吴共同抗曹魏，曹丕亲自杀 来，却被吴蜀联合杀退，此时南蛮孟获攻来，诸葛亮七擒孟获，折服蛮王，此时魏帝曹丕病亡，司马懿等人拥护 曹睿为帝，马谡设计散布流言挑拨魏帝与司马懿，司马懿被贬，孔明出班，上《出师表》讨伐中原，赵云同邓芝 为先锋大败夏侯渊之子夏侯楙，后又将夏侯楙困在南安城中，天水郡太守马遵想去搭救，姜维用计败退赵云，诸 葛亮用计收服姜维，魏帝又派曹真与王朗前往对敌，诸葛亮阵前骂死王朗，又败退曹真，曹真入羌中求救，诸葛 亮借雪天退敌，魏帝又启用司马懿，蜀将孟达被杀，魏帝又派张郃为先锋，与司马懿一同征进，马谡大意失街亭， 诸葛亮空城计退司马懿大军，挥泪斩马谡，此时周鲂假意叛吴，引诱曹休来攻吴，周鲂断发获取信任，配合陆逊 败退曹休，后遣书蜀主，攻打魏国，时诸葛亮兵强马壮，但赵子龙病亡，诸葛亮二次上表攻打魏国，曹真阻拦， 姜维用计 摘录 1.</description>
     </item>
     
     <item>
       <title>汽车构造</title>
-      <link>https://gyk19950104.github.io/skill/2.%E6%B1%BD%E8%BD%A6%E6%9E%84%E9%80%A0/</link>
+      <link>https://mrx-wiki.github.io/skill/2.%E6%B1%BD%E8%BD%A6%E6%9E%84%E9%80%A0/</link>
       <pubDate>Tue, 08 Dec 2020 21:56:58 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/skill/2.%E6%B1%BD%E8%BD%A6%E6%9E%84%E9%80%A0/</guid>
+      <guid>https://mrx-wiki.github.io/skill/2.%E6%B1%BD%E8%BD%A6%E6%9E%84%E9%80%A0/</guid>
       <description>汽车构造  轿车包括车身，发动机，底盘和电气件四大部分
  ✅发动机：当点火启动时，不同缸体内的火花塞轮流点火，油气进入缸体与火花接触爆炸，推动曲轴连杆机构将活塞往复运动转化为曲轴旋转运动，传递给主动轴扭矩与速度
  ✅底盘: 当需要不同扭矩或速度时，踩下离合器将发动机主轴与变速箱主轴分离，拨动档位，调节不同传动比的齿轮啮合后松开离合器，根据不同传递比，变速箱输出轴带有不同的扭矩或转速，空档时虽然发动机主轴与变速箱主轴链接，但变速箱输出轴与传动齿轮间隙配合所以车体也不会获得动力从而移动，当需要刹车减速时，踩下刹车器经助力放大传递到车轮处增大制动器与轮毂摩擦力减小车速
@@ -567,10 +567,10 @@ worker_processes 1; events { worker_connections 1024; } http { include mime.type
     
     <item>
       <title>1.三体</title>
-      <link>https://gyk19950104.github.io/book/1.%E4%B8%89%E4%BD%93/</link>
+      <link>https://mrx-wiki.github.io/book/1.%E4%B8%89%E4%BD%93/</link>
       <pubDate>Tue, 08 Dec 2020 20:54:51 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/book/1.%E4%B8%89%E4%BD%93/</guid>
+      <guid>https://mrx-wiki.github.io/book/1.%E4%B8%89%E4%BD%93/</guid>
       <description>故事梗概 文革时期遭受打击的叶文洁进入红岸基地，向4光年外的三体人发出信号请求他们来协助改造人类的劣根性， 饱受三体问题折磨的三体文明向地球派出舰队准备攻占地球，因惧怕地球文明在舰队赶往的时间中科技进步， 所以将2质子改造成智能计算机后发往地球干扰科技进步，地球大批科学家因智子干扰导致研究基础理论停滞， 纷纷自杀，人们在探查科学家自杀原因的时候逐步知道了三体的存在，出现不同派别，有的希望三体人前来 改造地球，有的希望三体人前来毁灭地球文明，为了应对三体人的到来，地球成立了对应的舰队，并利用三 体人思维透明的不足制定了面壁计划，面壁者罗辑根据叶文洁的提示想出了黑暗森林法则，并以此要挟阻止 了三体探测器水滴的进攻，借此形成了与三体人的短暂战略平衡，在面壁计划开始时，另一项目也开始实施， 通过阶梯计划将云天明的大脑送入三体，后在云天明三个童话故事的暗喻下，人类造出曲率飞船，不料此时 的三体和人类都被歌者文明发现，遭受到了光粒和二向箔打击，三体文明灭亡，地球文明被二维化，程心与 艾aa逃往后到达云天明送她的星球，知道了宇宙中的高级文明想要将宇宙降维从而实现文明重启。 摘录 1.三体的世界观本质是循环，高级文明的终极目的是重启宇宙
 2.其实对于我们遇到的各种事情，我最喜欢的是维德与大史的做法
 3.在宇宙中，你再快都有比你更快的，你再慢都有比你更慢的
@@ -588,10 +588,10 @@ worker_processes 1; events { worker_connections 1024; } http { include mime.type
     
     <item>
       <title>1.计算机组成原理</title>
-      <link>https://gyk19950104.github.io/cs/1.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</link>
+      <link>https://mrx-wiki.github.io/cs/1.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</link>
       <pubDate>Mon, 23 Nov 2020 16:01:52 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/cs/1.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</guid>
+      <guid>https://mrx-wiki.github.io/cs/1.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</guid>
       <description>1.什么是电路？ 物质由原子组成，原子由电子核与核外电子组成，在电场力的作用下核外电子绕原子核做圆周运动，当施加外部电场力时，导体的核外电子脱离原子核的束缚沿着电场力的方向运动：
  电子的定向移动就形成了电流 原子核同时也会阻止核外电子的力形成了电阻 核外电子移动后造成正负电子间的势能差形成了电压 在宏观世界，电流，电阻和电压会被转化为其他形式的能量，为了描述这些能量，提出了焦耳定律 q=i^2rt,焦耳反应了电流的做功大小 p=ui,功率反应了做功快慢  2.什么是电子管？ 通电的灯丝处产生大量活跃的电子，在电子管中加入外加正电压的金属板，活跃的电子在电场力的作用下朝着金属板移动产生电流，改变外加电压的正负即可控制通断，在外加正电压金属板与活跃电子之间再加入金属板，可用于加强电场。这样通过电压的正负极转换就能控制电子管的通断，但电子管的体积大，功耗高，难以适应急剧增长的需求 
 3.什么是晶体管？ 纯净的硅原子最外层有4个电子，它既不容易得到电子也不容易失去电子，被叫做本征半导体，
@@ -620,10 +620,10 @@ worker_processes 1; events { worker_connections 1024; } http { include mime.type
     
     <item>
       <title>搭建博客</title>
-      <link>https://gyk19950104.github.io/skill/1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://mrx-wiki.github.io/skill/1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Fri, 20 Nov 2020 16:24:14 +0800</pubDate>
       
-      <guid>https://gyk19950104.github.io/skill/1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://mrx-wiki.github.io/skill/1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>步骤  1.申请GitHub账号并配置ssh 2.brew安装hugo后选择主题 3.熟悉常见hugo指令 4.GitHub pages部署博客  指令 brew install hugo hugo new site blog git clone https://github.com/rmsubekti/the-roots-home.git themes/the-roots-home hugo server -t the-roots-home --buildDrafts hugo --theme=the-roots-home --baseUrl=&amp;#34;https://gyk19950104.github.io&amp;#34; --buildDrafts cd public git init git add . git commit -m &amp;#39;&amp;#39; git remote add origin https://github.com/gyk19950104/gyk19950104.github.io.git git push -u origin master 写博客 1.hugo new life/1.搭建博客.md 2.编写内容 3.运行脚本bash build.sh 4.从2021.3月开始需要使用token登陆，token记录在本地记事录 //build.sh #!/bin/bash hugo --theme=the-roots-home --baseUrl=&amp;#34;https://gyk19950104.github.io&amp;#34; --buildDrafts cd public git add . git commit -m &amp;#39;+1&amp;#39; git remote add origin https://github.</description>
     </item>
     

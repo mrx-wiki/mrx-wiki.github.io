@@ -11,10 +11,10 @@ JDK内置了3个注解：@Override重写，@Deprecated过时标记 @SuppressWarn
 jdk5.0提供了4个源注解：Retention生命周期 Target作用目标 Documented文档 Inherited继承
 4.枚举 枚举类enum：可创建的对象个数是有限的，确定的
 package wiki.mrx; public class Season { private final String seasonName; private final String seasonDesc; private Season(String seasonName, String seasonDesc) { this.">
-    <link rel="canonical" href="https://gyk19950104.github.io/backend/6.java%E6%9D%82%E9%A1%B9/">
+    <link rel="canonical" href="https://mrx-wiki.github.io/backend/6.java%E6%9D%82%E9%A1%B9/">
     <meta property="og:title" content="6.java杂项">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://gyk19950104.github.io/backend/6.java%E6%9D%82%E9%A1%B9/">
+    <meta property="og:url" content="https://mrx-wiki.github.io/backend/6.java%E6%9D%82%E9%A1%B9/">
     <meta property="og:description" content="1.泛型 泛型：检测或设置引用数据类型
  在集合中加泛型可以规定存入集合的数据类型，便于后续遍历 在类中加泛型可以后期传入具体的数据类型，而不必提前规定  package wiki.mrx.www; class Testa&lt;E&gt; { public void test(E m){ } } public class Test { public static void main(String[] args) { Testa&lt;String&gt; t = new Testa&lt;&gt;(); t.test(&#34;test&#34;); } } 2.异常 异常都继承于Throwable类，具体分类如下：
  Error Exception  检查异常 运行时异常 可以使用如下结构处理异常：    try{ }catch (Exception e){ e.printStackTrace(); }finally { } 3.注解 注解Annotation：代码编译时会被读取并自动操作标记好的内容
@@ -23,49 +23,39 @@ jdk5.0提供了4个源注解：Retention生命周期 Target作用目标 Document
 4.枚举 枚举类enum：可创建的对象个数是有限的，确定的
 package wiki.mrx; public class Season { private final String seasonName; private final String seasonDesc; private Season(String seasonName, String seasonDesc) { this.">
     <meta property="og:site_name" content="gyk&#39;s blog">
-    <link rel="stylesheet" href="https://gyk19950104.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
+    <link rel="stylesheet" href="https://mrx-wiki.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
     <meta name="generator" content="Hugo 0.73.0" />
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
 
     
-    <script type="text/javascript">
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
 </head>
 <body><header class="site-header">
     <nav class="site-nav" role="navigation" aria-label="breadcrumb">
     <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb"><li class="breadcrumb-item  " 
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/">
     <span itemprop="name">gyk&#39;s blog</span>
   </a>
   <meta itemprop="position" content="0" />
 </li>/<li class="breadcrumb-item  " 
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/backend/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/backend/">
     <span itemprop="name">backend</span>
   </a>
   <meta itemprop="position" content="0" />
 </li>/<li class="breadcrumb-item active hidden" aria-current="page"
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/backend/6.java%E6%9D%82%E9%A1%B9/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/backend/6.java%E6%9D%82%E9%A1%B9/">
     <span itemprop="name">6.java%E6%9D%82%E9%A1%B9</span>
   </a>
   <meta itemprop="position" content="1" />
 </li></ol>
     </nav>
     <h1 class="site-title hidden">
-    <a href="https://gyk19950104.github.io/">gyk&#39;s blog</a>
+    <a href="https://mrx-wiki.github.io/">gyk&#39;s blog</a>
     </h1>
 </header>
-<div>先有逻辑正确的思路，剩余的是重复的实践与积累</div>
 <main id="content">
 <article role="article" class="content post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
     <header class="post-header">        
@@ -326,24 +316,15 @@ Student stu<span style="color:#f92672">=(</span>Student<span style="color:#f9267
 
 <div class="pagination">
     
-    <div class="prev"> <a href="https://gyk19950104.github.io/backend/5.java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/">Previous Post</a> </div>
+    <div class="prev"> <a href="https://mrx-wiki.github.io/backend/5.java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/">Previous Post</a> </div>
     
     
-    <div class="next"> <a href="https://gyk19950104.github.io/backend/7.%E6%95%B0%E6%8D%AE%E5%BA%93/">Next Post</a> </div>
+    <div class="next"> <a href="https://mrx-wiki.github.io/backend/7.%E6%95%B0%E6%8D%AE%E5%BA%93/">Next Post</a> </div>
     
 </div>
 
 
-<script type="text/javascript">
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+
 
 </script>
 <script>

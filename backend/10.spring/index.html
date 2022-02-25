@@ -13,10 +13,10 @@ https://docs.spring.io/spring-framework/docs/5.2.0.RELEASE/spring-framework-refe
 1.引入spring包
 &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;groupId&gt;org.example&lt;/groupId&gt; &lt;artifactId&gt;spring-study&lt;/artifactId&gt; &lt;packaging&gt;pom&lt;/packaging&gt; &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt; &lt;modules&gt; &lt;module&gt;spring-01&lt;/module&gt; &lt;/modules&gt; &lt;dependencies&gt; &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc --&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework&lt;/groupId&gt; &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt; &lt;version&gt;5.3.15&lt;/version&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 2.编写pojo实体类
 package wiki.mrx.pojo; public class Hello { private String str; public String getStr() { return str; } public void setStr(String str) { this.str = str; } @Override public String toString() { return &#34;Hello{&#34; &#43; &#34;str=&#39;&#34; &#43; str &#43; &#39;\&#39;&#39; &#43; &#39;}&#39;; } } 3.">
-    <link rel="canonical" href="https://gyk19950104.github.io/backend/10.spring/">
+    <link rel="canonical" href="https://mrx-wiki.github.io/backend/10.spring/">
     <meta property="og:title" content="10.spring">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://gyk19950104.github.io/backend/10.spring/">
+    <meta property="og:url" content="https://mrx-wiki.github.io/backend/10.spring/">
     <meta property="og:description" content="===spring简介===｜===spring简介===｜===spring简介===
 https://docs.spring.io/spring-framework/docs/5.2.0.RELEASE/spring-framework-reference/
   spring是容器，支持IOC(控制反转)和AOP(面向切面编程)
@@ -27,49 +27,39 @@ https://docs.spring.io/spring-framework/docs/5.2.0.RELEASE/spring-framework-refe
 &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;groupId&gt;org.example&lt;/groupId&gt; &lt;artifactId&gt;spring-study&lt;/artifactId&gt; &lt;packaging&gt;pom&lt;/packaging&gt; &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt; &lt;modules&gt; &lt;module&gt;spring-01&lt;/module&gt; &lt;/modules&gt; &lt;dependencies&gt; &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc --&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework&lt;/groupId&gt; &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt; &lt;version&gt;5.3.15&lt;/version&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 2.编写pojo实体类
 package wiki.mrx.pojo; public class Hello { private String str; public String getStr() { return str; } public void setStr(String str) { this.str = str; } @Override public String toString() { return &#34;Hello{&#34; &#43; &#34;str=&#39;&#34; &#43; str &#43; &#39;\&#39;&#39; &#43; &#39;}&#39;; } } 3.">
     <meta property="og:site_name" content="gyk&#39;s blog">
-    <link rel="stylesheet" href="https://gyk19950104.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
+    <link rel="stylesheet" href="https://mrx-wiki.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
     <meta name="generator" content="Hugo 0.73.0" />
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
 
     
-    <script type="text/javascript">
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
 </head>
 <body><header class="site-header">
     <nav class="site-nav" role="navigation" aria-label="breadcrumb">
     <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb"><li class="breadcrumb-item  " 
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/">
     <span itemprop="name">gyk&#39;s blog</span>
   </a>
   <meta itemprop="position" content="0" />
 </li>/<li class="breadcrumb-item  " 
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/backend/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/backend/">
     <span itemprop="name">backend</span>
   </a>
   <meta itemprop="position" content="0" />
 </li>/<li class="breadcrumb-item active hidden" aria-current="page"
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/backend/10.spring/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/backend/10.spring/">
     <span itemprop="name">10.spring</span>
   </a>
   <meta itemprop="position" content="1" />
 </li></ol>
     </nav>
     <h1 class="site-title hidden">
-    <a href="https://gyk19950104.github.io/">gyk&#39;s blog</a>
+    <a href="https://mrx-wiki.github.io/">gyk&#39;s blog</a>
     </h1>
 </header>
-<div>先有逻辑正确的思路，剩余的是重复的实践与积累</div>
 <main id="content">
 <article role="article" class="content post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
     <header class="post-header">        
@@ -1047,22 +1037,13 @@ package wiki.mrx.pojo; public class Hello { private String str; public String ge
 
 <div class="pagination">
     
-    <div class="prev"> <a href="https://gyk19950104.github.io/backend/9.mybatis/">Previous Post</a> </div>
+    <div class="prev"> <a href="https://mrx-wiki.github.io/backend/9.mybatis/">Previous Post</a> </div>
     
     
 </div>
 
 
-<script type="text/javascript">
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+
 
 </script>
 <script>

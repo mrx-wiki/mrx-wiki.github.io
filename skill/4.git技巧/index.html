@@ -6,56 +6,46 @@
     <title> 4.git技巧 - gyk&#39;s blog</title>
     <meta name="description" content="0.理解 无法推送时，先新建后删除
 //新建代理 git config --global http.proxy http://127.0.0.1:1080 git config --global https.proxy http://127.0.0.1:1080 //删除代理 git config --global --unset http.proxy git config --global --unset https.proxy 1.版本控制系统：可以回溯文件修改内容与历史记录的软件 2.分布式控制系统会复制所有记录，不止当前版本的文件，包括所有修改历史 3.对于任何一个文件，在 Git 内都只有三种状态： 👉已提交（committed）：该文件已经被安全地保存在本地数据库中了 👉已修改（modified）：修改了某个文件 👉已暂存（staged）：已修改的文件放在下次提交时要保存的清单中 4.Git 分支，本质是一个指向 commit 对象(1. 指向暂存内容快照的指针2. 本次提交的作者等相关附属信息 3. 零个或多个指向该提交对象的父对象指针)的可变指针，一个包含commit对象 校验和（40 个字符长度 SHA-1 字串）的文件 它默认名为master，在每次提交的时候都会自动向前移动，永远指向最后一次提交对象的 master 分支 git branch 会创建一个新的分支指针，它也指向最后一次提交对象，但并不会自动切换过去 git checkout会将HEAD指针(指向正在工作中的本地分支的指针)修改为创建好的新分支指针， git merge 会用两个分支的末端和它们共同祖先进行三方合并计算结果重新做一个新的快照， 自动创建一个指向它的提交对象作为最终节点 git rebase 变基是把在一个分支里提交的改变移到另一个分支里重放一遍。 它的原理是回到两个分支最近的共同祖先，根据当前分支(fix)后续的历次提交对象 生成一系列文件补丁，然后以基底分支(master)最后一个 提交对象为新的出发点，逐个应用之前准备好的补丁文件，最后会生成一个新的 合并提交对象，使它成为 master 分支的最后commit对象，它可以得到一个在 远程分支上干净应用的补丁，但一旦分支中的提交对象发布到公共仓库，就千万 不要对该分支进行衍合操作，因为rebase会丢弃需要合并的信息，当别人提前 获取了未丢弃的合并信息继续开发时获得rebase后的代码会重复提交 1.密钥 首次下载git后需要设置">
-    <link rel="canonical" href="https://gyk19950104.github.io/skill/4.git%E6%8A%80%E5%B7%A7/">
+    <link rel="canonical" href="https://mrx-wiki.github.io/skill/4.git%E6%8A%80%E5%B7%A7/">
     <meta property="og:title" content="4.git技巧">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://gyk19950104.github.io/skill/4.git%E6%8A%80%E5%B7%A7/">
+    <meta property="og:url" content="https://mrx-wiki.github.io/skill/4.git%E6%8A%80%E5%B7%A7/">
     <meta property="og:description" content="0.理解 无法推送时，先新建后删除
 //新建代理 git config --global http.proxy http://127.0.0.1:1080 git config --global https.proxy http://127.0.0.1:1080 //删除代理 git config --global --unset http.proxy git config --global --unset https.proxy 1.版本控制系统：可以回溯文件修改内容与历史记录的软件 2.分布式控制系统会复制所有记录，不止当前版本的文件，包括所有修改历史 3.对于任何一个文件，在 Git 内都只有三种状态： 👉已提交（committed）：该文件已经被安全地保存在本地数据库中了 👉已修改（modified）：修改了某个文件 👉已暂存（staged）：已修改的文件放在下次提交时要保存的清单中 4.Git 分支，本质是一个指向 commit 对象(1. 指向暂存内容快照的指针2. 本次提交的作者等相关附属信息 3. 零个或多个指向该提交对象的父对象指针)的可变指针，一个包含commit对象 校验和（40 个字符长度 SHA-1 字串）的文件 它默认名为master，在每次提交的时候都会自动向前移动，永远指向最后一次提交对象的 master 分支 git branch 会创建一个新的分支指针，它也指向最后一次提交对象，但并不会自动切换过去 git checkout会将HEAD指针(指向正在工作中的本地分支的指针)修改为创建好的新分支指针， git merge 会用两个分支的末端和它们共同祖先进行三方合并计算结果重新做一个新的快照， 自动创建一个指向它的提交对象作为最终节点 git rebase 变基是把在一个分支里提交的改变移到另一个分支里重放一遍。 它的原理是回到两个分支最近的共同祖先，根据当前分支(fix)后续的历次提交对象 生成一系列文件补丁，然后以基底分支(master)最后一个 提交对象为新的出发点，逐个应用之前准备好的补丁文件，最后会生成一个新的 合并提交对象，使它成为 master 分支的最后commit对象，它可以得到一个在 远程分支上干净应用的补丁，但一旦分支中的提交对象发布到公共仓库，就千万 不要对该分支进行衍合操作，因为rebase会丢弃需要合并的信息，当别人提前 获取了未丢弃的合并信息继续开发时获得rebase后的代码会重复提交 1.密钥 首次下载git后需要设置">
     <meta property="og:site_name" content="gyk&#39;s blog">
-    <link rel="stylesheet" href="https://gyk19950104.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
+    <link rel="stylesheet" href="https://mrx-wiki.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
     <meta name="generator" content="Hugo 0.73.0" />
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
 
     
-    <script type="text/javascript">
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
 </head>
 <body><header class="site-header">
     <nav class="site-nav" role="navigation" aria-label="breadcrumb">
     <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb"><li class="breadcrumb-item  " 
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/">
     <span itemprop="name">gyk&#39;s blog</span>
   </a>
   <meta itemprop="position" content="0" />
 </li>/<li class="breadcrumb-item  " 
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/skill/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/skill/">
     <span itemprop="name">skill</span>
   </a>
   <meta itemprop="position" content="0" />
 </li>/<li class="breadcrumb-item active hidden" aria-current="page"
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/skill/4.git%E6%8A%80%E5%B7%A7/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/skill/4.git%E6%8A%80%E5%B7%A7/">
     <span itemprop="name">4.git%E6%8A%80%E5%B7%A7</span>
   </a>
   <meta itemprop="position" content="1" />
 </li></ol>
     </nav>
     <h1 class="site-title hidden">
-    <a href="https://gyk19950104.github.io/">gyk&#39;s blog</a>
+    <a href="https://mrx-wiki.github.io/">gyk&#39;s blog</a>
     </h1>
 </header>
-<div>先有逻辑正确的思路，剩余的是重复的实践与积累</div>
 <main id="content">
 <article role="article" class="content post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
     <header class="post-header">        
@@ -308,24 +298,15 @@ head是指向当前所在分支的引用标识符，本质是一个指向其他�
 
 <div class="pagination">
     
-    <div class="prev"> <a href="https://gyk19950104.github.io/skill/3.%E9%98%BF%E9%87%8C%E4%BA%91%E9%83%A8%E7%BD%B2/">Previous Post</a> </div>
+    <div class="prev"> <a href="https://mrx-wiki.github.io/skill/3.%E9%98%BF%E9%87%8C%E4%BA%91%E9%83%A8%E7%BD%B2/">Previous Post</a> </div>
     
     
-    <div class="next"> <a href="https://gyk19950104.github.io/skill/5.mac%E6%8A%80%E5%B7%A7/">Next Post</a> </div>
+    <div class="next"> <a href="https://mrx-wiki.github.io/skill/5.mac%E6%8A%80%E5%B7%A7/">Next Post</a> </div>
     
 </div>
 
 
-<script type="text/javascript">
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+
 
 </script>
 <script>

@@ -5,55 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> 搭建博客 - gyk&#39;s blog</title>
     <meta name="description" content="步骤  1.申请GitHub账号并配置ssh 2.brew安装hugo后选择主题 3.熟悉常见hugo指令 4.GitHub pages部署博客  指令 brew install hugo hugo new site blog git clone https://github.com/rmsubekti/the-roots-home.git themes/the-roots-home hugo server -t the-roots-home --buildDrafts hugo --theme=the-roots-home --baseUrl=&#34;https://gyk19950104.github.io&#34; --buildDrafts cd public git init git add . git commit -m &#39;&#39; git remote add origin https://github.com/gyk19950104/gyk19950104.github.io.git git push -u origin master 写博客 1.hugo new life/1.搭建博客.md 2.编写内容 3.运行脚本bash build.sh 4.从2021.3月开始需要使用token登陆，token记录在本地记事录 //build.sh #!/bin/bash hugo --theme=the-roots-home --baseUrl=&#34;https://gyk19950104.github.io&#34; --buildDrafts cd public git add . git commit -m &#39;&#43;1&#39; git remote add origin https://github.">
-    <link rel="canonical" href="https://gyk19950104.github.io/skill/1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+    <link rel="canonical" href="https://mrx-wiki.github.io/skill/1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
     <meta property="og:title" content="搭建博客">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://gyk19950104.github.io/skill/1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+    <meta property="og:url" content="https://mrx-wiki.github.io/skill/1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
     <meta property="og:description" content="步骤  1.申请GitHub账号并配置ssh 2.brew安装hugo后选择主题 3.熟悉常见hugo指令 4.GitHub pages部署博客  指令 brew install hugo hugo new site blog git clone https://github.com/rmsubekti/the-roots-home.git themes/the-roots-home hugo server -t the-roots-home --buildDrafts hugo --theme=the-roots-home --baseUrl=&#34;https://gyk19950104.github.io&#34; --buildDrafts cd public git init git add . git commit -m &#39;&#39; git remote add origin https://github.com/gyk19950104/gyk19950104.github.io.git git push -u origin master 写博客 1.hugo new life/1.搭建博客.md 2.编写内容 3.运行脚本bash build.sh 4.从2021.3月开始需要使用token登陆，token记录在本地记事录 //build.sh #!/bin/bash hugo --theme=the-roots-home --baseUrl=&#34;https://gyk19950104.github.io&#34; --buildDrafts cd public git add . git commit -m &#39;&#43;1&#39; git remote add origin https://github.">
     <meta property="og:site_name" content="gyk&#39;s blog">
-    <link rel="stylesheet" href="https://gyk19950104.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
+    <link rel="stylesheet" href="https://mrx-wiki.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
     <meta name="generator" content="Hugo 0.73.0" />
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
 
     
-    <script type="text/javascript">
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
 </head>
 <body><header class="site-header">
     <nav class="site-nav" role="navigation" aria-label="breadcrumb">
     <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb"><li class="breadcrumb-item  " 
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/">
     <span itemprop="name">gyk&#39;s blog</span>
   </a>
   <meta itemprop="position" content="0" />
 </li>/<li class="breadcrumb-item  " 
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/skill/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/skill/">
     <span itemprop="name">skill</span>
   </a>
   <meta itemprop="position" content="0" />
 </li>/<li class="breadcrumb-item active hidden" aria-current="page"
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://gyk19950104.github.io/skill/1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/skill/1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
     <span itemprop="name">1.%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2</span>
   </a>
   <meta itemprop="position" content="1" />
 </li></ol>
     </nav>
     <h1 class="site-title hidden">
-    <a href="https://gyk19950104.github.io/">gyk&#39;s blog</a>
+    <a href="https://mrx-wiki.github.io/">gyk&#39;s blog</a>
     </h1>
 </header>
-<div>先有逻辑正确的思路，剩余的是重复的实践与积累</div>
 <main id="content">
 <article role="article" class="content post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
     <header class="post-header">        
@@ -127,21 +117,12 @@ document.getElementById<span style="color:#f92672">(</span><span style="color:#e
 <div class="pagination">
     
     
-    <div class="next"> <a href="https://gyk19950104.github.io/skill/2.%E6%B1%BD%E8%BD%A6%E6%9E%84%E9%80%A0/">Next Post</a> </div>
+    <div class="next"> <a href="https://mrx-wiki.github.io/skill/2.%E6%B1%BD%E8%BD%A6%E6%9E%84%E9%80%A0/">Next Post</a> </div>
     
 </div>
 
 
-<script type="text/javascript">
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?5308f923b9c2ec2daee7dfdea5866c2a";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+
 
 </script>
 <script>
