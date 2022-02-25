@@ -4,18 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> 11.spring-mvc - gyk&#39;s blog</title>
-    <meta name="description" content="== springmvc原理 == | == springmvc原理 == |
-== 示例 == | == 示例 == |== 示例 == |== 示例 == |
+    <meta name="description" content="== 原始api == | == 原始api == |== 原始api == |
 第一步：导包
-&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;groupId&gt;org.example&lt;/groupId&gt; &lt;artifactId&gt;springmvc-study&lt;/artifactId&gt; &lt;packaging&gt;pom&lt;/packaging&gt; &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt; &lt;modules&gt; &lt;module&gt;springmvc-01&lt;/module&gt; &lt;module&gt;springmvc-02&lt;/module&gt; &lt;/modules&gt; &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;junit&lt;/groupId&gt; &lt;artifactId&gt;junit&lt;/artifactId&gt; &lt;version&gt;4.12&lt;/version&gt; &lt;scope&gt;test&lt;/scope&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework&lt;/groupId&gt; &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt; &lt;version&gt;5.3.16&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;javax.servlet&lt;/groupId&gt; &lt;artifactId&gt;servlet-api&lt;/artifactId&gt; &lt;version&gt;2.5&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;javax.servlet.jsp&lt;/groupId&gt; &lt;artifactId&gt;jsp-api&lt;/artifactId&gt; &lt;version&gt;2.1&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;javax.servlet.jsp.jstl&lt;/groupId&gt; &lt;artifactId&gt;jstl&lt;/artifactId&gt; &lt;version&gt;1.2&lt;/version&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 第二步：编写servlet和jsp">
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;groupId&gt;org.example&lt;/groupId&gt; &lt;artifactId&gt;springmvc-study&lt;/artifactId&gt; &lt;packaging&gt;pom&lt;/packaging&gt; &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt; &lt;modules&gt; &lt;module&gt;springmvc-01&lt;/module&gt; &lt;module&gt;springmvc-02&lt;/module&gt; &lt;/modules&gt; &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;junit&lt;/groupId&gt; &lt;artifactId&gt;junit&lt;/artifactId&gt; &lt;version&gt;4.12&lt;/version&gt; &lt;scope&gt;test&lt;/scope&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework&lt;/groupId&gt; &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt; &lt;version&gt;5.3.16&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;javax.servlet&lt;/groupId&gt; &lt;artifactId&gt;servlet-api&lt;/artifactId&gt; &lt;version&gt;2.5&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;javax.servlet.jsp&lt;/groupId&gt; &lt;artifactId&gt;jsp-api&lt;/artifactId&gt; &lt;version&gt;2.1&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;javax.servlet.jsp.jstl&lt;/groupId&gt; &lt;artifactId&gt;jstl&lt;/artifactId&gt; &lt;version&gt;1.2&lt;/version&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 第二步：编写servlet和jsp
+package wiki.mrx.controller; import org.springframework.web.servlet.ModelAndView; import org.springframework.web.servlet.mvc.Controller; import javax.servlet.http.HttpServletRequest; import javax.servlet.http.HttpServletResponse; public class HelloController implements Controller { public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception { //模型与视图  ModelAndView mv = new ModelAndView(); mv.">
     <link rel="canonical" href="https://mrx-wiki.github.io/backend/11.spring-mvc/">
     <meta property="og:title" content="11.spring-mvc">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://mrx-wiki.github.io/backend/11.spring-mvc/">
-    <meta property="og:description" content="== springmvc原理 == | == springmvc原理 == |
-== 示例 == | == 示例 == |== 示例 == |== 示例 == |
+    <meta property="og:description" content="== 原始api == | == 原始api == |== 原始api == |
 第一步：导包
-&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;groupId&gt;org.example&lt;/groupId&gt; &lt;artifactId&gt;springmvc-study&lt;/artifactId&gt; &lt;packaging&gt;pom&lt;/packaging&gt; &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt; &lt;modules&gt; &lt;module&gt;springmvc-01&lt;/module&gt; &lt;module&gt;springmvc-02&lt;/module&gt; &lt;/modules&gt; &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;junit&lt;/groupId&gt; &lt;artifactId&gt;junit&lt;/artifactId&gt; &lt;version&gt;4.12&lt;/version&gt; &lt;scope&gt;test&lt;/scope&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework&lt;/groupId&gt; &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt; &lt;version&gt;5.3.16&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;javax.servlet&lt;/groupId&gt; &lt;artifactId&gt;servlet-api&lt;/artifactId&gt; &lt;version&gt;2.5&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;javax.servlet.jsp&lt;/groupId&gt; &lt;artifactId&gt;jsp-api&lt;/artifactId&gt; &lt;version&gt;2.1&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;javax.servlet.jsp.jstl&lt;/groupId&gt; &lt;artifactId&gt;jstl&lt;/artifactId&gt; &lt;version&gt;1.2&lt;/version&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 第二步：编写servlet和jsp">
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;groupId&gt;org.example&lt;/groupId&gt; &lt;artifactId&gt;springmvc-study&lt;/artifactId&gt; &lt;packaging&gt;pom&lt;/packaging&gt; &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt; &lt;modules&gt; &lt;module&gt;springmvc-01&lt;/module&gt; &lt;module&gt;springmvc-02&lt;/module&gt; &lt;/modules&gt; &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;junit&lt;/groupId&gt; &lt;artifactId&gt;junit&lt;/artifactId&gt; &lt;version&gt;4.12&lt;/version&gt; &lt;scope&gt;test&lt;/scope&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework&lt;/groupId&gt; &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt; &lt;version&gt;5.3.16&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;javax.servlet&lt;/groupId&gt; &lt;artifactId&gt;servlet-api&lt;/artifactId&gt; &lt;version&gt;2.5&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;javax.servlet.jsp&lt;/groupId&gt; &lt;artifactId&gt;jsp-api&lt;/artifactId&gt; &lt;version&gt;2.1&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;javax.servlet.jsp.jstl&lt;/groupId&gt; &lt;artifactId&gt;jstl&lt;/artifactId&gt; &lt;version&gt;1.2&lt;/version&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 第二步：编写servlet和jsp
+package wiki.mrx.controller; import org.springframework.web.servlet.ModelAndView; import org.springframework.web.servlet.mvc.Controller; import javax.servlet.http.HttpServletRequest; import javax.servlet.http.HttpServletResponse; public class HelloController implements Controller { public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception { //模型与视图  ModelAndView mv = new ModelAndView(); mv.">
     <meta property="og:site_name" content="gyk&#39;s blog">
     <link rel="stylesheet" href="https://mrx-wiki.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
     <meta name="generator" content="Hugo 0.73.0" />
@@ -62,9 +62,7 @@
         </span>
     </header>
     <div class="post-content" itemprop="articleBody">
-        <p>== springmvc原理 == | == springmvc原理 == |</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/02/4565e1023acbd986.png" alt=""></p>
-<p>== 示例 == | == 示例 == |== 示例 == |== 示例 == |</p>
+        <p>== 原始api == | == 原始api == |== 原始api == |</p>
 <p>第一步：导包</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
 <span style="color:#f92672">&lt;project</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0&#34;</span>
@@ -184,6 +182,127 @@ ${msg}
     <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;/hello&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;wiki.mrx.controller.HelloController&#34;</span><span style="color:#f92672">/&gt;</span>
 <span style="color:#f92672">&lt;/beans&gt;</span>
 </code></pre></div><p>第四步：启动tomcat服务器</p>
+<p>== 注解开发 == ｜ == 注解开发 == ｜ == 注解开发 == ｜</p>
+<p>第一步：导包</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<span style="color:#f92672">&lt;project</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0&#34;</span>
+         <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+         <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;modelVersion&gt;</span>4.0.0<span style="color:#f92672">&lt;/modelVersion&gt;</span>
+
+    <span style="color:#f92672">&lt;groupId&gt;</span>org.example<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>springmvc-study<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;packaging&gt;</span>pom<span style="color:#f92672">&lt;/packaging&gt;</span>
+    <span style="color:#f92672">&lt;version&gt;</span>1.0-SNAPSHOT<span style="color:#f92672">&lt;/version&gt;</span>
+    <span style="color:#f92672">&lt;modules&gt;</span>
+        <span style="color:#f92672">&lt;module&gt;</span>springmvc-01<span style="color:#f92672">&lt;/module&gt;</span>
+        <span style="color:#f92672">&lt;module&gt;</span>springmvc-02<span style="color:#f92672">&lt;/module&gt;</span>
+    <span style="color:#f92672">&lt;/modules&gt;</span>
+
+    <span style="color:#f92672">&lt;dependencies&gt;</span>
+        <span style="color:#f92672">&lt;dependency&gt;</span>
+            <span style="color:#f92672">&lt;groupId&gt;</span>junit<span style="color:#f92672">&lt;/groupId&gt;</span>
+            <span style="color:#f92672">&lt;artifactId&gt;</span>junit<span style="color:#f92672">&lt;/artifactId&gt;</span>
+            <span style="color:#f92672">&lt;version&gt;</span>4.12<span style="color:#f92672">&lt;/version&gt;</span>
+            <span style="color:#f92672">&lt;scope&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
+        <span style="color:#f92672">&lt;/dependency&gt;</span>
+        <span style="color:#f92672">&lt;dependency&gt;</span>
+            <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework<span style="color:#f92672">&lt;/groupId&gt;</span>
+            <span style="color:#f92672">&lt;artifactId&gt;</span>spring-webmvc<span style="color:#f92672">&lt;/artifactId&gt;</span>
+            <span style="color:#f92672">&lt;version&gt;</span>5.3.16<span style="color:#f92672">&lt;/version&gt;</span>
+        <span style="color:#f92672">&lt;/dependency&gt;</span>
+        <span style="color:#f92672">&lt;dependency&gt;</span>
+            <span style="color:#f92672">&lt;groupId&gt;</span>javax.servlet<span style="color:#f92672">&lt;/groupId&gt;</span>
+            <span style="color:#f92672">&lt;artifactId&gt;</span>servlet-api<span style="color:#f92672">&lt;/artifactId&gt;</span>
+            <span style="color:#f92672">&lt;version&gt;</span>2.5<span style="color:#f92672">&lt;/version&gt;</span>
+        <span style="color:#f92672">&lt;/dependency&gt;</span>
+        <span style="color:#f92672">&lt;dependency&gt;</span>
+            <span style="color:#f92672">&lt;groupId&gt;</span>javax.servlet.jsp<span style="color:#f92672">&lt;/groupId&gt;</span>
+            <span style="color:#f92672">&lt;artifactId&gt;</span>jsp-api<span style="color:#f92672">&lt;/artifactId&gt;</span>
+            <span style="color:#f92672">&lt;version&gt;</span>2.1<span style="color:#f92672">&lt;/version&gt;</span>
+        <span style="color:#f92672">&lt;/dependency&gt;</span>
+        <span style="color:#f92672">&lt;dependency&gt;</span>
+            <span style="color:#f92672">&lt;groupId&gt;</span>javax.servlet.jsp.jstl<span style="color:#f92672">&lt;/groupId&gt;</span>
+            <span style="color:#f92672">&lt;artifactId&gt;</span>jstl<span style="color:#f92672">&lt;/artifactId&gt;</span>
+            <span style="color:#f92672">&lt;version&gt;</span>1.2<span style="color:#f92672">&lt;/version&gt;</span>
+        <span style="color:#f92672">&lt;/dependency&gt;</span>
+    <span style="color:#f92672">&lt;/dependencies&gt;</span>
+<span style="color:#f92672">&lt;/project&gt;</span>
+</code></pre></div><p>第二步：编写servlet和jsp</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> wiki.mrx.controller<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> org.springframework.stereotype.Controller<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.ui.Model<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.web.bind.annotation.RequestMapping<span style="color:#f92672">;</span>
+
+<span style="color:#a6e22e">@Controller</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HelloController</span> <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/hello&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">hello</span><span style="color:#f92672">(</span>Model model<span style="color:#f92672">){</span>
+        model<span style="color:#f92672">.</span><span style="color:#a6e22e">addAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;msg&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;hello springmvc&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;hello&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><pre><code class="language-jsp" data-lang="jsp">
+&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+${msg}
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre><p>第三步：注册DispatcherServlet</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<span style="color:#f92672">&lt;web-app</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://xmlns.jcp.org/xml/ns/javaee&#34;</span>
+         <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+         <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd&#34;</span>
+         <span style="color:#a6e22e">version=</span><span style="color:#e6db74">&#34;4.0&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#75715e">&lt;!--注册DispatcherServlet--&gt;</span>
+    <span style="color:#f92672">&lt;servlet&gt;</span>
+        <span style="color:#f92672">&lt;servlet-name&gt;</span>springmvc<span style="color:#f92672">&lt;/servlet-name&gt;</span>
+        <span style="color:#f92672">&lt;servlet-class&gt;</span>org.springframework.web.servlet.DispatcherServlet<span style="color:#f92672">&lt;/servlet-class&gt;</span>
+        <span style="color:#f92672">&lt;init-param&gt;</span>
+            <span style="color:#f92672">&lt;param-name&gt;</span>contextConfigLocation<span style="color:#f92672">&lt;/param-name&gt;</span>
+            <span style="color:#f92672">&lt;param-value&gt;</span>classpath:springmvc-servlet.xml<span style="color:#f92672">&lt;/param-value&gt;</span>
+        <span style="color:#f92672">&lt;/init-param&gt;</span>
+        <span style="color:#f92672">&lt;load-on-startup&gt;</span>1<span style="color:#f92672">&lt;/load-on-startup&gt;</span>
+    <span style="color:#f92672">&lt;/servlet&gt;</span>
+
+    <span style="color:#f92672">&lt;servlet-mapping&gt;</span>
+        <span style="color:#f92672">&lt;servlet-name&gt;</span>springmvc<span style="color:#f92672">&lt;/servlet-name&gt;</span>
+        <span style="color:#f92672">&lt;url-pattern&gt;</span>/<span style="color:#f92672">&lt;/url-pattern&gt;</span>
+    <span style="color:#f92672">&lt;/servlet-mapping&gt;</span>
+<span style="color:#f92672">&lt;/web-app&gt;</span>
+
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<span style="color:#f92672">&lt;beans</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/beans&#34;</span>
+       <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+       <span style="color:#a6e22e">xmlns:context=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/context&#34;</span>
+       <span style="color:#a6e22e">xmlns:mvc=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/mvc&#34;</span>
+       <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/beans
+</span><span style="color:#e6db74">        https://www.springframework.org/schema/beans/spring-beans.xsd
+</span><span style="color:#e6db74">        http://www.springframework.org/schema/context
+</span><span style="color:#e6db74">        https://www.springframework.org/schema/context/spring-context.xsd
+</span><span style="color:#e6db74">        http://www.springframework.org/schema/mvc
+</span><span style="color:#e6db74">        https://www.springframework.org/schema/mvc/spring-mvc.xsd&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#75715e">&lt;!--自动扫描--&gt;</span>
+    <span style="color:#f92672">&lt;context:component-scan</span> <span style="color:#a6e22e">base-package=</span><span style="color:#e6db74">&#34;wiki.mrx.controller&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;mvc:default-servlet-handler/&gt;</span>
+    <span style="color:#f92672">&lt;mvc:annotation-driven/&gt;</span>
+    <span style="color:#75715e">&lt;!--视图解析器--&gt;</span>
+    <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.springframework.web.servlet.view.InternalResourceViewResolver&#34;</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;InternalResourceViewResolver&#34;</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;prefix&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/WEB-INF/jsp/&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;suffix&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;.jsp&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;/bean&gt;</span>
+
+<span style="color:#f92672">&lt;/beans&gt;</span>
+
+</code></pre></div><p>第四步：启动tomcat服务器</p>
+<p>== springmvc原理 == | == springmvc原理 == |</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/02/4565e1023acbd986.png" alt=""></p>
 
     </div>
     <video id="my_video" style="height: 300px;width:100%" controls="controls"></video>
