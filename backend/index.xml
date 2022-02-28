@@ -5,10 +5,20 @@
     <link>https://mrx-wiki.github.io/backend/</link>
     <description>Recent content in Backends on gyk&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 26 Feb 2022 02:06:12 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 28 Feb 2022 17:22:55 +0800</lastBuildDate>
     
 	<atom:link href="https://mrx-wiki.github.io/backend/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>12.ssm整合</title>
+      <link>https://mrx-wiki.github.io/backend/12.ssm%E6%95%B4%E5%90%88/</link>
+      <pubDate>Mon, 28 Feb 2022 17:22:55 +0800</pubDate>
+      
+      <guid>https://mrx-wiki.github.io/backend/12.ssm%E6%95%B4%E5%90%88/</guid>
+      <description>== 建数据库 == ｜ == 建数据库 == ｜ == 建数据库 == ｜
+CREATE DATABASE `ssmbuild`; USE `ssmbuild`; DROP TABLE IF EXISTS `books`; CREATE TABLE `books` ( `bookID` INT(10) NOT NULL AUTO_INCREMENT COMMENT &amp;#39;书id&amp;#39;, `bookName` VARCHAR(100) NOT NULL COMMENT &amp;#39;书名&amp;#39;, `bookCounts` INT(11) NOT NULL COMMENT &amp;#39;数量&amp;#39;, `detail` VARCHAR(200) NOT NULL COMMENT &amp;#39;描述&amp;#39;, KEY `bookID` (`bookID`) )ENGINE=INNODB DEFAULT CHARSET=utf8 INSERT INTO `BOOKS`(`bookID`,`bookName`,`bookCounts`,`detail`)VALUES (1,&amp;#39;java&amp;#39;,1,&amp;#39; 从入门到精通&amp;#39;), (2,&amp;#39;mysql&amp;#39;,10,&amp;#39;从删库到跑路&amp;#39;), (3,&amp;#39;linux&amp;#39;,5,&amp;#39;从入门到入狱&amp;#39;); == 整合mybatis == | == 整合mybatis == | == 整合mybatis == |</description>
+    </item>
     
     <item>
       <title>11.spring-mvc</title>
