@@ -5,10 +5,29 @@
     <link>https://mrx-wiki.github.io/</link>
     <description>Recent content on gyk&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 28 Feb 2022 17:22:55 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 10 Mar 2022 00:50:47 +0800</lastBuildDate>
     
 	<atom:link href="https://mrx-wiki.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>13.springboot教程</title>
+      <link>https://mrx-wiki.github.io/backend/13.springboot%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Thu, 10 Mar 2022 00:50:47 +0800</pubDate>
+      
+      <guid>https://mrx-wiki.github.io/backend/13.springboot%E5%9F%BA%E7%A1%80/</guid>
+      <description>== springboot原理 == | == springboot原理 == | == springboot原理 == |
+1.springboot将spring中各种繁琐的配置进行简化
+以前写的ssm项目属于单体结构，springboot写的项目是微服务项目
+  @springbootApplication扫描spring.factories的全部自动配置
+  @condition并不会使它们全部生效，需要添加对应starter来启动
+  @xxxautoConfiguration/xxProperties扫描时会存在与yml配置文件绑定实现手动改配置
+  @Configuration在config/xxConfig.java自定义starter
+  == 配置文件 == | == 配置文件 == | == 配置文件 == | == 配置文件 == |
+1.springboot可以通过yml文件进行手动配置,常见的如下
+# 端口配置 server: port: 8081 # 多环境配置 spring: profiles: active: dev --- server: port: 8082 spring: profiles: active: test 2.springboot可以通过yml文件为实体类赋值
+package wiki.mrx.pojo; import lombok.AllArgsConstructor; import lombok.</description>
+    </item>
     
     <item>
       <title>12.ssm整合</title>
@@ -234,7 +253,8 @@ git是一个能快速高效处理大小项目的，免费的，开源的，分�
       <pubDate>Sun, 09 Jan 2022 04:59:55 +0800</pubDate>
       
       <guid>https://mrx-wiki.github.io/video/mrx/</guid>
-      <description>http://r5exz302v.hn-bkt.clouddn.com/%E9%BB%98%202022-01-01%2006.35.53.mp4</description>
+      <description>http://r5exz302v.hn-bkt.clouddn.com/%E9%BB%98%202022-01-01%2006.35.53.mp4
+七牛云隔30天需更新一次链接</description>
     </item>
     
     <item>
