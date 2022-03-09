@@ -37,7 +37,7 @@
 <section class="content item-list">
     
     
-    <div class="item">
+    <div class="item" onclick="pass()">
         <h3 class="item-title">
             
             <ion-icon name="folder-outline"></ion-icon>&nbsp;
@@ -53,7 +53,7 @@
         <time datetime="2006-01-02">10 Mar 2022</time>
     </div>
     
-    <div class="item">
+    <div class="item" onclick="pass()">
         <h3 class="item-title">
             
             <ion-icon name="folder-outline"></ion-icon>&nbsp;
@@ -69,7 +69,7 @@
         <time datetime="2006-01-02">22 Feb 2022</time>
     </div>
     
-    <div class="item">
+    <div class="item" onclick="pass()">
         <h3 class="item-title">
             
             <ion-icon name="folder-outline"></ion-icon>&nbsp;
@@ -85,7 +85,7 @@
         <time datetime="2006-01-02">18 Feb 2022</time>
     </div>
     
-    <div class="item">
+    <div class="item" onclick="pass()">
         <h3 class="item-title">
             
             <ion-icon name="folder-outline"></ion-icon>&nbsp;
@@ -101,7 +101,7 @@
         <time datetime="2006-01-02">17 Feb 2022</time>
     </div>
     
-    <div class="item">
+    <div class="item" onclick="pass()">
         <h3 class="item-title">
             
             <ion-icon name="folder-outline"></ion-icon>&nbsp;
@@ -117,7 +117,7 @@
         <time datetime="2006-01-02">14 Feb 2022</time>
     </div>
     
-    <div class="item">
+    <div class="item" onclick="pass()">
         <h3 class="item-title">
             
             <ion-icon name="folder-outline"></ion-icon>&nbsp;
@@ -133,7 +133,7 @@
         <time datetime="2006-01-02">13 Jan 2022</time>
     </div>
     
-    <div class="item">
+    <div class="item" onclick="pass()">
         <h3 class="item-title">
             
             <ion-icon name="folder-outline"></ion-icon>&nbsp;
@@ -178,9 +178,26 @@
 </section>
 
         </main><footer class="site-footer">
-	<span class="right">
-		<em>gyk&#39;s blog</em>
-	</span>
+    <span class="right">
+        <em>gyk&#39;s blog</em>
+    </span>
 </footer>
+
+
+<script type="text/javascript">
+    //显示标识位
+    let show_flag=true;
+    //输对密码才能看其他内容
+    function pass() {
+        while(show_flag){
+         let token = window.prompt("登陆码","注册联系管理员kk");
+         if(token==="lvjingyi123"){
+             show_flag=false;
+         }else{
+             show_flag=true;
+         }
+        }
+    }
+</script>
 </body>
 </html>
