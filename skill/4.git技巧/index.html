@@ -289,7 +289,16 @@ head是指向当前所在分支的引用标识符，本质是一个指向其他�
 
 ——————————HEAD标记————————
 
-</code></pre></div><p>git快照: <a href="https://segmentfault.com/q/1010000008914409">https://segmentfault.com/q/1010000008914409</a></p>
+</code></pre></div><p>服务器部署git</p>
+<ul>
+<li>1.导出裸仓库 git clone &ndash;bare demo_git demo_git.git</li>
+<li>2.裸仓库上传 scp -r demo_git.git root@ip:/opt/git</li>
+<li>3.ubuntu服务器安装git apt-get upgate &amp; install git</li>
+<li>4.修改权限 cd /opt/git git init &ndash;bare &ndash;shared</li>
+<li>5.本地克隆 git clone root@ip:/opt/git/</li>
+</ul>
+<pre><code>
+</code></pre><p>git快照: <a href="https://segmentfault.com/q/1010000008914409">https://segmentfault.com/q/1010000008914409</a></p>
 <p>git3对象: <a href="https://gitee.com/progit/9-Git-">https://gitee.com/progit/9-Git-</a>内部原理.html#9.3-Git-References</p>
 
     </div>
