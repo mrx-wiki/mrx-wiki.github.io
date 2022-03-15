@@ -711,4 +711,19 @@ $()或者jQuery() 在jquery2.0.3中，它是将其挂载到了window全局对象
 	</span>
 </footer>
 </body>
+    <script type="text/javascript">
+        
+        let show_flag=true;
+        
+        function pass() {
+            while(show_flag){
+             let token = window.prompt("登陆码","");
+             if(token==="888888"){
+                 show_flag=false;
+             }else{
+                 show_flag=true;
+             }
+            }
+        }
+    </script>
 </html>

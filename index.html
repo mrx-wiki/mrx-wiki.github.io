@@ -42,6 +42,22 @@
             
             <ion-icon name="folder-outline"></ion-icon>&nbsp;
              
+            <a title="Frontends" href="https://mrx-wiki.github.io/frontend/">
+                
+                
+                frontend 
+                
+            </a>
+        </h3>
+        
+        <time datetime="2006-01-02">16 Mar 2022</time>
+    </div>
+    
+    <div class="item" onclick="pass()">
+        <h3 class="item-title">
+            
+            <ion-icon name="folder-outline"></ion-icon>&nbsp;
+             
             <a title="Backends" href="https://mrx-wiki.github.io/backend/">
                 
                 
@@ -106,22 +122,6 @@
             
             <ion-icon name="folder-outline"></ion-icon>&nbsp;
              
-            <a title="Frontends" href="https://mrx-wiki.github.io/frontend/">
-                
-                
-                frontend 
-                
-            </a>
-        </h3>
-        
-        <time datetime="2006-01-02">14 Feb 2022</time>
-    </div>
-    
-    <div class="item" onclick="pass()">
-        <h3 class="item-title">
-            
-            <ion-icon name="folder-outline"></ion-icon>&nbsp;
-             
             <a title="Courses" href="https://mrx-wiki.github.io/course/">
                 
                 
@@ -149,7 +149,7 @@
         <time datetime="2006-01-02">9 Jan 2022</time>
     </div>
     
-    <div class="item">
+    <div class="item" >
         <h3 class="item-title">
             
             <ion-icon name="folder-outline"></ion-icon>&nbsp;
@@ -178,26 +178,24 @@
 </section>
 
         </main><footer class="site-footer">
-    <span class="right">
-        <em>gyk&#39;s blog</em>
-    </span>
+	<span class="right">
+		<em>gyk&#39;s blog</em>
+	</span>
 </footer>
-
-
-<script type="text/javascript">
-    //显示标识位
-    let show_flag=true;
-    //输对密码才能看其他内容
-    function pass() {
-        while(show_flag){
-         let token = window.prompt("登陆码","");
-         if(token==="888888"){
-             show_flag=false;
-         }else{
-             show_flag=true;
-         }
-        }
-    }
-</script>
 </body>
+    <script type="text/javascript">
+        
+        let show_flag=true;
+        
+        function pass() {
+            while(show_flag){
+             let token = window.prompt("登陆码","");
+             if(token==="888888"){
+                 show_flag=false;
+             }else{
+                 show_flag=true;
+             }
+            }
+        }
+    </script>
 </html>
