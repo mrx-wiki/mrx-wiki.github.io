@@ -5,10 +5,29 @@
     <link>https://mrx-wiki.github.io/frontend/</link>
     <description>Recent content in Frontends on gyk&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 16 Mar 2022 04:50:46 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 21 Mar 2022 02:57:44 +0800</lastBuildDate>
     
 	<atom:link href="https://mrx-wiki.github.io/frontend/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>一次vue逆向</title>
+      <link>https://mrx-wiki.github.io/frontend/%E4%B8%80%E6%AC%A1vue%E9%80%86%E5%90%91/</link>
+      <pubDate>Mon, 21 Mar 2022 02:57:44 +0800</pubDate>
+      
+      <guid>https://mrx-wiki.github.io/frontend/%E4%B8%80%E6%AC%A1vue%E9%80%86%E5%90%91/</guid>
+      <description>起因 偶然看到：http://donghuitiao.gitee.io/autoprogressnav/
+f12码云地址：https://gitee.com/donghuitiao/autoProgressNav/tree/master
+克隆代码：这是一份打包后的vue代码，作者居然直接把sourcemap上传了，可以破
+git clone https://gitee.com/donghuitiao/autoProgressNav.git 经过 作者对它进行了压缩，先把简单的html和css在https://beautifier.io/ 恢复一下, 发现：
+ chunk-vendors.2bd75e10.js app.971e6794.js  &amp;lt;script src=&amp;#34;js/chunk-vendors.2bd75e10.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;js/app.971e6794.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 其他的js文件应该是作者没删除的历史打包代码，不去管它
+chunk-vendors.2bd75e10.js代码对应的应该是一些类库源码，不涉及逻辑
+可以找到app.971e6794.js的sourcemap文件app.971e6794.js.map
+可以用map文件来恢复代码，采用restore-source-tree工具,先安装：
+git clone https://github.com/laysent/restore-source-tree sudo npm install -g npm run build #产生dist文件 安好以后直接使用：
+node dist.js app.971e6794.js.map node dist.js chunk-vendors.2bd75e10.js 成功还原出源码结构：
+&amp;lt;template&amp;gt; &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; &amp;lt;AutoNav/&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/template&amp;gt; &amp;lt;script&amp;gt; import AutoNav from &amp;#39;./components/AutoNav.vue&amp;#39; export default { name: &amp;#39;App&amp;#39;, components: { AutoNav } } &amp;lt;/script&amp;gt; &amp;lt;style&amp;gt; &amp;lt;/style&amp;gt; &amp;lt;template&amp;gt; &amp;lt;div&amp;gt; &amp;lt;h1&amp;gt;一键生成 视频导航素材&amp;lt;/h1&amp;gt; &amp;lt;h3 v-if=&amp;#39;!</description>
+    </item>
     
     <item>
       <title>Javascript基础</title>

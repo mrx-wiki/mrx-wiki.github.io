@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang=><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 一次vue逆向 - gyk&#39;s blog</title>
+    <meta name="description" content="起因 偶然看到：http://donghuitiao.gitee.io/autoprogressnav/
+f12码云地址：https://gitee.com/donghuitiao/autoProgressNav/tree/master
+克隆代码：这是一份打包后的vue代码，作者居然直接把sourcemap上传了，可以破
+git clone https://gitee.com/donghuitiao/autoProgressNav.git 经过 作者对它进行了压缩，先把简单的html和css在https://beautifier.io/ 恢复一下, 发现：
+ chunk-vendors.2bd75e10.js app.971e6794.js  &lt;script src=&#34;js/chunk-vendors.2bd75e10.js&#34;&gt;&lt;/script&gt; &lt;script src=&#34;js/app.971e6794.js&#34;&gt;&lt;/script&gt; 其他的js文件应该是作者没删除的历史打包代码，不去管它
+chunk-vendors.2bd75e10.js代码对应的应该是一些类库源码，不涉及逻辑
+可以找到app.971e6794.js的sourcemap文件app.971e6794.js.map
+可以用map文件来恢复代码，采用restore-source-tree工具,先安装：
+git clone https://github.com/laysent/restore-source-tree sudo npm install -g npm run build #产生dist文件 安好以后直接使用：
+node dist.js app.971e6794.js.map node dist.js chunk-vendors.2bd75e10.js 成功还原出源码结构：
+&lt;template&gt; &lt;div id=&#34;app&#34;&gt; &lt;AutoNav/&gt; &lt;/div&gt; &lt;/template&gt; &lt;script&gt; import AutoNav from &#39;./components/AutoNav.vue&#39; export default { name: &#39;App&#39;, components: { AutoNav } } &lt;/script&gt; &lt;style&gt; &lt;/style&gt; &lt;template&gt; &lt;div&gt; &lt;h1&gt;一键生成 视频导航素材&lt;/h1&gt; &lt;h3 v-if=&#39;!">
+    <link rel="canonical" href="https://mrx-wiki.github.io/frontend/%E4%B8%80%E6%AC%A1vue%E9%80%86%E5%90%91/">
+    <meta property="og:title" content="一次vue逆向">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mrx-wiki.github.io/frontend/%E4%B8%80%E6%AC%A1vue%E9%80%86%E5%90%91/">
+    <meta property="og:description" content="起因 偶然看到：http://donghuitiao.gitee.io/autoprogressnav/
+f12码云地址：https://gitee.com/donghuitiao/autoProgressNav/tree/master
+克隆代码：这是一份打包后的vue代码，作者居然直接把sourcemap上传了，可以破
+git clone https://gitee.com/donghuitiao/autoProgressNav.git 经过 作者对它进行了压缩，先把简单的html和css在https://beautifier.io/ 恢复一下, 发现：
+ chunk-vendors.2bd75e10.js app.971e6794.js  &lt;script src=&#34;js/chunk-vendors.2bd75e10.js&#34;&gt;&lt;/script&gt; &lt;script src=&#34;js/app.971e6794.js&#34;&gt;&lt;/script&gt; 其他的js文件应该是作者没删除的历史打包代码，不去管它
+chunk-vendors.2bd75e10.js代码对应的应该是一些类库源码，不涉及逻辑
+可以找到app.971e6794.js的sourcemap文件app.971e6794.js.map
+可以用map文件来恢复代码，采用restore-source-tree工具,先安装：
+git clone https://github.com/laysent/restore-source-tree sudo npm install -g npm run build #产生dist文件 安好以后直接使用：
+node dist.js app.971e6794.js.map node dist.js chunk-vendors.2bd75e10.js 成功还原出源码结构：
+&lt;template&gt; &lt;div id=&#34;app&#34;&gt; &lt;AutoNav/&gt; &lt;/div&gt; &lt;/template&gt; &lt;script&gt; import AutoNav from &#39;./components/AutoNav.vue&#39; export default { name: &#39;App&#39;, components: { AutoNav } } &lt;/script&gt; &lt;style&gt; &lt;/style&gt; &lt;template&gt; &lt;div&gt; &lt;h1&gt;一键生成 视频导航素材&lt;/h1&gt; &lt;h3 v-if=&#39;!">
+    <meta property="og:site_name" content="gyk&#39;s blog">
+    <link rel="stylesheet" href="https://mrx-wiki.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
+    <meta name="generator" content="Hugo 0.73.0" />
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+
+    
+</head>
+<body><header class="site-header">
+    <nav class="site-nav" role="navigation" aria-label="breadcrumb">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb"><li class="breadcrumb-item  " 
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/">
+    <span itemprop="name">gyk&#39;s blog</span>
+  </a>
+  <meta itemprop="position" content="0" />
+</li>/<li class="breadcrumb-item  " 
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/frontend/">
+    <span itemprop="name">frontend</span>
+  </a>
+  <meta itemprop="position" content="0" />
+</li>/<li class="breadcrumb-item active hidden" aria-current="page"
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/frontend/%E4%B8%80%E6%AC%A1vue%E9%80%86%E5%90%91/">
+    <span itemprop="name">%E4%B8%80%E6%AC%A1vue%E9%80%86%E5%90%91</span>
+  </a>
+  <meta itemprop="position" content="1" />
+</li></ol>
+    </nav>
+    <h1 class="site-title hidden">
+    <a href="https://mrx-wiki.github.io/">gyk&#39;s blog</a>
+    </h1>
+</header>
+<main id="content">
+<article role="article" class="content post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">        
+        <h2 class="post-title" itemprop="name headline">一次vue逆向</h2>
+        <span class="post-meta">
+            <time class="date-published" datetime="2022-03-21T02:57:44&#43;07:00" itemprop="datePublished">
+                Mon, 21 Mar 2022
+            </time>
+            
+        </span>
+    </header>
+    <div class="post-content" itemprop="articleBody">
+        <h2 id="起因">起因</h2>
+<p>偶然看到：http://donghuitiao.gitee.io/autoprogressnav/</p>
+<p>f12码云地址：https://gitee.com/donghuitiao/autoProgressNav/tree/master</p>
+<p>克隆代码：这是一份打包后的vue代码，作者居然直接把sourcemap上传了，可以破</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://gitee.com/donghuitiao/autoProgressNav.git
+</code></pre></div><h2 id="经过">经过</h2>
+<p>作者对它进行了压缩，先把简单的html和css在https://beautifier.io/ 恢复一下, 发现：</p>
+<ul>
+<li>chunk-vendors.2bd75e10.js</li>
+<li>app.971e6794.js</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/chunk-vendors.2bd75e10.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/app.971e6794.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>其他的js文件应该是作者没删除的历史打包代码，不去管它</p>
+<p>chunk-vendors.2bd75e10.js代码对应的应该是一些类库源码，不涉及逻辑</p>
+<p>可以找到app.971e6794.js的sourcemap文件app.971e6794.js.map</p>
+<p>可以用map文件来恢复代码，采用restore-source-tree工具,先安装：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/laysent/restore-source-tree
+sudo npm install -g
+npm run build <span style="color:#75715e">#产生dist文件</span>
+</code></pre></div><p>安好以后直接使用：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">node dist.js app.971e6794.js.map
+node dist.js chunk-vendors.2bd75e10.js
+</code></pre></div><p>成功还原出源码结构：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">template</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app&#34;</span>&gt;
+    &lt;<span style="color:#f92672">AutoNav</span>/&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+
+&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">AutoNav</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./components/AutoNav.vue&#39;</span>
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;App&#39;</span>,
+  <span style="color:#a6e22e">components</span><span style="color:#f92672">:</span> {
+     <span style="color:#a6e22e">AutoNav</span>
+  }
+}
+&lt;/<span style="color:#f92672">script</span>&gt;
+
+&lt;<span style="color:#f92672">style</span>&gt;
+
+&lt;/<span style="color:#f92672">style</span>&gt;
+
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">template</span>&gt;
+	&lt;<span style="color:#f92672">div</span>&gt;
+		&lt;<span style="color:#f92672">h1</span>&gt;<span style="color:#a6e22e">一键生成</span> <span style="color:#a6e22e">视频导航素材</span>&lt;/<span style="color:#f92672">h1</span>&gt;
+		&lt;<span style="color:#f92672">h3</span> <span style="color:#a6e22e">v</span><span style="color:#f92672">-if</span><span style="color:#960050;background-color:#1e0010">=&#39;!</span><span style="color:#a6e22e">creating</span><span style="color:#960050;background-color:#1e0010">&#39;</span>&gt;<span style="color:#a6e22e">bilibili冬灰条</span> <span style="color:#a6e22e">制作</span> <span style="color:#ae81ff">2020.12.28</span><span style="color:#a6e22e">更新</span>&lt;/<span style="color:#f92672">h3</span>&gt;
+		&lt;<span style="color:#f92672">div</span> <span style="color:#f92672">v-else</span>&gt;
+			&lt;<span style="color:#f92672">h3</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:blue&#34;</span>&gt;
+				&lt;<span style="color:#f92672">span</span>&gt;<span style="color:#a6e22e">正在录制生成素材</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">倒计时</span>&lt;/<span style="color:#f92672">span</span>&gt;
+				&lt;<span style="color:#f92672">span</span> <span style="color:#f92672">v-text</span><span style="color:#e6db74">=&#34;waitTime&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;
+				&lt;<span style="color:#f92672">span</span>&gt;<span style="color:#a6e22e">秒</span>&lt;/<span style="color:#f92672">span</span>&gt;
+			&lt;/<span style="color:#f92672">h3</span>&gt;
+		&lt;/<span style="color:#f92672">div</span>&gt;
+
+		&lt;<span style="color:#f92672">canvas</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;canvasProcess&#34;</span> <span style="color:#f92672">:</span><span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;vedioWidth&#39;</span> <span style="color:#f92672">:</span><span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;navHeight&#39;</span>&gt;&lt;/<span style="color:#f92672">canvas</span>&gt;
+		<span style="color:#75715e">&lt;!--</span> <span style="color:#a6e22e">底部颜色</span> <span style="color:#f92672">--&gt;</span>
+		&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;flex justify-center align-center colorItem&#34;</span>&gt;
+			&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;<span style="color:#a6e22e">底部颜色</span>&lt;/<span style="color:#f92672">div</span>&gt;
+			&lt;<span style="color:#f92672">el-color-picker</span> <span style="color:#f92672">v-model</span><span style="color:#e6db74">=&#34;baseColor&#34; @active-change=&#39;changeBaseColor&#39;&gt;&lt;/el-color-picker&gt;
+</span><span style="color:#e6db74">		&lt;/div&gt;
+</span><span style="color:#e6db74">		&lt;!-- 进度颜色 --&gt;
+</span><span style="color:#e6db74">		&lt;div class=&#34;flex justify-center align-center colorItem&#34;&gt;
+</span><span style="color:#e6db74">			&lt;div class=&#34;title&#34;&gt;进度颜色&lt;/div&gt;
+</span><span style="color:#e6db74">			&lt;el-color-picker v-model=&#34;processColor&#34; @active-change=&#39;changeProcessColor&#39;&gt;&lt;/el-color-picker&gt;
+</span><span style="color:#e6db74">		&lt;/div&gt;
+</span><span style="color:#e6db74">		&lt;!-- 文本 --&gt;
+</span><span style="color:#e6db74">		&lt;div class=&#34;flex justify-center align-center colorItem&#34;&gt;
+</span><span style="color:#e6db74">			&lt;div class=&#34;title&#34;&gt;文本颜色&lt;/div&gt;
+</span><span style="color:#e6db74">			&lt;el-color-picker v-model=&#34;textColor&#34; @active-change=&#39;changeTextColor&#39;&gt;&lt;/el-color-picker&gt;
+</span><span style="color:#e6db74">			&lt;div class=&#34;title&#34; style=&#34;margin-left:30px&#34;&gt;文本大小&lt;/div&gt;
+</span><span style="color:#e6db74">			&lt;el-input-number
+</span><span style="color:#e6db74">				v-model=&#34;fontSize&#34;
+</span><span style="color:#e6db74">				controls-position=&#34;right&#34;
+</span><span style="color:#e6db74">				:min=&#34;12&#34;
+</span><span style="color:#e6db74">				:max=&#34;45&#34;
+</span><span style="color:#e6db74">				@change=&#34;updateCanvas()&#34;
+</span><span style="color:#e6db74">			&gt;
+</span><span style="color:#e6db74">			&lt;/el-input-number&gt;
+</span><span style="color:#e6db74">		&lt;/div&gt;
+</span><span style="color:#e6db74">		&lt;!-- 边框颜色 --&gt;
+</span><span style="color:#e6db74">		&lt;div class=&#34;flex justify-center align-center colorItem&#34;&gt;
+</span><span style="color:#e6db74">			&lt;div class=&#34;title&#34;&gt;边框颜色&lt;/div&gt;
+</span><span style="color:#e6db74">			&lt;el-color-picker v-model=&#34;borderColor&#34; @active-change=&#39;changeBorderColor&#39;&gt;&lt;/el-color-picker&gt;
+</span><span style="color:#e6db74">			&lt;div class=&#34;title&#34; style=&#34;margin-left:30px&#34;&gt;边框宽度&lt;/div&gt;
+</span><span style="color:#e6db74">			&lt;el-input-number
+</span><span style="color:#e6db74">				v-model=&#34;lineWidth&#34;
+</span><span style="color:#e6db74">				controls-position=&#34;right&#34;
+</span><span style="color:#e6db74">				:min=&#34;1&#34;
+</span><span style="color:#e6db74">				:max=&#34;9&#34;
+</span><span style="color:#e6db74">				@change=&#34;updateCanvas()&#34;
+</span><span style="color:#e6db74">			&gt;
+</span><span style="color:#e6db74">			&lt;/el-input-number&gt;
+</span><span style="color:#e6db74">		&lt;/div&gt;
+</span><span style="color:#e6db74">		&lt;!-- 一个环节 --&gt;
+</span><span style="color:#e6db74">		&lt;div v-for=&#34;(part,index) in arr&#34; :key=&#34;index&#34; class=&#34;onePart&#34;&gt;
+</span><span style="color:#e6db74">			&lt;h3 v-text=&#34;index+1&#34;&gt;&lt;/h3&gt;
+</span><span style="color:#e6db74">			&lt;el-input @input=&#34;changeText(index)&#34; v-model=&#34;part.name&#34; class=&#34;partName&#34; placeholder=&#39;请输入环节名称  如 : 开头介绍&#39;&gt;&lt;/el-input&gt;
+</span><span style="color:#e6db74">			&lt;!-- 文本颜色 --&gt;
+</span><span style="color:#e6db74">			&lt;el-color-picker v-model=&#34;part.textColor&#34; @active-change=&#39;changePartTextColor($event,index)&#39; style=&#34;margin-right:30px&#34;&gt;&lt;/el-color-picker&gt;
+</span><span style="color:#e6db74">			&lt;!-- 如果是第一个环节，那么最低就是0 --&gt;
+</span><span style="color:#e6db74">			&lt;!-- 如果是第二个环节以上，那么最低就是上一个环节的end的minites --&gt;
+</span><span style="color:#e6db74">			&lt;el-input-number
+</span><span style="color:#e6db74">				v-model=&#34;part.end.minites&#34;
+</span><span style="color:#e6db74">				controls-position=&#34;right&#34;
+</span><span style="color:#e6db74">				:min=&#34;getMinitesMin(index)&#34;
+</span><span style="color:#e6db74">				@change=&#34;changeNumber(index)&#34;
+</span><span style="color:#e6db74">			&gt;
+</span><span style="color:#e6db74">			&lt;/el-input-number&gt;
+</span><span style="color:#e6db74">			&lt;div style=&#34;margin:0 21px;&#34;&gt;分钟&lt;/div&gt; 
+</span><span style="color:#e6db74">			&lt;!-- 如果是第一个环节，那么最低就是0 --&gt;
+</span><span style="color:#e6db74">			&lt;!-- 如果是第二个环节以上，如果和上一个环节的end的minites相等，那么最低就是上一个环节的seconds --&gt;
+</span><span style="color:#e6db74">			&lt;!-- 如果是第二个环节以上，如果和上一个环节的end的minites不等，那么最低就是0 --&gt;
+</span><span style="color:#e6db74">			&lt;el-input-number
+</span><span style="color:#e6db74">				v-model=&#34;part.end.seconds&#34;
+</span><span style="color:#e6db74">				controls-position=&#34;right&#34;
+</span><span style="color:#e6db74">				:min=&#34;getSecondsMin(index)&#34;
+</span><span style="color:#e6db74">				:max=&#34;60&#34;
+</span><span style="color:#e6db74">				@change=&#34;changeNumber(index)&#34;
+</span><span style="color:#e6db74">			&gt;
+</span><span style="color:#e6db74">			&lt;/el-input-number&gt;
+</span><span style="color:#e6db74">			&lt;div style=&#34;margin:0 21px;&#34;&gt;秒&lt;/div&gt;
+</span><span style="color:#e6db74">			&lt;!-- 删除按钮 --&gt;
+</span><span style="color:#e6db74">			&lt;i v-if=&#34;!creating&amp;&amp;arr.length&gt;1&#34; 
+</span><span style="color:#e6db74">			   class=&#34;el-icon-delete-solid deleteOnePart&#34;
+</span><span style="color:#e6db74">			   @click=&#34;deleteOnePart(index)&#34;
+</span><span style="color:#e6db74">			&gt;&lt;/i&gt;
+</span><span style="color:#e6db74">			&lt;div v-else style=&#34;width:21px&#34;&gt;&lt;/div&gt;
+</span><span style="color:#e6db74">		&lt;/div&gt;
+</span><span style="color:#e6db74">		&lt;el-button @click=&#34;addOnePart&#34; :disabled=&#39;creating&#39;&gt;增加一个环节&lt;/el-button&gt;
+</span><span style="color:#e6db74">		&lt;div style=&#34;margin-top:30px&#34;&gt;
+</span><span style="color:#e6db74">			&lt;el-button v-if=&#34;!creating&#34; :disabled=&#39;creating&#39; type=&#39;success&#39; @click=&#34;getCanvasNavVedio&#34;&gt;一键生成视频导航.mp4&lt;/el-button&gt;
+</span><span style="color:#e6db74">			&lt;el-button v-else type=&#39;danger&#39; @click=&#34;cancelGetNav&#34;</span>&gt;<span style="color:#a6e22e">取消生成</span><span style="color:#960050;background-color:#1e0010">&lt;/</span><span style="color:#a6e22e">el</span><span style="color:#f92672">-button</span>&gt;
+		&lt;/<span style="color:#f92672">div</span>&gt;
+	&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+
+&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">ysFixWebmDuration</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./../assets/fix-webm-duration&#39;</span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+	<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;HelloWorld&#34;</span>,
+	<span style="color:#a6e22e">mounted</span>(){
+		window.<span style="color:#a6e22e">resizeTo</span>(<span style="color:#ae81ff">3000</span>, <span style="color:#ae81ff">600</span>);
+		<span style="color:#75715e">// 获得背景画布的上下文
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">backgroundCanvas</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;canvas&#39;</span>);
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">backgroundCanvas</span>.<span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1920</span>;
+    	<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">backgroundCanvas</span>.<span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#ae81ff">54</span>;
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">backgroundCtx</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">backgroundCanvas</span>.<span style="color:#a6e22e">getContext</span>(<span style="color:#e6db74">&#34;2d&#34;</span>);
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">backgroundCtx</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">baseColor</span>;
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">backgroundCtx</span>.<span style="color:#a6e22e">fillRect</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vedioWidth</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">navHeight</span>);
+		<span style="color:#75715e">// 获取文字画布的上下文
+</span><span style="color:#75715e"></span>		<span style="color:#75715e">// this.textCanvas = document.createElement(&#39;canvas&#39;)
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCanvas</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">OffscreenCanvas</span>(<span style="color:#ae81ff">1920</span>,<span style="color:#ae81ff">54</span>);
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCanvas</span>.<span style="color:#a6e22e">getContext</span>(<span style="color:#e6db74">&#34;2d&#34;</span>);
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span>.<span style="color:#a6e22e">lineWidth</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lineWidth</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span>.<span style="color:#a6e22e">strokeStyle</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">borderColor</span>;
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span>.<span style="color:#a6e22e">strokeRect</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vedioWidth</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">navHeight</span>);
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">drawTextCanvas</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lineWidth</span>,<span style="color:#ae81ff">0</span>);
+		<span style="color:#75715e">// 获取canvas本体
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">processCtx</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;canvasProcess&#34;</span>).<span style="color:#a6e22e">getContext</span>(<span style="color:#e6db74">&#39;2d&#39;</span>);
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">processCtx</span>.<span style="color:#a6e22e">drawImage</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">backgroundCanvas</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">processCtx</span>.<span style="color:#a6e22e">drawImage</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCanvas</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);
+	},
+	<span style="color:#a6e22e">data</span>() {
+		<span style="color:#66d9ef">return</span> {
+			<span style="color:#a6e22e">num</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+			<span style="color:#a6e22e">textCanvas</span><span style="color:#f92672">:</span><span style="color:#66d9ef">null</span>,
+			<span style="color:#a6e22e">backgroundCanvas</span><span style="color:#f92672">:</span><span style="color:#66d9ef">null</span>,
+			<span style="color:#a6e22e">backgroundCtx</span><span style="color:#f92672">:</span><span style="color:#66d9ef">null</span>,
+			<span style="color:#a6e22e">textCtx</span><span style="color:#f92672">:</span><span style="color:#66d9ef">null</span>,
+			<span style="color:#a6e22e">processCtx</span><span style="color:#f92672">:</span><span style="color:#66d9ef">null</span>,
+			<span style="color:#a6e22e">startTime</span><span style="color:#f92672">:</span><span style="color:#66d9ef">null</span>,
+			<span style="color:#a6e22e">baseColor</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;#000000&#39;</span>,
+			<span style="color:#a6e22e">processColor</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;#00CCFF&#39;</span>,
+			<span style="color:#a6e22e">borderColor</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;#409EFF&#39;</span>,
+			<span style="color:#a6e22e">textColor</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;#FFFFFF&#39;</span>,
+			<span style="color:#a6e22e">creating</span><span style="color:#f92672">:</span><span style="color:#66d9ef">false</span>,
+			<span style="color:#a6e22e">fontSize</span><span style="color:#f92672">:</span><span style="color:#ae81ff">30</span>,
+			<span style="color:#a6e22e">arr</span><span style="color:#f92672">:</span>[
+				{
+					<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;开头介绍&#39;</span>,
+					<span style="color:#a6e22e">end</span><span style="color:#f92672">:</span>{
+						<span style="color:#a6e22e">minites</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>,
+						<span style="color:#a6e22e">seconds</span><span style="color:#f92672">:</span><span style="color:#ae81ff">30</span>
+					},
+					<span style="color:#a6e22e">textColor</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;&#39;</span>
+				},
+				{
+					<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;中间展示&#39;</span>,
+					<span style="color:#a6e22e">end</span><span style="color:#f92672">:</span>{
+						<span style="color:#a6e22e">minites</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span>,
+						<span style="color:#a6e22e">seconds</span><span style="color:#f92672">:</span><span style="color:#ae81ff">30</span>
+					},
+					<span style="color:#a6e22e">textColor</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;&#39;</span>
+				},
+				{
+					<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;结尾部分&#39;</span>,
+					<span style="color:#a6e22e">end</span><span style="color:#f92672">:</span>{
+						<span style="color:#a6e22e">minites</span><span style="color:#f92672">:</span><span style="color:#ae81ff">2</span>,
+						<span style="color:#a6e22e">seconds</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>
+					},
+					<span style="color:#a6e22e">textColor</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;&#39;</span>
+				},
+			],
+			<span style="color:#a6e22e">vedioWidth</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1920</span>,
+			<span style="color:#a6e22e">navHeight</span><span style="color:#f92672">:</span><span style="color:#ae81ff">54</span>,
+			<span style="color:#a6e22e">lineWidth</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>,
+			<span style="color:#a6e22e">waitTime</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>,
+			<span style="color:#a6e22e">mediaRecord</span><span style="color:#f92672">:</span><span style="color:#66d9ef">null</span>,
+			<span style="color:#a6e22e">videoUrl</span><span style="color:#f92672">:</span><span style="color:#66d9ef">null</span>,
+			<span style="color:#a6e22e">chunks</span><span style="color:#f92672">:</span><span style="color:#66d9ef">null</span>,
+			<span style="color:#a6e22e">timer</span><span style="color:#f92672">:</span><span style="color:#66d9ef">null</span>,
+			<span style="color:#a6e22e">cancel</span><span style="color:#f92672">:</span><span style="color:#66d9ef">false</span>
+		};
+	},
+	<span style="color:#a6e22e">computed</span><span style="color:#f92672">:</span>{
+		<span style="color:#a6e22e">allSeconds</span>(){
+			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">arr</span>[<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>].<span style="color:#a6e22e">end</span>.<span style="color:#a6e22e">minites</span><span style="color:#f92672">*</span><span style="color:#ae81ff">60</span><span style="color:#f92672">+</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">arr</span>[<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>].<span style="color:#a6e22e">end</span>.<span style="color:#a6e22e">seconds</span>
+		},
+	},
+	<span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span>{
+		<span style="color:#75715e">// 修改环节名称
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">changeText</span>(<span style="color:#a6e22e">index</span>){
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">clearCanvas</span>();
+		},
+		<span style="color:#a6e22e">changePartTextColor</span>(<span style="color:#a6e22e">e</span>,<span style="color:#a6e22e">index</span>){
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$set</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">index</span>],<span style="color:#e6db74">&#39;textColor&#39;</span>,<span style="color:#a6e22e">e</span>);
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">updateCanvas</span>();
+		},
+		<span style="color:#75715e">// 清空画布
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">clearCanvas</span>(){
+			<span style="color:#75715e">// 清空画布
+</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">processCtx</span>.<span style="color:#a6e22e">clearRect</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vedioWidth</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">navHeight</span>)
+			<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">pCanvas</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;canvasProcess&#34;</span>);
+			<span style="color:#a6e22e">pCanvas</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">pCanvas</span>.<span style="color:#a6e22e">width</span>
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">backgroundCtx</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">baseColor</span>;
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">backgroundCtx</span>.<span style="color:#a6e22e">fillRect</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vedioWidth</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">navHeight</span>);
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">processCtx</span>.<span style="color:#a6e22e">drawImage</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">backgroundCanvas</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span>.<span style="color:#a6e22e">clearRect</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vedioWidth</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">navHeight</span>);
+			<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tCanvas</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCanvas</span>;
+			<span style="color:#a6e22e">tCanvas</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tCanvas</span>.<span style="color:#a6e22e">width</span>
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span>.<span style="color:#a6e22e">lineWidth</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lineWidth</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>;
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span>.<span style="color:#a6e22e">strokeStyle</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">borderColor</span>;
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span>.<span style="color:#a6e22e">strokeRect</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vedioWidth</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">navHeight</span>);
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">drawTextCanvas</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lineWidth</span>,<span style="color:#ae81ff">0</span>);
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">processCtx</span>.<span style="color:#a6e22e">drawImage</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCanvas</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);
+		},
+		<span style="color:#a6e22e">drawTextCanvas</span>(<span style="color:#a6e22e">startPosition</span>,<span style="color:#a6e22e">index</span>){
+			<span style="color:#75715e">// 获取本环节的时长
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">partSeconds</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getPartSeconds</span>(<span style="color:#a6e22e">index</span>);
+            <span style="color:#75715e">// 获得本环节该占多少像素
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">partLength</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">partSeconds</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vedioWidth</span>)<span style="color:#f92672">/</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">allSeconds</span>;
+            <span style="color:#75715e">// 获得结束时的位置
+</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">endPosition</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">startPosition</span><span style="color:#f92672">+</span><span style="color:#a6e22e">partLength</span><span style="color:#f92672">+</span><span style="color:#ae81ff">3</span>;
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span>.<span style="color:#a6e22e">font</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">fontSize</span><span style="color:#e6db74">}</span><span style="color:#e6db74">px bold`</span>;
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span>.<span style="color:#a6e22e">textAlign</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;center&#39;</span>;
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span>.<span style="color:#a6e22e">textBaseline</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;middle&#39;</span>;
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">index</span>].<span style="color:#a6e22e">name</span><span style="color:#f92672">==</span><span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">?</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">borderColor</span><span style="color:#f92672">:</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textColor</span>;
+			<span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">index</span>].<span style="color:#a6e22e">textColor</span><span style="color:#f92672">!=</span><span style="color:#e6db74">&#39;&#39;</span>) <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">index</span>].<span style="color:#a6e22e">textColor</span>;
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span>.<span style="color:#a6e22e">fillText</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">index</span>].<span style="color:#a6e22e">name</span><span style="color:#f92672">==</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">?</span><span style="color:#e6db74">&#39;环节名称&#39;</span><span style="color:#f92672">:</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">index</span>].<span style="color:#a6e22e">name</span>,<span style="color:#a6e22e">startPosition</span><span style="color:#f92672">+</span>(<span style="color:#a6e22e">partLength</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>), <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">navHeight</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>);
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span>.<span style="color:#a6e22e">moveTo</span>(<span style="color:#a6e22e">endPosition</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lineWidth</span>);
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span>.<span style="color:#a6e22e">lineTo</span>(<span style="color:#a6e22e">endPosition</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">navHeight</span><span style="color:#f92672">-</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lineWidth</span>);
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span>.<span style="color:#a6e22e">lineWidth</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lineWidth</span>;
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span>.<span style="color:#a6e22e">strokeStyle</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">borderColor</span>;
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCtx</span>.<span style="color:#a6e22e">stroke</span>();
+            <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">index</span>&lt;<span style="color:#f92672">this</span><span style="color:#a6e22e">.arr.length</span><span style="color:#f92672">-1</span><span style="color:#960050;background-color:#1e0010">)</span> <span style="color:#a6e22e">this.drawTextCanvas</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">endPosition</span><span style="color:#960050;background-color:#1e0010">,</span><span style="color:#a6e22e">index</span><span style="color:#960050;background-color:#1e0010">+</span><span style="color:#a6e22e">1</span><span style="color:#960050;background-color:#1e0010">);</span>
+		}<span style="color:#960050;background-color:#1e0010">,</span>
+		<span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#a6e22e">获取分钟的最小值</span>
+		<span style="color:#a6e22e">getMinitesMin</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">index</span><span style="color:#960050;background-color:#1e0010">)</span>{
+			<span style="color:#a6e22e">if</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">index</span><span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#a6e22e">0</span><span style="color:#960050;background-color:#1e0010">)</span> <span style="color:#a6e22e">return</span> <span style="color:#a6e22e">0</span><span style="color:#960050;background-color:#1e0010">;</span>
+			<span style="color:#a6e22e">return</span> <span style="color:#a6e22e">this.arr</span><span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">index</span><span style="color:#f92672">-1</span><span style="color:#960050;background-color:#1e0010">]</span><span style="color:#a6e22e">.end.minites</span><span style="color:#960050;background-color:#1e0010">;</span>
+		}<span style="color:#960050;background-color:#1e0010">,</span>
+		<span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#a6e22e">获取秒的最小值</span>
+		<span style="color:#a6e22e">getSecondsMin</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">index</span><span style="color:#960050;background-color:#1e0010">)</span>{
+			<span style="color:#a6e22e">if</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">index</span><span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#a6e22e">0</span><span style="color:#960050;background-color:#1e0010">)</span> <span style="color:#a6e22e">return</span> <span style="color:#a6e22e">0</span><span style="color:#960050;background-color:#1e0010">;</span>
+			<span style="color:#a6e22e">if</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">this.arr</span><span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">index</span><span style="color:#f92672">-1</span><span style="color:#960050;background-color:#1e0010">]</span><span style="color:#a6e22e">.end.minites</span><span style="color:#960050;background-color:#1e0010">==</span><span style="color:#a6e22e">this.arr</span><span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">index</span><span style="color:#960050;background-color:#1e0010">]</span><span style="color:#a6e22e">.end.minites</span><span style="color:#960050;background-color:#1e0010">)</span> <span style="color:#a6e22e">return</span> <span style="color:#a6e22e">this.arr</span><span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">index</span><span style="color:#f92672">-1</span><span style="color:#960050;background-color:#1e0010">]</span><span style="color:#a6e22e">.end.seconds</span><span style="color:#960050;background-color:#1e0010">;</span>
+			<span style="color:#a6e22e">return</span> <span style="color:#a6e22e">0</span>
+		}<span style="color:#960050;background-color:#1e0010">,</span>
+		<span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#a6e22e">获取时间的时长</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">单位为秒</span>
+		<span style="color:#a6e22e">getTimeLength</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">time</span><span style="color:#960050;background-color:#1e0010">)</span>{
+			<span style="color:#a6e22e">return</span> <span style="color:#a6e22e">time.minites</span><span style="color:#960050;background-color:#1e0010">*</span><span style="color:#a6e22e">60</span><span style="color:#960050;background-color:#1e0010">+</span><span style="color:#a6e22e">time.seconds</span><span style="color:#960050;background-color:#1e0010">;</span>
+		}<span style="color:#960050;background-color:#1e0010">,</span>
+		<span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#a6e22e">获取环节时间长度</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">单位为秒</span>
+		<span style="color:#a6e22e">getPartSeconds</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">index</span><span style="color:#960050;background-color:#1e0010">)</span>{
+			<span style="color:#a6e22e">if</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">index</span><span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#a6e22e">0</span><span style="color:#960050;background-color:#1e0010">)</span> <span style="color:#a6e22e">return</span> <span style="color:#a6e22e">this.getTimeLength</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">this.arr</span><span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">index</span><span style="color:#960050;background-color:#1e0010">]</span><span style="color:#a6e22e">.end</span><span style="color:#960050;background-color:#1e0010">);</span>
+			<span style="color:#a6e22e">return</span> <span style="color:#a6e22e">this.getTimeLength</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">this.arr</span><span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">index</span><span style="color:#960050;background-color:#1e0010">]</span><span style="color:#a6e22e">.end</span><span style="color:#960050;background-color:#1e0010">)</span><span style="color:#f92672">-this</span><span style="color:#a6e22e">.getTimeLength</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">this.arr</span><span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">index</span><span style="color:#f92672">-1</span><span style="color:#960050;background-color:#1e0010">]</span><span style="color:#a6e22e">.end</span><span style="color:#960050;background-color:#1e0010">);</span>
+		}<span style="color:#960050;background-color:#1e0010">,</span>
+		<span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#a6e22e">增加一个环节</span>
+		<span style="color:#a6e22e">addOnePart</span><span style="color:#960050;background-color:#1e0010">()</span>{
+			<span style="color:#960050;background-color:#1e0010">//</span><span style="color:#a6e22e">增加时</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">复制上一个环节的时间</span>
+			<span style="color:#a6e22e">let</span> <span style="color:#a6e22e">end </span><span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON.parse</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">JSON.stringify</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">this.arr</span><span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">this.arr.length</span><span style="color:#f92672">-1</span><span style="color:#960050;background-color:#1e0010">]</span><span style="color:#a6e22e">.end</span><span style="color:#960050;background-color:#1e0010">));</span>
+			<span style="color:#a6e22e">this.arr.push</span><span style="color:#960050;background-color:#1e0010">(</span>{
+				<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#960050;background-color:#1e0010">&#39;&#39;,</span>
+				<span style="color:#a6e22e">end</span>
+			}<span style="color:#960050;background-color:#1e0010">);</span>
+			<span style="color:#a6e22e">this.clearCanvas</span><span style="color:#960050;background-color:#1e0010">();</span>
+		}<span style="color:#960050;background-color:#1e0010">,</span>
+		<span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#a6e22e">当删除一个环节时</span>
+		<span style="color:#a6e22e">deleteOnePart</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">index</span><span style="color:#960050;background-color:#1e0010">)</span>{
+			<span style="color:#a6e22e">this.arr.splice</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">index</span><span style="color:#960050;background-color:#1e0010">,</span><span style="color:#a6e22e">1</span><span style="color:#960050;background-color:#1e0010">)</span>
+			<span style="color:#a6e22e">this.clearCanvas</span><span style="color:#960050;background-color:#1e0010">();</span>
+		}<span style="color:#960050;background-color:#1e0010">,</span>
+		<span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#a6e22e">当修改时间时</span>
+		<span style="color:#a6e22e">changeNumber</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">index</span><span style="color:#960050;background-color:#1e0010">)</span>{
+			<span style="color:#a6e22e">this.clearCanvas</span><span style="color:#960050;background-color:#1e0010">();</span>
+			<span style="color:#960050;background-color:#1e0010">/*</span>
+				<span style="color:#a6e22e">如果修改的不是最后一项</span>
+				<span style="color:#a6e22e">如果这个环节的end比下一个环节的end大</span>
+				<span style="color:#a6e22e">那就直接修改下一个环节的end</span>
+			<span style="color:#960050;background-color:#1e0010">*/</span>
+			<span style="color:#a6e22e">if</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">index</span><span style="color:#960050;background-color:#1e0010">!=</span><span style="color:#a6e22e">this.arr.length</span><span style="color:#f92672">-1</span>
+			<span style="color:#960050;background-color:#1e0010">&amp;&amp;</span>
+			<span style="color:#a6e22e">this.getTimeLength</span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">this.arr</span><span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">index</span><span style="color:#960050;background-color:#1e0010">]</span><span style="color:#a6e22e">.end</span><span style="color:#960050;background-color:#1e0010">)</span>&gt;<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getTimeLength</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">index</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>].<span style="color:#a6e22e">end</span>)){
+				<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">index</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>].<span style="color:#a6e22e">end</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">index</span>].<span style="color:#a6e22e">end</span>));
+				<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">changeNumber</span>(<span style="color:#a6e22e">index</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+			}
+		},
+		<span style="color:#a6e22e">download</span>(<span style="color:#a6e22e">blob</span>){
+			<span style="color:#75715e">// this.mediaRecord.stop() // 结束录屏
+</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">clearCanvas</span>();
+			<span style="color:#75715e">//this.processCtx.drawImage(this.backgroundCanvas,0,0);
+</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">processCtx</span>.<span style="color:#a6e22e">drawImage</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCanvas</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);
+			<span style="color:#75715e">// const videoBlob = new Blob(this.chunks, { &#39;type&#39;: &#39;video/mp4&#39; })   // 创建视频文件
+</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">videoUrl</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">createObjectURL</span>(<span style="color:#a6e22e">blob</span>)    <span style="color:#75715e">// 创建对象链接
+</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;a&#39;</span>)
+			<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">videoUrl</span>
+			<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">download</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;视频导航条(请用格式工厂转化成mp4).webm&#39;</span>
+			<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;none&#39;</span>
+			document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">a</span>)
+			<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">click</span>()
+		},
+		<span style="color:#75715e">// 修改背景底色
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">changeBaseColor</span>(<span style="color:#a6e22e">e</span>){
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">baseColor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">e</span>;
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">clearCanvas</span>();
+		},
+		<span style="color:#75715e">// 修改进度颜色
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">changeProcessColor</span>(<span style="color:#a6e22e">e</span>){
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">processColor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">e</span>;
+		},
+		<span style="color:#75715e">// 修改边框颜色
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">changeBorderColor</span>(<span style="color:#a6e22e">e</span>){
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">borderColor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">e</span>;
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">clearCanvas</span>();
+		},
+		<span style="color:#a6e22e">changeTextColor</span>(<span style="color:#a6e22e">e</span>){
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textColor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">e</span>;
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">clearCanvas</span>();
+		},
+		<span style="color:#75715e">// 修改边框宽度
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">updateCanvas</span>(){
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">clearCanvas</span>();
+		},
+		<span style="color:#a6e22e">cancelGetNav</span>(){
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">cancel</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">waitTime</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+			<span style="color:#a6e22e">clearInterval</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">timer</span>);
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">creating</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">updateCanvas</span>();
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">mediaRecord</span>.<span style="color:#a6e22e">stop</span>()
+		},
+		<span style="color:#75715e">//当生成素材时
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">getCanvasNavVedio</span>(){
+			<span style="color:#a6e22e">h</span>(<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">data</span>);
+				}
+				<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">mediaRecord</span>.<span style="color:#a6e22e">onstop</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">e</span>)=&gt;{
+					<span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">cancel</span>) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+						<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">cancel</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+					}, <span style="color:#ae81ff">500</span>); 
+					<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">duration</span> <span style="color:#f92672">=</span> Date.<span style="color:#a6e22e">now</span>() <span style="color:#f92672">-</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">startTime</span>;<span style="color:#75715e">//停止录制时候 用当前时间减去开始录制的时间
+</span><span style="color:#75715e"></span>					<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tmpBlob</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Blob</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">chunks</span>, { <span style="color:#e6db74">&#39;type&#39;</span><span style="color:#f92672">:</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">mediaRecord</span>.<span style="color:#a6e22e">mimeType</span>});
+					<span style="color:#75715e">//调用设置时长代码。该函数基于fix-webm-duration.js
+</span><span style="color:#75715e"></span>					<span style="color:#a6e22e">ysFixWebmDuration</span>(<span style="color:#a6e22e">tmpBlob</span>, <span style="color:#a6e22e">duration</span>, (<span style="color:#a6e22e">fixedBlob</span>)=&gt;{
+						<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">download</span>(<span style="color:#a6e22e">fixedBlob</span>)
+					});
+				};
+				<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">mediaRecord</span>.<span style="color:#a6e22e">start</span>(<span style="color:#ae81ff">100</span>)  <span style="color:#75715e">// 开始录屏,参数为抓取间隔100毫秒
+</span><span style="color:#75715e"></span>				<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">startTime</span> <span style="color:#f92672">=</span> Date.<span style="color:#a6e22e">now</span>();
+				window.<span style="color:#a6e22e">requestAnimationFrame</span>(<span style="color:#a6e22e">drawStep</span>);
+			};
+			<span style="color:#75715e">// 以下是自己写的代码
+</span><span style="color:#75715e"></span>			<span style="color:#75715e">// 总时长
+</span><span style="color:#75715e"></span>			<span style="color:#75715e">// let timeMax = this.allSeconds*1000;
+</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">timeMax</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10000</span>;
+			<span style="color:#75715e">// 多少毫秒变化一次
+</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">eachStepTime</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>
+			<span style="color:#75715e">// 每次改变进度条的像素
+</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">step</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vedioWidth</span><span style="color:#f92672">-</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lineWidth</span>)<span style="color:#f92672">/</span>(<span style="color:#a6e22e">timeMax</span><span style="color:#f92672">/</span><span style="color:#a6e22e">eachStepTime</span>);
+            <span style="color:#75715e">// 改变进度条的次数
+</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">process</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	
+			<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">navHeight</span>;
+			<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">videoWidth</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vedioWidth</span>;
+			<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">changeWidth</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">step</span>;
+
+			<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">drawStep</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">timestamp</span>)=&gt;{
+				<span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">cancel</span>) <span style="color:#66d9ef">return</span>;
+				<span style="color:#75715e">// 先绘制进度
+</span><span style="color:#75715e"></span>				<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">processCtx</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">processColor</span>;
+				<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">processCtx</span>.<span style="color:#a6e22e">fillRect</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lineWidth</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lineWidth</span>,<span style="color:#a6e22e">changeWidth</span>,<span style="color:#ae81ff">54</span><span style="color:#f92672">-</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lineWidth</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>));
+				<span style="color:#75715e">// 然后把分割线与文字画到进度条上
+</span><span style="color:#75715e"></span>				<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">processCtx</span>.<span style="color:#a6e22e">drawImage</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textCanvas</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>)
+				<span style="color:#75715e">// 改变次数增加，等待下一次绘制进度
+</span><span style="color:#75715e"></span>				<span style="color:#a6e22e">process</span><span style="color:#f92672">++</span>;
+				<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">changeWidth</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">videoWidth</span>){
+					<span style="color:#75715e">// this.download();
+</span><span style="color:#75715e"></span>					<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">mediaRecord</span>.<span style="color:#a6e22e">stop</span>() <span style="color:#75715e">// 结束录屏
+</span><span style="color:#75715e"></span>					<span style="color:#a6e22e">clearInterval</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">timer</span>);
+					<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">creating</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+				}<span style="color:#66d9ef">else</span>{
+					<span style="color:#a6e22e">changeWidth</span><span style="color:#f92672">+=</span><span style="color:#a6e22e">step</span>;
+					window.<span style="color:#a6e22e">requestAnimationFrame</span>(<span style="color:#a6e22e">drawStep</span>);
+				}
+			}
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">waitTime</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">timer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setInterval</span>(()=&gt;{
+				<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">waitTime</span><span style="color:#f92672">--</span>;
+			},<span style="color:#ae81ff">1000</span>)
+			<span style="color:#75715e">// 清空textCanvas后开始录制
+</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">processCtx</span>.<span style="color:#a6e22e">clearRect</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vedioWidth</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">navHeight</span>)
+			<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">pCanvas</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;canvasProcess&#34;</span>);
+			<span style="color:#a6e22e">pCanvas</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">pCanvas</span>.<span style="color:#a6e22e">width</span>
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">backgroundCtx</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">baseColor</span>;
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">backgroundCtx</span>.<span style="color:#a6e22e">fillRect</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vedioWidth</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">navHeight</span>);
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">processCtx</span>.<span style="color:#a6e22e">drawImage</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">backgroundCanvas</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);
+			<span style="color:#a6e22e">createRecord</span>();
+		},  
+	}
+};
+&lt;/<span style="color:#f92672">script</span>&gt;
+
+</code></pre></div><p>可以看一下他的制作思路：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">click</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;getCanvasNavVedio&#34;</span>
+<span style="color:#75715e">// 获取画布canvasElement并设置帧频率(FPS)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">mediaRecord</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MediaRecorder</span>(<span style="color:#a6e22e">processMediaStream</span>, {   
+	<span style="color:#75715e">// 核心API，可以录制canvas, audio, video代码下方提供文档链接
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">videoBitsPerSecond</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">850000</span>,
+	<span style="color:#a6e22e">mimeType</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;video/webm&#34;</span>
+})
+
+</code></pre></div><p>总结一下：MediaRecorder录制canvas的绘制过程,</p>
+<p>fix-webm-duration将生成的webm格式的视频下载到本地</p>
+
+    </div>
+    <video id="my_video" style="height: 300px;width:100%" controls="controls"></video>
+</article>
+
+<div class="pagination">
+    
+    <div class="prev"> <a href="https://mrx-wiki.github.io/frontend/javascript%E5%9F%BA%E7%A1%80/">Previous Post</a> </div>
+    
+    
+</div>
+
+
+
+
+</script>
+<script>
+    try{
+        
+        let src = document.getElementsByTagName('code')[0].innerText;
+        
+        if(src.indexOf("mp4")!=-1){
+            document.getElementById('my_video').setAttribute("src",src)
+        }else{
+            
+            let video = document.getElementById('my_video');
+            if (video != null){
+                video.parentNode.removeChild(video);
+            }
+            
+            
+        }
+    }catch(e){
+        
+        let video = document.getElementById('my_video');
+        if (video != null){
+            video.parentNode.removeChild(video);
+        }
+    }
+    
+    
+    
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </main><footer class="site-footer">
+	<span class="right">
+		<em>gyk&#39;s blog</em>
+	</span>
+</footer>
+</body>
+    <script type="text/javascript">
+        
+        let show_flag=true;
+        
+        function pass() {
+            while(show_flag){
+             let token = window.prompt("登陆码","");
+             if(token==="888888"){
+                 show_flag=false;
+             }else{
+                 show_flag=true;
+             }
+            }
+        }
+
+
+        let timer_flag = document.getElementsByClassName("post-content")[0].innerHTML === '\n        <h2 id="timer">timer</h2>\n\n    ';
+
+
+
+
+
+
+    </script>
+</html>
