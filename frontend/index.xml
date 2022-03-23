@@ -5,10 +5,24 @@
     <link>https://mrx-wiki.github.io/frontend/</link>
     <description>Recent content in Frontends on gyk&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 21 Mar 2022 02:57:44 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 24 Mar 2022 02:40:53 +0800</lastBuildDate>
     
 	<atom:link href="https://mrx-wiki.github.io/frontend/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>写b站小脚本的曲折</title>
+      <link>https://mrx-wiki.github.io/frontend/%E5%86%99b%E7%AB%99%E5%B0%8F%E8%84%9A%E6%9C%AC%E7%9A%84%E6%9B%B2%E6%8A%98/</link>
+      <pubDate>Thu, 24 Mar 2022 02:40:53 +0800</pubDate>
+      
+      <guid>https://mrx-wiki.github.io/frontend/%E5%86%99b%E7%AB%99%E5%B0%8F%E8%84%9A%E6%9C%AC%E7%9A%84%E6%9B%B2%E6%8A%98/</guid>
+      <description>起因 如果你想做一些网页相关的小脚本，具体的思路大概有以下3种：
+ 1.定位到网页元素的具体位置，然后再操作 2.定位到网页元素的css选择器，然后再操作 3.找到接口，然后直接发请求  这时会遇到以下问题：
+ 1.元素位置可能会随着主站更新而变更 2.有些数据是异步的，比如网络请求，事件等 3.写接口需要密钥，需要拼接参数，伪造请求头  经过 上面的这些问题，可以通过以下的例子来体验并解决：
+目标：批量删除b站动态
+//找到所有的三点图标 let items = document.getElementsByClassName(&amp;#34;more-button bp-icon-font icon-more-1&amp;#34;); //点击三点 items[0].click(); //点击置顶下的删除 document.getElementsByClassName(&amp;#34;child-button c-pointer&amp;#34;)[1].click(); //1ms后点击蓝色删除按钮 let finished = document.getElementsByClassName(&amp;#34;bl-button panel-btn bl-button--primary bl-button--size&amp;#34;)[0].click(); 因为这些操作是异步的，可以把它们套在setTimeout(()=&amp;gt;{},0)
+//找到所有的三点图标 let items = document.getElementsByClassName(&amp;#34;more-button bp-icon-font icon-more-1&amp;#34;); //实现删除的函数 function delete_item(){ //点击三点  items[0].click(); setTimeout(() =&amp;gt; { //点击置顶下的删除  document.getElementsByClassName(&amp;#34;child-button c-pointer&amp;#34;)[1].click(); },0) setTimeout(() =&amp;gt; { //1ms后点击蓝色删除按钮  let finished = document.getElementsByClassName(&amp;#34;bl-button panel-btn bl-button--primary bl-button--size&amp;#34;)[0].click(); },1) clearTimeout(); } 然后隔1s删一个,然后刷新页面</description>
+    </item>
     
     <item>
       <title>一次vue逆向</title>

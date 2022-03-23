@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang=><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 写b站小脚本的曲折 - gyk&#39;s blog</title>
+    <meta name="description" content="起因 如果你想做一些网页相关的小脚本，具体的思路大概有以下3种：
+ 1.定位到网页元素的具体位置，然后再操作 2.定位到网页元素的css选择器，然后再操作 3.找到接口，然后直接发请求  这时会遇到以下问题：
+ 1.元素位置可能会随着主站更新而变更 2.有些数据是异步的，比如网络请求，事件等 3.写接口需要密钥，需要拼接参数，伪造请求头  经过 上面的这些问题，可以通过以下的例子来体验并解决：
+目标：批量删除b站动态
+//找到所有的三点图标 let items = document.getElementsByClassName(&#34;more-button bp-icon-font icon-more-1&#34;); //点击三点 items[0].click(); //点击置顶下的删除 document.getElementsByClassName(&#34;child-button c-pointer&#34;)[1].click(); //1ms后点击蓝色删除按钮 let finished = document.getElementsByClassName(&#34;bl-button panel-btn bl-button--primary bl-button--size&#34;)[0].click(); 因为这些操作是异步的，可以把它们套在setTimeout(()=&gt;{},0)
+//找到所有的三点图标 let items = document.getElementsByClassName(&#34;more-button bp-icon-font icon-more-1&#34;); //实现删除的函数 function delete_item(){ //点击三点  items[0].click(); setTimeout(() =&gt; { //点击置顶下的删除  document.getElementsByClassName(&#34;child-button c-pointer&#34;)[1].click(); },0) setTimeout(() =&gt; { //1ms后点击蓝色删除按钮  let finished = document.getElementsByClassName(&#34;bl-button panel-btn bl-button--primary bl-button--size&#34;)[0].click(); },1) clearTimeout(); } 然后隔1s删一个,然后刷新页面">
+    <link rel="canonical" href="https://mrx-wiki.github.io/frontend/%E5%86%99b%E7%AB%99%E5%B0%8F%E8%84%9A%E6%9C%AC%E7%9A%84%E6%9B%B2%E6%8A%98/">
+    <meta property="og:title" content="写b站小脚本的曲折">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mrx-wiki.github.io/frontend/%E5%86%99b%E7%AB%99%E5%B0%8F%E8%84%9A%E6%9C%AC%E7%9A%84%E6%9B%B2%E6%8A%98/">
+    <meta property="og:description" content="起因 如果你想做一些网页相关的小脚本，具体的思路大概有以下3种：
+ 1.定位到网页元素的具体位置，然后再操作 2.定位到网页元素的css选择器，然后再操作 3.找到接口，然后直接发请求  这时会遇到以下问题：
+ 1.元素位置可能会随着主站更新而变更 2.有些数据是异步的，比如网络请求，事件等 3.写接口需要密钥，需要拼接参数，伪造请求头  经过 上面的这些问题，可以通过以下的例子来体验并解决：
+目标：批量删除b站动态
+//找到所有的三点图标 let items = document.getElementsByClassName(&#34;more-button bp-icon-font icon-more-1&#34;); //点击三点 items[0].click(); //点击置顶下的删除 document.getElementsByClassName(&#34;child-button c-pointer&#34;)[1].click(); //1ms后点击蓝色删除按钮 let finished = document.getElementsByClassName(&#34;bl-button panel-btn bl-button--primary bl-button--size&#34;)[0].click(); 因为这些操作是异步的，可以把它们套在setTimeout(()=&gt;{},0)
+//找到所有的三点图标 let items = document.getElementsByClassName(&#34;more-button bp-icon-font icon-more-1&#34;); //实现删除的函数 function delete_item(){ //点击三点  items[0].click(); setTimeout(() =&gt; { //点击置顶下的删除  document.getElementsByClassName(&#34;child-button c-pointer&#34;)[1].click(); },0) setTimeout(() =&gt; { //1ms后点击蓝色删除按钮  let finished = document.getElementsByClassName(&#34;bl-button panel-btn bl-button--primary bl-button--size&#34;)[0].click(); },1) clearTimeout(); } 然后隔1s删一个,然后刷新页面">
+    <meta property="og:site_name" content="gyk&#39;s blog">
+    <link rel="stylesheet" href="https://mrx-wiki.github.io/css/main.min.7fdf1d02dafd1a6eb5cfd0d707e17e33515b866f5d305a0ab01a4095577484fe.css" integrity="sha256-f98dAtr9Gm61z9DXB&#43;F&#43;M1Fbhm9dMFoKsBpAlVd0hP4=">
+    <meta name="generator" content="Hugo 0.73.0" />
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+
+    
+</head>
+<body><header class="site-header">
+    <nav class="site-nav" role="navigation" aria-label="breadcrumb">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb"><li class="breadcrumb-item  " 
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/">
+    <span itemprop="name">gyk&#39;s blog</span>
+  </a>
+  <meta itemprop="position" content="0" />
+</li>/<li class="breadcrumb-item  " 
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/frontend/">
+    <span itemprop="name">frontend</span>
+  </a>
+  <meta itemprop="position" content="0" />
+</li>/<li class="breadcrumb-item active hidden" aria-current="page"
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://mrx-wiki.github.io/frontend/%E5%86%99b%E7%AB%99%E5%B0%8F%E8%84%9A%E6%9C%AC%E7%9A%84%E6%9B%B2%E6%8A%98/">
+    <span itemprop="name">%E5%86%99b%E7%AB%99%E5%B0%8F%E8%84%9A%E6%9C%AC%E7%9A%84%E6%9B%B2%E6%8A%98</span>
+  </a>
+  <meta itemprop="position" content="1" />
+</li></ol>
+    </nav>
+    <h1 class="site-title hidden">
+    <a href="https://mrx-wiki.github.io/">gyk&#39;s blog</a>
+    </h1>
+</header>
+<main id="content">
+<article role="article" class="content post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">        
+        <h2 class="post-title" itemprop="name headline">写b站小脚本的曲折</h2>
+        <span class="post-meta">
+            <time class="date-published" datetime="2022-03-24T02:40:53&#43;07:00" itemprop="datePublished">
+                Thu, 24 Mar 2022
+            </time>
+            
+        </span>
+    </header>
+    <div class="post-content" itemprop="articleBody">
+        <h2 id="起因">起因</h2>
+<p>如果你想做一些网页相关的小脚本，具体的思路大概有以下3种：</p>
+<ul>
+<li>1.定位到网页元素的具体位置，然后再操作</li>
+<li>2.定位到网页元素的css选择器，然后再操作</li>
+<li>3.找到接口，然后直接发请求</li>
+</ul>
+<p>这时会遇到以下问题：</p>
+<ul>
+<li>1.元素位置可能会随着主站更新而变更</li>
+<li>2.有些数据是异步的，比如网络请求，事件等</li>
+<li>3.写接口需要密钥，需要拼接参数，伪造请求头</li>
+</ul>
+<h2 id="经过">经过</h2>
+<p>上面的这些问题，可以通过以下的例子来体验并解决：</p>
+<p>目标：批量删除b站动态</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//找到所有的三点图标
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">items</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;more-button bp-icon-font icon-more-1&#34;</span>); 
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//点击三点
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">items</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">click</span>();
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//点击置顶下的删除
+</span><span style="color:#75715e"></span>document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;child-button c-pointer&#34;</span>)[<span style="color:#ae81ff">1</span>].<span style="color:#a6e22e">click</span>();
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//1ms后点击蓝色删除按钮
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">finished</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;bl-button panel-btn bl-button--primary bl-button--size&#34;</span>)[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">click</span>();
+</code></pre></div><p>因为这些操作是异步的，可以把它们套在<code>setTimeout(()=&gt;{},0)</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//找到所有的三点图标
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">items</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;more-button bp-icon-font icon-more-1&#34;</span>); 
+
+<span style="color:#75715e">//实现删除的函数
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">delete_item</span>(){
+    <span style="color:#75715e">//点击三点
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">items</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">click</span>();
+    <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+        <span style="color:#75715e">//点击置顶下的删除
+</span><span style="color:#75715e"></span>        document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;child-button c-pointer&#34;</span>)[<span style="color:#ae81ff">1</span>].<span style="color:#a6e22e">click</span>();
+    },<span style="color:#ae81ff">0</span>)
+    <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+        <span style="color:#75715e">//1ms后点击蓝色删除按钮
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">finished</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;bl-button panel-btn bl-button--primary bl-button--size&#34;</span>)[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">click</span>();
+    },<span style="color:#ae81ff">1</span>)
+    <span style="color:#a6e22e">clearTimeout</span>();
+}
+</code></pre></div><p>然后隔1s删一个,然后刷新页面</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#75715e">//功能：批量删除网页版b站动态
+</span><span style="color:#75715e">//使用：先把动态拉到底，将所有动态都加载出来，然后将下面代码复制粘贴到console，等待即可！
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//找到所有的三点图标
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">items</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;more-button bp-icon-font icon-more-1&#34;</span>); 
+
+<span style="color:#75715e">//实现删除的函数
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">delete_item</span>(){
+    <span style="color:#75715e">//点击三点
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">items</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">click</span>();
+    <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+        <span style="color:#75715e">//点击置顶下的删除
+</span><span style="color:#75715e"></span>        document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;child-button c-pointer&#34;</span>)[<span style="color:#ae81ff">1</span>].<span style="color:#a6e22e">click</span>();
+    },<span style="color:#ae81ff">0</span>)
+    <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+        <span style="color:#75715e">//1ms后点击蓝色删除按钮
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">finished</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;bl-button panel-btn bl-button--primary bl-button--size&#34;</span>)[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">click</span>();
+    },<span style="color:#ae81ff">1</span>)
+    <span style="color:#a6e22e">clearTimeout</span>();
+}
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">items</span>.<span style="color:#a6e22e">length</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+    <span style="color:#75715e">//每隔1秒删1个，避免b站限制
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">setInterval</span>(() =&gt; {<span style="color:#a6e22e">delete_item</span>()},<span style="color:#ae81ff">1000</span>);
+    <span style="color:#a6e22e">clearInterval</span>();        
+}
+<span style="color:#75715e">//15秒后自动刷新页面
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+    <span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">reload</span>();
+},<span style="color:#ae81ff">15000</span>)
+</code></pre></div><p>以上针对的是click事件，但在dom上，onmouseover是不存在，那怎么办？</p>
+<p>同样通过例子说明：取消b站up的功能</p>
+<p>这时候可以f12，source，overrides中将pages的代码加入，这样网站会优先执行</p>
+<pre><code>https://space.bilibili.com/39389722/fans/follow/
+Source/space/39389/follow
+//引入配置文件 ✅
+&lt;script type=&quot;text/javascript&quot; src=&quot;//s1.hdslb.com/bfs/seed/jinkela/short/config/biliconfig.js&quot;&gt;&lt;/script&gt;
+window.__BILI_CONFIG__ = {
+  show_bv: true
+};
+
+
+//引入vediojs
+&lt;link rel=&quot;prefetch&quot; as=&quot;script&quot; href=&quot;//s1.hdslb.com/bfs/static/player/main/video.js?v=2022317&quot;&gt;
+//引入sentry
+&lt;script type=&quot;text/javascript&quot; src=&quot;//s1.hdslb.com/bfs/static/jinkela/long/js/sentry/sentry-5.2.1.min.js&quot;&gt;&lt;/script&gt;
+//引入vue
+&lt;script type=&quot;text/javascript&quot; src=&quot;//s1.hdslb.com/bfs/static/jinkela/long/js/sentry/sentry.vue.js&quot;&gt;&lt;/script&gt;
+//引入jquery
+&lt;script src=&quot;//s1.hdslb.com/bfs/static/jinkela/long/js/jquery/jquery1.7.2.min.js&quot;&gt;&lt;/script&gt;
+
+
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;//s1.hdslb.com/bfs/seed/jinkela/header-v2/header.js&quot; defer=&quot;defer&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//s1.hdslb.com/bfs/seed/jinkela/short/auto-append-spmid.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//s1.hdslb.com/bfs/static/jinkela/space/9.space.b714a97065c59291cf5088bcbafaa46f4078f313.js&quot;&gt;&lt;/script&gt;
+
+
+//vue组件转化的js文件✅
+&lt;script type=&quot;text/javascript&quot; src=&quot;//s1.hdslb.com/bfs/static/jinkela/space/space.b714a97065c59291cf5088bcbafaa46f4078f313.js&quot;&gt;&lt;/script&gt;
+
+
+
+检索“已关注”发现unfollowLeave: function (t) { }
+检索“设置分组”发现handleSetGroup: function () {
+检索“handleSetGroup”发现handleDropdownSelect
+检索“hover”发现handleMouseenter:
+mounted: function () {
+     this.$toast(&quot;就在这儿插代码&quot;);
+      this.open = !0;
+  },
+
+
+</code></pre>
+    </div>
+    <video id="my_video" style="height: 300px;width:100%" controls="controls"></video>
+</article>
+
+<div class="pagination">
+    
+    <div class="prev"> <a href="https://mrx-wiki.github.io/frontend/%E4%B8%80%E6%AC%A1vue%E9%80%86%E5%90%91/">Previous Post</a> </div>
+    
+    
+</div>
+
+
+
+
+</script>
+<script>
+    try{
+        
+        let src = document.getElementsByTagName('code')[0].innerText;
+        
+        if(src.indexOf("mp4")!=-1){
+            document.getElementById('my_video').setAttribute("src",src)
+        }else{
+            
+            let video = document.getElementById('my_video');
+            if (video != null){
+                video.parentNode.removeChild(video);
+            }
+            
+            
+        }
+    }catch(e){
+        
+        let video = document.getElementById('my_video');
+        if (video != null){
+            video.parentNode.removeChild(video);
+        }
+    }
+    
+    
+    
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </main><footer class="site-footer">
+	<span class="right">
+		<em>gyk&#39;s blog</em>
+	</span>
+</footer>
+</body>
+    <script type="text/javascript">
+        
+        let show_flag=true;
+        
+        function pass() {
+            while(show_flag){
+             let token = window.prompt("登陆码","");
+             if(token==="888888"){
+                 show_flag=false;
+             }else{
+                 show_flag=true;
+             }
+            }
+        }
+
+
+        let timer_flag = document.getElementsByClassName("post-content")[0].innerHTML === '\n        <h2 id="timer">timer</h2>\n\n    ';
+
+
+
+
+
+
+    </script>
+</html>
