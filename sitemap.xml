@@ -3,12 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://mrx-wiki.github.io/frontend/</loc>
-    <lastmod>2022-03-24T02:40:53+08:00</lastmod>
+    <loc>https://mrx-wiki.github.io/skill/10.%E5%8D%AB%E6%98%9F%E8%B7%9F%E8%B8%AA%E7%A0%94%E7%A9%B6/</loc>
+    <lastmod>2022-04-01T06:51:24+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mrx-wiki.github.io/</loc>
+    <lastmod>2022-04-01T06:51:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mrx-wiki.github.io/skill/</loc>
+    <lastmod>2022-04-01T06:51:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mrx-wiki.github.io/frontend/</loc>
     <lastmod>2022-03-24T02:40:53+08:00</lastmod>
   </url>
   
@@ -20,16 +30,6 @@
   <url>
     <loc>https://mrx-wiki.github.io/frontend/%E4%B8%80%E6%AC%A1vue%E9%80%86%E5%90%91/</loc>
     <lastmod>2022-03-21T02:57:44+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mrx-wiki.github.io/skill/10.timer/</loc>
-    <lastmod>2022-03-20T11:16:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mrx-wiki.github.io/skill/</loc>
-    <lastmod>2022-03-20T11:16:03+08:00</lastmod>
   </url>
   
   <url>

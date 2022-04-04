@@ -5,10 +5,25 @@
     <link>https://mrx-wiki.github.io/</link>
     <description>Recent content on gyk&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 24 Mar 2022 02:40:53 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 01 Apr 2022 06:51:24 +0800</lastBuildDate>
     
 	<atom:link href="https://mrx-wiki.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>10.卫星跟踪研究</title>
+      <link>https://mrx-wiki.github.io/skill/10.%E5%8D%AB%E6%98%9F%E8%B7%9F%E8%B8%AA%E7%A0%94%E7%A9%B6/</link>
+      <pubDate>Fri, 01 Apr 2022 06:51:24 +0800</pubDate>
+      
+      <guid>https://mrx-wiki.github.io/skill/10.%E5%8D%AB%E6%98%9F%E8%B7%9F%E8%B8%AA%E7%A0%94%E7%A9%B6/</guid>
+      <description>起因 http://chnsatcom.com/track/track.php
+基础知识   人造卫星：围绕行星轨道运行的人造天体
+  命名：COSPAR ID：1957-001B&amp;mdash;年份+发射序号+分离部分序号
+  原理：以7.9km/s&amp;lt; v &amp;lt;11.2km/s运行的天体，向心力与地球引力相抵消,vr成反比
+  轨道：
+ 低轨道：200千米～2000千米高 中轨道：2000千米～20000千米 高轨道：20000千米以上，线速度小 静止轨道：倾角为零，始终位于赤道某地的上空    捕捉卫星信号  天线：电信号震荡产生电磁波发射出来  参考 1.人造卫星国际标准化命名方式是什么？https://www.zhihu.com/question/268074570
+2.发射卫星必须达到第一宇宙速度？https://zhuanlan.zhihu.com/p/397986093</description>
+    </item>
     
     <item>
       <title>写b站小脚本的曲折</title>
@@ -41,15 +56,6 @@ chunk-vendors.2bd75e10.js代码对应的应该是一些类库源码，不涉及�
 git clone https://github.com/laysent/restore-source-tree sudo npm install -g npm run build #产生dist文件 安好以后直接使用：
 node dist.js app.971e6794.js.map node dist.js chunk-vendors.2bd75e10.js 成功还原出源码结构：
 &amp;lt;template&amp;gt; &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; &amp;lt;AutoNav/&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/template&amp;gt; &amp;lt;script&amp;gt; import AutoNav from &amp;#39;./components/AutoNav.vue&amp;#39; export default { name: &amp;#39;App&amp;#39;, components: { AutoNav } } &amp;lt;/script&amp;gt; &amp;lt;style&amp;gt; &amp;lt;/style&amp;gt; &amp;lt;template&amp;gt; &amp;lt;div&amp;gt; &amp;lt;h1&amp;gt;一键生成 视频导航素材&amp;lt;/h1&amp;gt; &amp;lt;h3 v-if=&amp;#39;!</description>
-    </item>
-    
-    <item>
-      <title>10</title>
-      <link>https://mrx-wiki.github.io/skill/10.timer/</link>
-      <pubDate>Sun, 20 Mar 2022 11:16:03 +0800</pubDate>
-      
-      <guid>https://mrx-wiki.github.io/skill/10.timer/</guid>
-      <description>timer </description>
     </item>
     
     <item>
